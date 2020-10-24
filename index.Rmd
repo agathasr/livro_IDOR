@@ -1,0 +1,41 @@
+--- 
+title: "Estatística Aplicada à Pesquisa"
+author: "Agatha Rodrigues"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde."
+---
+
+# Sobre esse livro
+
+Este livro tem como objetivo abordar todas as etapas de uma análise de dados, discutindo os tópicos do ponto de vista teórico e prático, utilizando o softaware [R](https://cran.r-project.org/) como ferramenta de análise de dados. 
+
+Na versão atual, a parte teórica do livro está bastante resumida. Para aquele leitor que tenha interesse em aprofundar mais nos assuntos aqui abordados, recomendamos os livros [@morettin2020introduccaoa], [@bussab2004estatistica] e [@magalhaes2002noccoes].
+
+Este material está em construção e em revisão aberta. Fique à vontade para corrigir qualquer tipo de erro que encontrar no nosso material.
+
+## Sobre mim
+
+Eu sou doutora em Estatística pelo Instituto de Matemática e Estatística da Universidade de São Paulo (2018), com graduação em Estatística pela Universidade Federal de São Carlos (2010) e mestrado em Estatística pelo Instituto de Matemática e Estatística da Universidade de São Paulo (2013). Minhas áreas de pesquisa são: Análise de Confiabilidade, Análise de Sobrevivência e Bioestatística. 
+
+Tenho experiência em mais de 10 anos com pesquisa em Estatística aplicada à área da saúde, com atuações em hospitais oncológicos, departamentos de Obstetrícia e Ginecologia, Psiquiatria e também Psicologia. Já ministrei cursos de Estatística na pós-graduação do Departamento de Ginecologia e Obstetrícia da USP, trazendo uma abordagem de aulas teóricas e práticas em algum programa de análise de dados.
+
+Atualmente sou docente no Departamento de Estatística da Universidade Federal do Espírito Santo (UFES), coordenadora do projeto de extensão ensinaR (que visa a divulgação, ensino e treinamento da comunidade sobre o software R) e cofundadora da R-Ladies Capítulo Vitória (https://www.meetup.com/pt-BR/rladies-vitoria/ e https://github.com/rladies/meetup-presentations_vitoria). 
+
+Também sou a coordenadora do laboratório de Ciência de Dados da UFES, o DaSLab (https://daslab-ufes.github.io/) e do projeto de pesquisa certificado no CNPq: Ciência de Dados e Aprendizado Estatístico Aplicados à Saúde (http://dgp.cnpq.br/dgp/espelhogrupo/2755579833615592).
+
+- Currículo lattes: http://lattes.cnpq.br/3445977720574534
+- GitHub: https://github.com/agathasr
+- Linkedin: https://www.linkedin.com/in/agatha-rodrigues-0a8a6214a
+- Email: agatha.srodrigues@gmail.com
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

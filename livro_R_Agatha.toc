@@ -1,0 +1,75 @@
+\contentsline {chapter}{\numberline {1}Sobre esse livro}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sobre mim}{5}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Introdução}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Bases de dados}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Gestações gemelares}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Gestações gemelares - depressão e amamentação}{10}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Sobre o software R}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Instalação R e RStudio}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Instalação R}{12}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}Para Windows}{12}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}Para MAC}{16}{subsubsection.2.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.3.1.3}Para Linux}{20}{subsubsection.2.3.1.3}%
+\contentsline {subsection}{\numberline {2.3.2}Instalação RStudio}{20}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Para Windows}{24}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Para MAC}{24}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}Para Linux}{30}{subsubsection.2.3.2.3}%
+\contentsline {section}{\numberline {2.4}Primeiros passos com R e RStudio.}{30}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Primeiros contatos com RStudio}{30}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Projetos}{36}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}Boas práticas}{36}{subsubsection.2.4.1.2}%
+\contentsline {subsection}{\numberline {2.4.2}Primeiros passos no R}{36}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}R como calculadora}{36}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Atribuição}{37}{subsubsection.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}Objetos em R}{38}{subsubsection.2.4.2.3}%
+\contentsline {subsubsection}{\numberline {2.4.2.4}Apagar objetos}{38}{subsubsection.2.4.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.2.5}Vetor}{39}{subsubsection.2.4.2.5}%
+\contentsline {subsubsection}{\numberline {2.4.2.6}Matrizes}{40}{subsubsection.2.4.2.6}%
+\contentsline {subsubsection}{\numberline {2.4.2.7}Fator}{42}{subsubsection.2.4.2.7}%
+\contentsline {subsubsection}{\numberline {2.4.2.8}Data frame}{42}{subsubsection.2.4.2.8}%
+\contentsline {subsubsection}{\numberline {2.4.2.9}Operadores Relacionais}{44}{subsubsection.2.4.2.9}%
+\contentsline {subsubsection}{\numberline {2.4.2.10}Operadores Lógicos}{45}{subsubsection.2.4.2.10}%
+\contentsline {subsubsection}{\numberline {2.4.2.11}If e else}{46}{subsubsection.2.4.2.11}%
+\contentsline {subsubsection}{\numberline {2.4.2.12}For}{46}{subsubsection.2.4.2.12}%
+\contentsline {subsubsection}{\numberline {2.4.2.13}Funções}{47}{subsubsection.2.4.2.13}%
+\contentsline {subsubsection}{\numberline {2.4.2.14}Dados faltantes, infinitos e indefinições matemáticas}{47}{subsubsection.2.4.2.14}%
+\contentsline {section}{\numberline {2.5}Como obter ajuda no R}{47}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Pacotes}{48}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Instalação}{48}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Carregar pacotes:}{49}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Materiais complementares}{49}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Conceitos iniciais}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}População}{51}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Amostra}{52}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Variáveis}{53}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Tabulação de dados}{54}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Importação de dados no R}{54}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Extensão .txt ou .csv}{54}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Arquivos em Excel}{55}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Arquivos de outros softwares}{55}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Análise de consistência e tratamento dos dados}{56}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Importação dos dados}{56}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Arrumação da base de dados}{57}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Identificação de casos duplicados}{59}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Identificar problemas nas variáveis da base de dados}{60}{subsection.3.6.4}%
+\contentsline {section}{\numberline {3.7}Transformação dos dados}{64}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Transformação de variáveis quantitativas}{65}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Transformação de variáveis qualitativas}{65}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Manipulação de datas}{66}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Filtragem de observações}{67}{subsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.4.1}Pacote dplyr}{67}{subsubsection.3.7.4.1}%
+\contentsline {section}{\numberline {3.8}Exercícios}{68}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Teóricos}{68}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Práticos no R}{69}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {4}Análise exploratória dos dados}{71}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Tabelas de frequências}{72}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Medidas resumo}{73}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Medidas de posição}{73}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Medidas de dispersão}{74}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Tabelas cruzadas - duas variáveis qualitativas}{76}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Gráficos}{77}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Pacote ggplot2}{78}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Pacote esquisse}{88}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Materiais complementares}{88}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Exercícios}{90}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Testes paramétricos para média}{91}{chapter.5}%

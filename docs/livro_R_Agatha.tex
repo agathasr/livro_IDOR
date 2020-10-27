@@ -113,7 +113,7 @@
 
 \title{Estatística Aplicada à Pesquisa}
 \author{Agatha Rodrigues}
-\date{2020-10-24}
+\date{2020-10-27}
 
 \begin{document}
 \maketitle
@@ -2718,19 +2718,11 @@ A data está salva no formato ano-mês-dia e por isso usamos a função \texttt{
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{intervalo <-}\StringTok{ }\NormalTok{lubridate}\OperatorTok{::}\KeywordTok{ymd}\NormalTok{(dados}\OperatorTok{$}\NormalTok{data_nascimento) }
-\OperatorTok{%--%}\StringTok{  }\NormalTok{lubridate}\OperatorTok{::}\KeywordTok{ymd}\NormalTok{(dados}\OperatorTok{$}\NormalTok{data_aval)}
+\NormalTok{intervalo <-}\StringTok{ }\NormalTok{lubridate}\OperatorTok{::}\KeywordTok{ymd}\NormalTok{(dados}\OperatorTok{$}\NormalTok{data_nascimento)}\OperatorTok{%--%}\StringTok{  }\NormalTok{lubridate}\OperatorTok{::}\KeywordTok{ymd}\NormalTok{(dados}\OperatorTok{$}\NormalTok{data_aval)}
 \NormalTok{dados}\OperatorTok{$}\NormalTok{idade <-}\StringTok{ }\NormalTok{intervalo }\OperatorTok{/}\StringTok{ }\NormalTok{lubridate}\OperatorTok{::}\KeywordTok{dyears}\NormalTok{(}\DecValTok{1}\NormalTok{)  }\CommentTok{#número de anos}
 \NormalTok{dados}\OperatorTok{$}\NormalTok{idade <-}\StringTok{ }\KeywordTok{trunc}\NormalTok{(dados}\OperatorTok{$}\NormalTok{idade) }\CommentTok{#usamos a idade completada }
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Error: <text>:2:1: SPECIAL inesperado
-## 1: intervalo <- lubridate::ymd(dados$data_nascimento) 
-## 2: %--%
-##    ^
-\end{verbatim}
 
 A última linha do código acima utiliza a função \texttt{trunc} para truncar a idade para não usar a fração dos meses da idade ainda não completa e sim usar a idade completada no último aniversário.
 
@@ -2747,12 +2739,6 @@ Uma função bastante importante quando estamos analisando dados é filtrar de a
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Error: Problem with `filter()` input `..1`.
-## x objeto 'idade' não encontrado
-## i Input `..1` is `idade < 23`.
-\end{verbatim}
-
 Veja que agora o objeto dados\_jovens é a base de dados apenas com aquelas cuja idade é menor que 23 (use o comando View(dados\_jovens) para verificar).
 
 Utilizando os operadores lógicos ``\&'' (e) e ``\textbar{}'' (ou), conseguimos realizar algumas condições, como mostrado no exemplo abaixo.
@@ -2764,12 +2750,6 @@ Agora, queremos selecionar apenas as gestantes mais novas e do grupo progesteron
 \NormalTok{dados_jovens_progest <-}\StringTok{  }\KeywordTok{filter}\NormalTok{(dados,idade}\OperatorTok{<}\DecValTok{23} \OperatorTok{&}\StringTok{ }\NormalTok{grupo}\OperatorTok{==}\StringTok{"progest"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Error: Problem with `filter()` input `..1`.
-## x objeto 'idade' não encontrado
-## i Input `..1` is `idade < 23 & grupo == "progest"`.
-\end{verbatim}
 
 Acho que aqui vale uma nota sobre o pacote \texttt{dplyr} e por isso dediquei uma subseção para ele, no que segue.
 

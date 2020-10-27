@@ -465,8 +465,7 @@ library(lubridate)
 ```
 
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-intervalo <- lubridate::ymd(dados$data_nascimento) 
-%--%  lubridate::ymd(dados$data_aval)
+intervalo <- lubridate::ymd(dados$data_nascimento)%--%  lubridate::ymd(dados$data_aval)
 dados$idade <- intervalo / lubridate::dyears(1)  #número de anos
 dados$idade <- trunc(dados$idade) #usamos a idade completada 
 ```

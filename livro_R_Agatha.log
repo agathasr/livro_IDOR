@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  24 OCT 2020 00:02
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  27 OCT 2020 09:50
 entering extended mode
 **./livro_R_Agatha.tex
 (livro_R_Agatha.tex
@@ -1748,126 +1748,126 @@ ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
 []\n        class=[]table table-condensed[]")[] 
  []
 
-[66] [67] [68]
-Underfull \hbox (badness 1383) in paragraph at lines 2883--2886
+[66] [67]
+Underfull \hbox (badness 1383) in paragraph at lines 2863--2866
 []\TU/lmr/m/n/10 Crie a variável igp (idade gestacional do parto) obtida ao som
 ar
  []
 
-[69] [70
+[68] [69] [70
 
 ]
 Chapter 4.
 [71]
-Overfull \hbox (36.092pt too wide) in paragraph at lines 2992--2993
+Overfull \hbox (36.092pt too wide) in paragraph at lines 2972--2973
 \TU/lmr/m/n/10 que, ao utilizar \TU/lmtt/m/n/10 view(freq(dados$prematuridade,c
 umul=FALSE,report.nas=FALSE))
  []
 
 [72] [73] [74] [75]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
 [76]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ##       placebo                         19 (18.3%)   33 (31.
 7%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ##       progest                         25 (24.0%)   27 (26.
 0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3185--3185
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ##       placebo                         19 (36.5%)   33 (63.
 5%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ##       progest                         25 (48.1%)   27 (51.
 9%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3206--3206
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade           nao         
   sim          Total[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ##       placebo                         19 ( 43.2%)   33 ( 5
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ##       progest                         25 ( 56.8%)   27 ( 4
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ##         Total                         44 (100.0%)   60 (10
 0.0%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3227--3227
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
@@ -1944,18 +1944,18 @@ File: figures/esquise1.png Graphic file (type bmp)
 File: figures/esquise2.png Graphic file (type bmp)
 <figures/esquise2.png>
 [88] [89]
-Overfull \hbox (3.05891pt too wide) in paragraph at lines 3520--3522
+Overfull \hbox (3.05891pt too wide) in paragraph at lines 3500--3502
 []\TU/lmr/m/n/10 Construa uma tabela cruzada entre EDPS_antes_SN e EDPS_depois_
 SN; 
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 3522--3524
+Underfull \hbox (badness 6094) in paragraph at lines 3502--3504
 []\TU/lmr/m/n/10 Apresente uma tabela com as medidas descritivas da variável
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 3522--3524
+Underfull \hbox (badness 2277) in paragraph at lines 3502--3504
 \TU/lmr/m/n/10 tempo_amamentacao_meses por grupo de amamentação. Refaça
  []
 

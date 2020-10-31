@@ -98,7 +98,7 @@ Para mais detalhes sobre tabulação de dados, acesse https://daslab-ufes.github
 
 ### Extensão .txt ou .csv
 
-Para importar dados para o R, com extensão .txt ou .csv, uma sugestão é utilizar o pacote readr. Como exemplo, consideramos um arquivo chamado dados1. 
+Para importar dados para o R, com extensão .txt ou .csv, uma sugestão é utilizar o pacote `readr`. Como exemplo, consideramos um arquivo chamado dados1 que queremos importar para o R. 
 
 ```{r, eval=TRUE,include=TRUE,echo=FALSE,error=TRUE}
 library(magrittr)
@@ -106,21 +106,28 @@ library(magrittr)
 
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 library(readr)
-dados_csv <- read_csv(file = "dados1.csv")
+dados_csv <- read_csv(file = "caminho-para-o-arquivo/dados1.csv")
 dados_txt <- read_delim(file = "caminho-para-o-arquivo/dados1.txt", delim = " ")
 ```
 
-O argumento file= representa o caminho onde o arquivo está alocado. Se o arquivo estiver no diretório de trabalho, não precisa especificar o caminho até o arquivo. O argumento delim= indica qual caracter separa cada coluna no arquivo de texto.
- 
-Outra opção para leitura de arquivo .txt é usar a função read.table que já está salva na base, ou seja, não é necessário instalar pacote. 
+O argumento `file=` representa o caminho onde o arquivo está alocado. Se o arquivo estiver no diretório de trabalho (quando criamos o projeto e colocamos os arquivos de dados na pasta criada pelo projeto), não precisa especificar o caminho até o arquivo, como segue:
+
+```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
+dados_csv <- read_csv(file = "dados1.csv")
+dados_txt <- read_delim(file = "dados1.txt", delim = " ")
+```
+
+O argumento `delim=` indica qual o separador das colunas no arquivo de texto.
+
+Outra opção para leitura de arquivo .txt é usar a função `read.table` que já está salva na base, ou seja, não é necessário instalar pacotes. 
 
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 dados_txt2 <- read.table(file="dados1.txt",header=T)
 ```
 
-O argumento header indica se a primeira linha do arquivo consta o nome das variáveis. Se for T (TRUE), a primeira linha é indicada como nome das variáveis. O default é header=F. 
+O argumento header indica se a primeira linha do arquivo consta o nome das variáveis. Se for T (TRUE), a primeira linha é indicada como nome das variáveis. O _default_ (padrão se o usuário não mudar o argumento) é `header=F`. 
 
-Vale ressaltar que para cada função read_, existe uma respectiva função write_ para salvar o arquivo no formato de interesse. Como exemplo, queremos salvar a base de dados cars. 
+Vale ressaltar que para cada função `read_`, existe uma respectiva função `write_` para salvar o arquivo no formato de interesse. Como exemplo, queremos salvar a base de dados mtcars na pasta do meu computador com o nome cars: 
 
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 write_csv(x = mtcars, path = "cars.csv")
@@ -129,7 +136,7 @@ write_delim(x = mtcars, delim = " ", path = "cars.txt"))
 
 ### Arquivos em Excel
 
-O pacote readxl pode ser utilizado para leiturade arquivos do Excel, como .xls e xlsx.
+O pacote `readxl` pode ser utilizado para leitura de arquivos do Excel, como .xls e xlsx.
 
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 library(readxl)
@@ -137,16 +144,25 @@ dados_excel <- read_xls(path = "dados1.xls") #Leitura do arquivo .xls
 dados_excelx <- read_xlsx(path = "dados1.xlsx") #Leitura do arquivo .xlsx
 ```
 
-Uma maneira mais simples é a utilização da função read_excel(), pois ela auto detecta a extensão do arquivo.
+Dentre os argumentos dessas funções (veja o `help()`de cada uma delas), o argumento `na` indica quais strings (textos) devem ser interpretados como `NA`. O _default_ é considerar espaço em branco no excel. 
+
+Uma maneira mais simples é a utilização da função `read_excel()`, pois ela auto detecta a extensão do arquivo.
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 library(readxl)
 dados_excel1 <- read_excel(path = "dados1.xls")
 dados_excelx1 <- read_excel(path = "dados1.xlsx")
 ```
 
+Podemos também exportar um arquivo em excel (.xls e .xlsx) ao considerar a função `write_xlsx` do pacote `writexl`. Suponha que temos o interesse em salvar a base de dados `dados` em excel na pasta do computador (exportar) com o nome de `dados_correto`:
+```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
+library(writexl)
+write_xlsx(dados, "dados_correto.xlsx")
+```
+
+
 ### Arquivos de outros softwares
 
-Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem ser utilizadas as funções do pacote haven. 
+Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem ser utilizadas as funções do pacote `haven`. 
 
 ```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
 library(haven)
@@ -155,7 +171,7 @@ dados_spss <- read_spss("dados1.sav")
 dados_sas <- read_sas("dados1.sas7bdat")  
 ```
 
-Outra opção de pacote para importação de dados de outros softwares é o foreign. Além do SAS, STAT e SPSS, ele também lê dados do Octave, Minitab e Epi Info. 
+Outra opção de pacote para importação de dados de outros softwares é o `foreign`. Além do SAS, STAT e SPSS, ele também lê dados do Octave, Minitab e Epi Info. 
 
 
 ## Análise de consistência e tratamento dos dados {#consistencia}

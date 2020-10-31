@@ -113,7 +113,7 @@
 
 \title{Estatística Aplicada à Pesquisa}
 \author{Agatha Rodrigues}
-\date{2020-10-27}
+\date{2020-10-31}
 
 \begin{document}
 \maketitle
@@ -127,7 +127,7 @@
 
 Este livro tem como objetivo abordar todas as etapas de uma análise de dados, discutindo os tópicos do ponto de vista teórico e prático, utilizando o softaware \href{https://cran.r-project.org/}{R} como ferramenta de análise de dados.
 
-Na versão atual, a parte teórica do livro está bastante resumida. Para aquele leitor que tenha interesse em aprofundar mais nos assuntos aqui abordados, recomendamos os livros \citep{morettin2020introduccaoa}, \citep{bussab2004estatistica} e \citep{magalhaes2002noccoes}.
+Na versão atual, a parte teórica do livro está bastante resumida. Para aquele leitor que tenha interesse em aprofundar mais nos assuntos aqui abordados, recomendamos os livros \citet{morettin2020introduccaoa}, \citet{bussab2004estatistica} e \citet{magalhaes2002noccoes}.
 
 Este material está em construção e em revisão aberta. Fique à vontade para corrigir qualquer tipo de erro que encontrar no nosso material.
 
@@ -844,7 +844,10 @@ Vale também ressaltar que se você digitar um comando que o R não reconhece, e
 \hypertarget{atribuiuxe7uxe3o}{%
 \subsubsection{Atribuição}\label{atribuiuxe7uxe3o}}
 
-Para atribuir a um objeto, o sinal de atribuição é = ou \textless- (preferível).
+Podemos salvar valores dentro de um objeto, que é simplemente um nome que guarda um valor, vetor, matriz, lista ou base de dados.
+
+Para atribuir a um objeto, o sinal de atribuição é \texttt{=} ou \texttt{\textless{}-} (preferível).
+
 Exemplos:
 
 \begin{Shaded}
@@ -913,7 +916,7 @@ Vamos atribuir a x a string banana.
 ## [1] "banana"
 \end{verbatim}
 
-O primeiro caso (x\textless-banana) não deu certo, pois ele entendeu que estamos atribuindo a x outro objeto banana, que não foi declarado. Para atribuir o string banana à x, precisamos colocar entre aspas ou aspas simples. Uma string sem aspas é entendido como um objeto, veja abaixo:
+O primeiro caso (x \textless- banana) não deu certo, pois ele entendeu que estamos atribuindo a x outro objeto banana, que não foi declarado. Para atribuir o string banana à x, precisamos colocar entre aspas ou aspas simples. Uma string sem aspas é entendido como um objeto, veja abaixo:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1004,7 +1007,7 @@ Como atribuir varios valores a um objeto? Para entrar com vários números (ou n
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{y <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+\NormalTok{y <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{10}\NormalTok{)}
 \NormalTok{y}
 \end{Highlighting}
 \end{Shaded}
@@ -1151,7 +1154,7 @@ Matrizes são vetores numéricos com duas dimensões, que são simplesmente a li
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{x <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{16}\NormalTok{), }\DataTypeTok{nrow=}\DecValTok{4}\NormalTok{,}\DataTypeTok{ncol=}\DecValTok{4}\NormalTok{)}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{16}\NormalTok{), }\DataTypeTok{nrow=}\DecValTok{4}\NormalTok{,}\DataTypeTok{ncol=}\DecValTok{4}\NormalTok{)}
 \NormalTok{x}
 \end{Highlighting}
 \end{Shaded}
@@ -1244,7 +1247,7 @@ E se quisermos substituir a terceira coluna por d?
 
 Qual a dimensao da matriz x?
 
-Vimos que para vetor usamos o comando length(). Serve par matriz? Vamos testar:
+Vimos que para vetor usamos o comando length(). Serve para matriz? Vamos testar:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1256,7 +1259,7 @@ Vimos que para vetor usamos o comando length(). Serve par matriz? Vamos testar:
 ## [1] 16
 \end{verbatim}
 
-Note que é retornado o num de colunas vezes o número de linhas (4*4). Mas o que quero saber é o numero de linhas e de colunas. Para isso, o comando é dim().
+Note que retorna o número de colunas vezes o número de linhas (4*4=16). Mas o que quero saber é o numero de linhas e de colunas. Para isso, o comando é \texttt{dim()}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1268,7 +1271,7 @@ Note que é retornado o num de colunas vezes o número de linhas (4*4). Mas o qu
 ## [1] 4 4
 \end{verbatim}
 
-Para concatenar linhas em uma matriz, podemos usar o comando rbind():
+Para concatenar linhas em uma matriz, podemos usar o comando \texttt{rbind()}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1287,7 +1290,7 @@ Para concatenar linhas em uma matriz, podemos usar o comando rbind():
 ## vet    2   20   12   34
 \end{verbatim}
 
-Para concatenar colunas em uma matriz, podemos usar o comando cbind():
+Para concatenar colunas em uma matriz, podemos usar o comando \texttt{cbind()}:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1343,7 +1346,7 @@ Posso criar um data frame no R com os vetores, por exemplo:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{ID <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{6}\NormalTok{)}
+\NormalTok{ID <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{6}\NormalTok{)}
 \NormalTok{pes <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{62}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{52}\NormalTok{, }\DecValTok{98}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{70}\NormalTok{)}
 \NormalTok{alt <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{1.70}\NormalTok{, }\FloatTok{1.82}\NormalTok{, }\FloatTok{1.75}\NormalTok{, }\FloatTok{1.94}\NormalTok{, }\FloatTok{1.84}\NormalTok{, }\FloatTok{1.61}\NormalTok{)}
 \NormalTok{imc <-}\StringTok{ }\NormalTok{pes}\OperatorTok{/}\NormalTok{(alt}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
@@ -1362,7 +1365,7 @@ Posso criar um data frame no R com os vetores, por exemplo:
 ## 6  6   70   1.61 27.00513
 \end{verbatim}
 
-Posso pensar que o dat frame tem a mesma ideia de matriz. Quero olhar os dados de altura. Sei que altura está na coluna 3.
+Posso pensar que o data frame tem a mesma ideia de matriz. Quero olhar os dados de altura. Sei que altura está na coluna 3.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1374,8 +1377,8 @@ Posso pensar que o dat frame tem a mesma ideia de matriz. Quero olhar os dados d
 ## [1] 1.70 1.82 1.75 1.94 1.84 1.61
 \end{verbatim}
 
-Mas existe uma maneira mais facil de selecionar a variavel de interesse:
-Por ser um data frame, posso usar \$:
+Mas existe uma maneira mais fácil de selecionar a variável de interesse sem ter que saber em qual coluna ela está.
+Por ser um data frame, posso usar \texttt{\$} da seguinte maneira:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1387,7 +1390,7 @@ Por ser um data frame, posso usar \$:
 ## [1] 1.70 1.82 1.75 1.94 1.84 1.61
 \end{verbatim}
 
-Putz, esqueci de colocar a varivel de grupo no data frame. Tenho que criar tudo de novo? Não:
+Putz, esqueci de colocar a variável de grupo no data frame. Tenho que criar tudo de novo? Não:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1408,7 +1411,11 @@ Putz, esqueci de colocar a varivel de grupo no data frame. Tenho que criar tudo 
 ## 6  6   70   1.61 27.00513     2
 \end{verbatim}
 
-Funcoes uteis para data.frame:
+Veja que no ``dados\$grupo'' foi inserido o objeto ``gr''. Se ``gr'' não tivesse o mesmo número de linhas do data frame retornaria um erro.
+
+\textbf{Funções úteis para data.frame:}
+
+Ainda não falamos com muito detalhes sobre funções no R, faremos isso mais adiante. Mas por enquanto, considere que sejam nomes já salvos no R e que, ao colocar o objeto da base de dados (no nosso exemplo é \texttt{dados}) dentro dos parênteses, retorna algumas informações úteis sobre a base de dados. São algumas delas:
 
 \begin{itemize}
 \item
@@ -1426,22 +1433,6 @@ Funcoes uteis para data.frame:
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{head}\NormalTok{(dados)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##   ID peso altura      imc grupo
-## 1  1   62   1.70 21.45329     1
-## 2  2   70   1.82 21.13271     1
-## 3  3   52   1.75 16.97959     1
-## 4  4   98   1.94 26.03890     2
-## 5  5   90   1.84 26.58318     2
-## 6  6   70   1.61 27.00513     2
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{tail}\NormalTok{(dados)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1490,10 +1481,18 @@ Funcoes uteis para data.frame:
 ##  $ grupo : num  1 1 1 2 2 2
 \end{verbatim}
 
-\hypertarget{operadores-relacionais}{%
-\subsubsection{Operadores Relacionais}\label{operadores-relacionais}}
+\hypertarget{operadores-luxf3gicos}{%
+\subsubsection{Operadores lógicos}\label{operadores-luxf3gicos}}
 
-Igual a: ==
+A operação lógica nada mais é do que um teste que retorna verdadeiro (\texttt{TRUE}) ou falso (\texttt{FALSE}). Esses valores dois valores recebem uma classe especial: \texttt{logical}.
+
+\begin{itemize}
+\tightlist
+\item
+  Igual a: ==
+\end{itemize}
+
+Vamos ao testar se um valor é igual ao outro.
 
 Exemplo:
 
@@ -1507,7 +1506,24 @@ Exemplo:
 ## [1] FALSE
 \end{verbatim}
 
-Diferente de: !=
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{11}\OperatorTok{==}\DecValTok{11}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+No primeiro retornou \texttt{FALSE}, pois realmente 10 não é igual a 11 e no segundo caso acima retornou \texttt{TRUE}, pois realmente 11 é igual a 11.
+De maneira análoga funciona para os operadores abaixo:
+
+\begin{itemize}
+\tightlist
+\item
+  Diferente de: !=
+\end{itemize}
 
 Exemplo:
 
@@ -1574,8 +1590,22 @@ Exemplos:
 ## [1] TRUE
 \end{verbatim}
 
-\hypertarget{operadores-luxf3gicos}{%
-\subsubsection{Operadores Lógicos}\label{operadores-luxf3gicos}}
+\begin{itemize}
+\tightlist
+\item
+  Um outro operador muito útil é o \texttt{\%in\%}. Com ele, podemos verificar se um valor está dentro de um vetor.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ex <-}\StringTok{ }\DecValTok{1}\OperatorTok{:}\DecValTok{15}
+\DecValTok{3} \OperatorTok{%in%}\StringTok{ }\NormalTok{ex}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
 
 \begin{itemize}
 \tightlist
@@ -1648,15 +1678,76 @@ Exemplos:
 ## [1] FALSE
 \end{verbatim}
 
-\hypertarget{if-e-else}{%
-\subsubsection{If e else}\label{if-e-else}}
+\hypertarget{dados-faltantes-infinitos-e-indefiniuxe7uxf5es-matemuxe1ticas}{%
+\subsubsection{Dados faltantes, infinitos e indefinições matemáticas}\label{dados-faltantes-infinitos-e-indefiniuxe7uxf5es-matemuxe1ticas}}
+
+\begin{itemize}
+\tightlist
+\item
+  NA (Not Available): dado faltante/indisponível. Exemplo:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{9}\NormalTok{)}
+\NormalTok{x[}\DecValTok{4}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+retornou \texttt{NA} porque não há elemento na posição 4 do vetor x.
+
+\begin{itemize}
+\tightlist
+\item
+  NaN (Not a Number): indefinições matemáticas. Como 0/0 e log(-1).
+  Exemplo:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{log}\NormalTok{(}\OperatorTok{-}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NaN
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Inf (Infinito): número muito grande ou o limite matemático. Aceita sinal negativo -Inf.
+  Exemplo:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{10}\OperatorTok{^}\DecValTok{14321}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] Inf
+\end{verbatim}
+
+\hypertarget{condicionamento-if-e-else}{%
+\subsubsection{Condicionamento : If e else}\label{condicionamento-if-e-else}}
+
+As estruturas if e else servem para executar um código apenas se uma condição (teste lógico) for satisfeita.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{a <-}\StringTok{ }\DecValTok{224}
 \NormalTok{b <-}\StringTok{ }\DecValTok{225}
-\ControlFlowTok{if}\NormalTok{ (a}\OperatorTok{==}\NormalTok{b) \{ v=}\DecValTok{10}
-\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{v=}\DecValTok{15}\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (a}\OperatorTok{==}\NormalTok{b) \{ }
+\NormalTok{  v <-}\StringTok{ }\DecValTok{10}
+\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{  v <-}\StringTok{ }\DecValTok{15}
+\NormalTok{  \}}
 \NormalTok{v}
 \end{Highlighting}
 \end{Shaded}
@@ -1665,13 +1756,23 @@ Exemplos:
 ## [1] 15
 \end{verbatim}
 
+Veja que o R só executa o conteúdo das chaves \{\} se a expressão dentro dos parênteses () retornar \texttt{TRUE}.
+
+Note que a condição de igualdade é representada por dois iguais ==. Como dito anteriormente, apenas um igual = é símbolo de atribuição (preferível \textless-).
+
+Veja outro exemplo:
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{a <-}\StringTok{ }\DecValTok{224}
 \NormalTok{b <-}\StringTok{ }\DecValTok{225}
-\ControlFlowTok{if}\NormalTok{ (a}\OperatorTok{==}\NormalTok{b) \{ v=}\DecValTok{10}
-\NormalTok{\} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (a }\OperatorTok{>}\StringTok{ }\NormalTok{b) \{v=}\DecValTok{15}
-\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{v=}\DecValTok{25}\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (a}\OperatorTok{==}\NormalTok{b) \{ }
+\NormalTok{  v <-}\StringTok{ }\DecValTok{10}
+\NormalTok{\} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (a }\OperatorTok{>}\StringTok{ }\NormalTok{b) \{}
+\NormalTok{  v <-}\StringTok{ }\DecValTok{15}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{    v <-}\StringTok{ }\DecValTok{25}
+\NormalTok{    \}}
 \NormalTok{v}
 \end{Highlighting}
 \end{Shaded}
@@ -1680,12 +1781,14 @@ Exemplos:
 ## [1] 25
 \end{verbatim}
 
-Note que a condição de igualdade é representada por dois iguais ==. Como dito anteriormente, apenas um igual = é símbolo de atribuição (mas preferível \textless-).
+Veja que nesse exemplo gostaria de usar mais de duas condições e por isso usamos a estrutura intermediária else if.
 
-\hypertarget{for}{%
-\subsubsection{For}\label{for}}
+\hypertarget{iterador-for}{%
+\subsubsection{Iterador for}\label{iterador-for}}
 
-Seja o vetor m dado por:
+O for serve para repetir uma mesma tarefa para um conjunto de valores diferentes. Cada repetição é chamada de iteração.
+
+Como exemplo, considere o vetor atribuído ao objeto m como segue:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1710,67 +1813,200 @@ de m dividido por sua posição.
 ## [1]  1.00000 10.00000 16.66667 15.00000 20.00000
 \end{verbatim}
 
-Note que primeiro definimos o objeto p.~
+Note que primeiro definimos o objeto p, recebendo \texttt{NULL}. O \texttt{NULL} representa a ausência de um objeto e serve para já declarar algum objeto que receberá valor na sequência. No caso, ao rodar o for, o p é um vetor de tamanho 5 (tamanho do vetor m).
+
+No exemplo, temos 5 iterações e para cada valor de i, correndo de 1 até 5 (tamanho de m), pegamos o valor de m na posição i e dividimos por sua posição. Assim formamos o vetor p.~
 
 \hypertarget{funuxe7uxf5es}{%
 \subsubsection{Funções}\label{funuxe7uxf5es}}
 
-Vamos criar uma função que soma seus dois argumentos.
+Funções no R são nomes que guardam um código de R. A ideia é que sempre que rodar a função com os seus argumentos, o código que ela guarda será executado e o resultado será retornado.
+
+Já usamos anteriormente algumas funções que estão na base do R. Por exemplo, quando usamos \texttt{class()} para entender a classe do objeto que o R está entendendo. Colocamos um argumento dentro do parênteses e o R retornou qual a classe do objeto em questão. Relembre o que falamos ao perguntar ao R qual a classe do vetor oi criado:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{f.soma <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x,y) \{}
-\NormalTok{  out <-}\StringTok{ }\NormalTok{x}\OperatorTok{+}\NormalTok{y}
+\NormalTok{oi <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\FloatTok{0.5}\NormalTok{)}
+\KeywordTok{class}\NormalTok{(oi)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+Agora vamos conversar sobre outra função já criada e disponibilizada na base do R: \texttt{mean}. Essa função retorna a média do vetor que está em seu argumento. Vamos calcular a média dos valores do vetor oi:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mean}\NormalTok{(oi)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.7
+\end{verbatim}
+
+Considere que, por algum motivo, tenha no vetor oi uma observação faltante. No R, dado faltante é caracterizado por \texttt{NA}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{oi <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{,}\FloatTok{0.5}\NormalTok{,}\OtherTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Perceba que, apesar de \texttt{NA} ser um texto, não coloquei entre aspas porque quero falar para o R que naquela posição não tem valor e o R entende isso ao ler \texttt{NA} (sem aspas). Se colocar entre aspas, ele entenderá como sendo um texto e não mais como valor faltante.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mean}\NormalTok{(oi)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+Como não sabemos o valor do elemento na posição 6 do vetor oi, o R não teria como calcular a média de todos os 6 valores e por isso devolve \texttt{NA}. No entanto, queremos calcular a média dos elementos de oi ao retirar os valores faltantes, ou seja, queremos fazer: (10+20+2+1+0.5)/5.
+Então devemos falar para o R o que queremos e, para isso, podemos utilizar o argumento \texttt{na.rm\ =\ TRUE}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mean}\NormalTok{(oi,}\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6.7
+\end{verbatim}
+
+\textbf{Importantes:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  se a função tiver mais de um argumento, eles são sempre separados por vírgulas;
+\item
+  cada função tem os seus próprios argumentos. Para saber quais são e como usar os argumentos de uma função, basta acessar a sua documentação. Uma forma de fazer isso é pela função \texttt{help}, cujo argumento é o nome da função que precisa de ajuda:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{help}\NormalTok{(mean)}
+\end{Highlighting}
+\end{Shaded}
+
+Veja que abrirá a documentação sobre a função \texttt{mean} no menu ``Help'' do RStudio e lá é possível ver os argumentos e exemplos de uso da função em questão.
+
+Ainda sobre funções já presentes no R, vamos considerar agora a função \texttt{sample}. Veja a documentação dessa função para ver o que ela faz:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{help}\NormalTok{(sample)}
+\end{Highlighting}
+\end{Shaded}
+
+A função \texttt{sample} retorna uma amostra de um vetor com tamanho especificado em um de seus argumentos com ou sem reposição. Ela apresenta quatro argumentos: \texttt{sample(x,\ size,\ replace\ =\ FALSE,\ prob\ =\ NULL)}, em que: \texttt{x} é o vetor do qual será amostrado o número de elementos especificado no argumento \texttt{size}, seja com ou sem reposição (argumento \texttt{replace}) e com dadas probabilidades de seleção, especificadas em \texttt{prob}.
+
+Quero usar essa função para amostrar do objeto oi (\texttt{x=oi}) dois elementos (\texttt{size=2}) em uma seleção com reposição (\texttt{replace\ =\ TRUE}) e que a probabilidade de seleção seja a mesma para todos os elementos do vetor oi. No caso da probabilidade, como podemos ver na documentação da função \texttt{sample}, o \emph{default} (padrão se o usuário não mudar o argumento) é ser a mesma probabilidade de seleção para todos os elementos. Assim, se o usuário nada especificar para esse argumento, o R entenderá o seu \emph{default}. O mesmo vale para o argumento \texttt{replace}: caso fosse o interesse fazer a seleção sem reposição, não precisaríamos colocar esse argumento porque seu \emph{default} é \texttt{FALSE}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sample}\NormalTok{(}\DataTypeTok{x=}\NormalTok{oi,}\DataTypeTok{size=}\DecValTok{2}\NormalTok{,}\DataTypeTok{replace=}\OtherTok{TRUE}\NormalTok{) }\CommentTok{#não colocamos argumento prob porque vamos usar o seu default (probs iguais).}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 20.0  0.5
+\end{verbatim}
+
+Também poderíamos usar a mesma função sem colocar o nome dos argumentos:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sample}\NormalTok{(oi,}\DecValTok{2}\NormalTok{,}\OtherTok{TRUE}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1 10
+\end{verbatim}
+
+Mas, nesse caso, é importante que se respeite a ordem dos argumentos: o vetor tem que ser o primeiro, o segundo argumento é \texttt{size} e assim por diante.
+
+Vale ressaltar que as duas últimas saídas não necessariamente serão as mesmas, porque é feito um sorteio aleatório de dois elementos de oi em cada uma delas.
+
+Além de usar funções já prontas, podemos criar novas funções. Suponha que queremos criar uma função de dois argumentos que retorna o primeiro mais três vezes o segundo argumento. Criamos a função no que segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f_conta <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x,y) \{}
+\NormalTok{  out <-}\StringTok{ }\NormalTok{x}\OperatorTok{+}\DecValTok{3}\OperatorTok{*}\NormalTok{y}
   \KeywordTok{return}\NormalTok{(out)}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
 A função acima tem:
-* o nome: f.soma;
 
 \begin{itemize}
 \item
+  o nome: f\_conta;
+\item
   os argumentos: x e y;
 \item
-  o corpo out \textless- x+y e
+  o corpo out \textless- x+3*y e
 \item
   o que retorna return(out).
 \end{itemize}
 
-Vamos agora chamar a função:
+Suponha que eu queira fazer a conta: 10+3*20. Podemos fazer isso ao chamar a função criada \texttt{f\_conta}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{f.soma}\NormalTok{(}\DataTypeTok{x=}\DecValTok{10}\NormalTok{,}\DataTypeTok{y=}\DecValTok{20}\NormalTok{)}
+\KeywordTok{f_conta}\NormalTok{(}\DataTypeTok{x=}\DecValTok{10}\NormalTok{,}\DataTypeTok{y=}\DecValTok{20}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 30
+## [1] 70
 \end{verbatim}
+
+Veja que o cálculo acima retorna exatamente o mesmo que o seguinte:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{f.soma}\NormalTok{(}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{)}
+\KeywordTok{f_conta}\NormalTok{(}\DataTypeTok{y=}\DecValTok{20}\NormalTok{,}\DataTypeTok{x=}\DecValTok{10}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 30
+## [1] 70
 \end{verbatim}
 
-\hypertarget{dados-faltantes-infinitos-e-indefiniuxe7uxf5es-matemuxe1ticas}{%
-\subsubsection{Dados faltantes, infinitos e indefinições matemáticas}\label{dados-faltantes-infinitos-e-indefiniuxe7uxf5es-matemuxe1ticas}}
+Pois mudei a ordem dos argumentos, mas acompanhado com os nomes dos argumentos. Se eu não quiser colocar os nomes dos argumentos, precisa tomar cuidado para não errar a ordem deles. Pois:
 
-\begin{itemize}
-\item
-  NA (Not Available): dado faltante/indisponível.
-\item
-  NaN (Not a Number): indefinições matemáticas. Como 0/0 e log(-1).
-\item
-  Inf (Infinito): número muito grande ou o limite matemático. Aceita sinal negativo -Inf.
-\end{itemize}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{f_conta}\NormalTok{(}\DecValTok{10}\NormalTok{,}\DecValTok{20}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 70
+\end{verbatim}
+
+é diferente de
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{f_conta}\NormalTok{(}\DecValTok{20}\NormalTok{,}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 50
+\end{verbatim}
 
 \hypertarget{como-obter-ajuda-no-r}{%
 \section{Como obter ajuda no R}\label{como-obter-ajuda-no-r}}
@@ -2052,19 +2288,28 @@ Para mais detalhes sobre tabulação de dados, acesse \url{https://daslab-ufes.g
 \hypertarget{extensuxe3o-.txt-ou-.csv}{%
 \subsection{Extensão .txt ou .csv}\label{extensuxe3o-.txt-ou-.csv}}
 
-Para importar dados para o R, com extensão .txt ou .csv, uma sugestão é utilizar o pacote readr. Como exemplo, consideramos um arquivo chamado dados1.
+Para importar dados para o R, com extensão .txt ou .csv, uma sugestão é utilizar o pacote \texttt{readr}. Como exemplo, consideramos um arquivo chamado dados1 que queremos importar para o R.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(readr)}
-\NormalTok{dados_csv <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dados1.csv"}\NormalTok{)}
+\NormalTok{dados_csv <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"caminho-para-o-arquivo/dados1.csv"}\NormalTok{)}
 \NormalTok{dados_txt <-}\StringTok{ }\KeywordTok{read_delim}\NormalTok{(}\DataTypeTok{file =} \StringTok{"caminho-para-o-arquivo/dados1.txt"}\NormalTok{, }\DataTypeTok{delim =} \StringTok{" "}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-O argumento file= representa o caminho onde o arquivo está alocado. Se o arquivo estiver no diretório de trabalho, não precisa especificar o caminho até o arquivo. O argumento delim= indica qual caracter separa cada coluna no arquivo de texto.
+O argumento \texttt{file=} representa o caminho onde o arquivo está alocado. Se o arquivo estiver no diretório de trabalho (quando criamos o projeto e colocamos os arquivos de dados na pasta criada pelo projeto), não precisa especificar o caminho até o arquivo, como segue:
 
-Outra opção para leitura de arquivo .txt é usar a função read.table que já está salva na base, ou seja, não é necessário instalar pacote.
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados_csv <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dados1.csv"}\NormalTok{)}
+\NormalTok{dados_txt <-}\StringTok{ }\KeywordTok{read_delim}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dados1.txt"}\NormalTok{, }\DataTypeTok{delim =} \StringTok{" "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+O argumento \texttt{delim=} indica qual o separador das colunas no arquivo de texto.
+
+Outra opção para leitura de arquivo .txt é usar a função \texttt{read.table} que já está salva na base, ou seja, não é necessário instalar pacotes.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2072,9 +2317,9 @@ Outra opção para leitura de arquivo .txt é usar a função read.table que já
 \end{Highlighting}
 \end{Shaded}
 
-O argumento header indica se a primeira linha do arquivo consta o nome das variáveis. Se for T (TRUE), a primeira linha é indicada como nome das variáveis. O default é header=F.
+O argumento header indica se a primeira linha do arquivo consta o nome das variáveis. Se for T (TRUE), a primeira linha é indicada como nome das variáveis. O \emph{default} (padrão se o usuário não mudar o argumento) é \texttt{header=F}.
 
-Vale ressaltar que para cada função read\_, existe uma respectiva função write\_ para salvar o arquivo no formato de interesse. Como exemplo, queremos salvar a base de dados cars.
+Vale ressaltar que para cada função \texttt{read\_}, existe uma respectiva função \texttt{write\_} para salvar o arquivo no formato de interesse. Como exemplo, queremos salvar a base de dados mtcars na pasta do meu computador com o nome cars:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2086,7 +2331,7 @@ Vale ressaltar que para cada função read\_, existe uma respectiva função wri
 \hypertarget{arquivos-em-excel}{%
 \subsection{Arquivos em Excel}\label{arquivos-em-excel}}
 
-O pacote readxl pode ser utilizado para leiturade arquivos do Excel, como .xls e xlsx.
+O pacote \texttt{readxl} pode ser utilizado para leitura de arquivos do Excel, como .xls e xlsx.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2096,7 +2341,9 @@ O pacote readxl pode ser utilizado para leiturade arquivos do Excel, como .xls e
 \end{Highlighting}
 \end{Shaded}
 
-Uma maneira mais simples é a utilização da função read\_excel(), pois ela auto detecta a extensão do arquivo.
+Dentre os argumentos dessas funções (veja o \texttt{help()}de cada uma delas), o argumento \texttt{na} indica quais strings (textos) devem ser interpretados como \texttt{NA}. O \emph{default} é considerar espaço em branco no excel.
+
+Uma maneira mais simples é a utilização da função \texttt{read\_excel()}, pois ela auto detecta a extensão do arquivo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2106,10 +2353,19 @@ Uma maneira mais simples é a utilização da função read\_excel(), pois ela a
 \end{Highlighting}
 \end{Shaded}
 
+Podemos também exportar um arquivo em excel (.xls e .xlsx) ao considerar a função \texttt{write\_xlsx} do pacote \texttt{writexl}. Suponha que temos o interesse em salvar a base de dados \texttt{dados} em excel na pasta do computador (exportar) com o nome de \texttt{dados\_correto}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(writexl)}
+\KeywordTok{write_xlsx}\NormalTok{(dados, }\StringTok{"dados_correto.xlsx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{arquivos-de-outros-softwares}{%
 \subsection{Arquivos de outros softwares}\label{arquivos-de-outros-softwares}}
 
-Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem ser utilizadas as funções do pacote haven.
+Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem ser utilizadas as funções do pacote \texttt{haven}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2120,7 +2376,7 @@ Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem
 \end{Highlighting}
 \end{Shaded}
 
-Outra opção de pacote para importação de dados de outros softwares é o foreign. Além do SAS, STAT e SPSS, ele também lê dados do Octave, Minitab e Epi Info.
+Outra opção de pacote para importação de dados de outros softwares é o \texttt{foreign}. Além do SAS, STAT e SPSS, ele também lê dados do Octave, Minitab e Epi Info.
 
 \hypertarget{consistencia}{%
 \section{Análise de consistência e tratamento dos dados}\label{consistencia}}
@@ -3280,7 +3536,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-120-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3292,7 +3548,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-121-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf}
 
 \textbf{Gráfico de barras} - analisando duas variáveis qualitativas:
 
@@ -3307,7 +3563,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-122-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf}
 
 Mesmo gráfico acima, mas agora com a porcentagem escrito no gráfico:
 
@@ -3324,7 +3580,7 @@ Mesmo gráfico acima, mas agora com a porcentagem escrito no gráfico:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-123-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf}
 
 Outra forma de fazer um gráfico de barras para duas variáveis qualitativas:
 
@@ -3337,7 +3593,7 @@ Outra forma de fazer um gráfico de barras para duas variáveis qualitativas:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-124-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf}
 
 Veja o site para mais detalhes sobre gráfico de barras:
 \url{http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization\#barplot-of-counts}.
@@ -3355,7 +3611,7 @@ Histograma:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-125-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf}
 
 Boxplot:
 
@@ -3369,7 +3625,7 @@ Boxplot:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-126-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf}
 
 \textbf{Gráficos para variáveis quantitativas} - variável quantitativa por uma variável de grupo:
 
@@ -3383,7 +3639,7 @@ Boxplot:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-127-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf}
 
 \textbf{Gráficos para variáveis quantitativas} - duas variáveis quantitativas:
 
@@ -3399,7 +3655,7 @@ Gráfico de dispersão:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-128-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf}
 
 Gráfico de dispersão identificando o grupo (progesterona ou placebo):
 
@@ -3414,7 +3670,7 @@ Gráfico de dispersão identificando o grupo (progesterona ou placebo):
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-129-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf}
 
 \hypertarget{pacote-esquisse}{%
 \subsection{Pacote esquisse}\label{pacote-esquisse}}

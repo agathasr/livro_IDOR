@@ -442,7 +442,10 @@ Vale também ressaltar que se você digitar um comando que o R não reconhece, e
 
 #### Atribuição 
 
-Para atribuir a um objeto, o sinal de atribuição é = ou <- (preferível). 
+Podemos salvar valores dentro de um objeto, que é simplemente um nome que guarda um valor, vetor, matriz, lista ou base de dados. 
+
+Para atribuir a um objeto, o sinal de atribuição é `=` ou `<-` (preferível). 
+
 Exemplos:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 x <- 10/2
@@ -473,7 +476,7 @@ x <- banana
 x <- "banana"
 x
 ```
-O primeiro caso (x<-banana) não deu certo, pois ele entendeu que estamos atribuindo a x outro objeto banana, que não foi declarado. Para atribuir o string banana à x, precisamos colocar entre aspas ou aspas simples. Uma string sem aspas é entendido como um objeto, veja abaixo:
+O primeiro caso (x <- banana) não deu certo, pois ele entendeu que estamos atribuindo a x outro objeto banana, que não foi declarado. Para atribuir o string banana à x, precisamos colocar entre aspas ou aspas simples. Uma string sem aspas é entendido como um objeto, veja abaixo:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 banana <- 30
 x <- banana
@@ -511,7 +514,7 @@ rm(list=ls())
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 x <- c(2,3,4)
 x
-y <- seq(1:10)
+y <- seq(1,10)
 y
 z <- rep(1,10)
 z
@@ -558,7 +561,7 @@ length(imc)
 #### Matrizes
 Matrizes são vetores numéricos com duas dimensões, que são simplesmente a linha e a coluna às quais o elemento pertence.
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-x <- matrix(seq(1:16), nrow=4,ncol=4)
+x <- matrix(seq(1,16), nrow=4,ncol=4)
 x
 ```
 Note que os números de 1 a 16 foram dispostos na matriz coluna por coluna ou seja, preenchendo de cima para baixo e depois da esquerda para a direita.
@@ -590,23 +593,23 @@ x[,3] <- d
 ```
 Qual a dimensao da matriz x?
 
-Vimos que para vetor usamos o comando length(). Serve par matriz? Vamos testar:
+Vimos que para vetor usamos o comando length(). Serve para matriz? Vamos testar:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 length(x)
 ```
-Note que é retornado o num de colunas vezes o número de linhas (4*4). Mas o que quero saber é o numero de linhas e de colunas. Para isso, o comando é dim().
+Note que retorna o número de colunas vezes o número de linhas (4*4=16). Mas o que quero saber é o numero de linhas e de colunas. Para isso, o comando é `dim()`.
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 dim(x)
 ```
 
-Para concatenar linhas em uma matriz, podemos usar o comando rbind():
+Para concatenar linhas em uma matriz, podemos usar o comando `rbind()`:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 vet <- c(2,20,12,34)
 x2 <- rbind(x,vet)
 x2
 ```
 
-Para concatenar colunas em uma matriz, podemos usar o comando cbind():
+Para concatenar colunas em uma matriz, podemos usar o comando `cbind()`:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 v2 <- c(25,10,15,4) 
 x3 <- cbind(x,v2)
@@ -628,7 +631,7 @@ Essa é a grande diferença entre data.frame’s e matrizes (matriz é só numer
 
 Posso criar um data frame no R com os vetores, por exemplo:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-ID <- seq(1:6)
+ID <- seq(1,6)
 pes <- c(62, 70, 52, 98, 90, 70)
 alt <- c(1.70, 1.82, 1.75, 1.94, 1.84, 1.61)
 imc <- pes/(alt^2)
@@ -636,25 +639,28 @@ dados <- data.frame(ID=ID,peso=pes,altura=alt, imc=imc)
 dados
 ```
 
-Posso pensar que o dat frame tem a mesma ideia de matriz. Quero olhar os dados de altura. Sei que altura está na coluna 3. 
+Posso pensar que o data frame tem a mesma ideia de matriz. Quero olhar os dados de altura. Sei que altura está na coluna 3. 
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 dados[,3]
 ```
-Mas existe uma maneira mais facil de selecionar a variavel de interesse:
-Por ser um data frame, posso usar $:
+Mas existe uma maneira mais fácil de selecionar a variável de interesse sem ter que saber em qual coluna ela está. 
+Por ser um data frame, posso usar `$` da seguinte maneira:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 dados$altura
 ```
 
-Putz, esqueci de colocar a varivel de grupo no data frame. Tenho que criar tudo de novo? Não:
+Putz, esqueci de colocar a variável de grupo no data frame. Tenho que criar tudo de novo? Não:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 gr <- c(rep(1,3),rep(2,3))
 dados$grupo <- gr
 
 dados
 ```
+Veja que no "dados$grupo" foi inserido o objeto "gr". Se "gr" não tivesse o mesmo número de linhas do data frame retornaria um erro. 
 
-Funcoes uteis para data.frame:
+**Funções úteis para data.frame:**
+
+Ainda não falamos com muito detalhes sobre funções no R, faremos isso mais adiante. Mas por enquanto, considere que sejam nomes já salvos no R e que, ao colocar o objeto da base de dados (no nosso exemplo é `dados`) dentro dos parênteses, retorna algumas informações úteis sobre a base de dados. São algumas delas:
 
 * head() - Mostra as primeiras 6 linhas.
 
@@ -669,22 +675,31 @@ Funcoes uteis para data.frame:
 
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 head(dados)
-tail(dados)
 dim(dados)
 names(dados)
 str(dados)
 ```
 
-#### Operadores Relacionais
-Igual a: ==
+#### Operadores lógicos
+
+A operação lógica nada mais é do que um teste que retorna verdadeiro (`TRUE`) ou falso (`FALSE`). Esses valores dois valores recebem uma classe especial: `logical`.
+
+
+* Igual a: ==
+
+Vamos ao testar se um valor é igual ao outro.
 
 Exemplo:
 
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 10==11
-```
 
-Diferente de: !=
+11==11
+```
+No primeiro retornou `FALSE`, pois realmente 10 não é igual a 11 e no segundo caso acima retornou `TRUE`, pois realmente 11 é igual a 11. 
+De maneira análoga funciona para os operadores abaixo:
+
+* Diferente de: !=
 
 Exemplo:
 
@@ -712,7 +727,12 @@ Exemplos:
 4<=4
 ```
 
-#### Operadores Lógicos
+* Um outro operador muito útil é o `%in%`. Com ele, podemos verificar se um valor está dentro de um vetor.
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+ex <- 1:15
+3 %in% ex
+```
 
 * E: & - será verdadeiro se os dois forem TRUE
 
@@ -739,28 +759,65 @@ x <- 15
 !x<30
 ```
 
-#### If e else
+#### Dados faltantes, infinitos e indefinições matemáticas
+
+* NA (Not Available): dado faltante/indisponível. Exemplo:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+x <- c(1,6,9)
+x[4]
+```
+retornou `NA` porque não há elemento na posição 4 do vetor x. 
+
+* NaN (Not a Number): indefinições matemáticas. Como 0/0 e log(-1).
+Exemplo:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,warning=FALSE,error=TRUE}
+log(-10)
+```
+
+* Inf (Infinito): número muito grande ou o limite matemático. Aceita sinal negativo -Inf.
+Exemplo:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,warning=FALSE,error=TRUE}
+10^14321
+```
+
+#### Condicionamento : If e else
+
+As estruturas if e else servem para executar um código apenas se uma condição (teste lógico) for satisfeita.
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+a <- 224
+b <- 225
+if (a==b) { 
+  v <- 10
+} else {
+  v <- 15
+  }
+v
+```
+Veja que o R só executa o conteúdo das chaves {} se a expressão dentro dos parênteses () retornar `TRUE`. 
+
+Note que a condição de igualdade é representada por dois iguais ==. Como dito anteriormente, apenas um igual = é símbolo de atribuição (preferível <-). 
+
+Veja outro exemplo:
 
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 a <- 224
 b <- 225
-if (a==b) { v=10
-} else {v=15}
+if (a==b) { 
+  v <- 10
+} else if (a > b) {
+  v <- 15
+  } else {
+    v <- 25
+    }
 v
 ```
+Veja que nesse exemplo gostaria de usar mais de duas condições e por isso usamos a estrutura intermediária else if. 
 
-```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-a <- 224
-b <- 225
-if (a==b) { v=10
-} else if (a > b) {v=15
-} else {v=25}
-v
-```
-Note que a condição de igualdade é representada por dois iguais ==. Como dito anteriormente, apenas um igual = é símbolo de atribuição (mas preferível <-). 
+#### Iterador for
 
-#### For
-Seja o vetor m dado por:
+O for serve para repetir uma mesma tarefa para um conjunto de valores diferentes. Cada repetição é chamada de iteração.
+
+Como exemplo, considere o vetor atribuído ao objeto m como segue:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
 m <- c(1,20,50,60,100)
 ```
@@ -773,40 +830,114 @@ for (i in 1: length(m)){
 }
 p
 ```
-Note que primeiro definimos o objeto p. 
+Note que primeiro definimos o objeto p, recebendo `NULL`. O `NULL` representa a ausência de um objeto e serve para já declarar algum objeto que receberá valor na sequência. No caso, ao rodar o for, o p é um vetor de tamanho 5 (tamanho do vetor m). 
+
+No exemplo, temos 5 iterações e para cada valor de i, correndo de 1 até 5 (tamanho de m), pegamos o valor de m na posição i e dividimos por sua posição. Assim formamos o vetor p. 
 
 
 #### Funções
-Vamos criar uma função que soma seus dois argumentos. 
+
+Funções no R são nomes que guardam um código de R. A ideia é que sempre que rodar a função com os seus argumentos, o código que ela guarda será executado e o resultado será retornado. 
+
+Já usamos anteriormente algumas funções que estão na base do R. Por exemplo, quando usamos `class()` para entender a classe do objeto que o R está entendendo. Colocamos um argumento dentro do parênteses e o R retornou qual a classe do objeto em questão. Relembre o que falamos ao perguntar ao R qual a classe do vetor oi criado:
 ```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-f.soma <- function(x,y) {
-  out <- x+y
+oi <- c(10,20,2,1,0.5)
+class(oi)
+```
+
+Agora vamos conversar sobre outra função já criada e disponibilizada na base do R: `mean`. Essa função retorna a média do vetor que está em seu argumento. Vamos calcular a média dos valores do vetor oi:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+mean(oi)
+```
+
+Considere que, por algum motivo, tenha no vetor oi uma observação faltante. No R, dado faltante é caracterizado por `NA`. 
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+oi <- c(10,20,2,1,0.5,NA)
+```
+Perceba que, apesar de `NA` ser um texto, não coloquei entre aspas porque quero falar para o R que naquela posição não tem valor e o R entende isso ao ler `NA` (sem aspas). Se colocar entre aspas, ele entenderá como sendo um texto e não mais como valor faltante. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+mean(oi)
+```
+
+Como não sabemos o valor do elemento na posição 6 do vetor oi, o R não teria como calcular a média de todos os 6 valores e por isso devolve `NA`. No entanto, queremos calcular a média dos elementos de oi ao retirar os valores faltantes, ou seja, queremos fazer: (10+20+2+1+0.5)/5. 
+Então devemos falar para o R o que queremos e, para isso, podemos utilizar o argumento `na.rm = TRUE`:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+mean(oi,na.rm = TRUE)
+```
+
+**Importantes:**
+
+1) se a função tiver mais de um argumento, eles são sempre separados por vírgulas;
+
+2) cada função tem os seus próprios argumentos. Para saber quais são e como usar os argumentos de uma função, basta acessar a sua documentação. Uma forma de fazer isso é pela função `help`, cujo argumento é o nome da função que precisa de ajuda:
+```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
+help(mean)
+```
+Veja que abrirá a documentação sobre a função `mean` no menu "Help" do RStudio e lá é possível ver os argumentos e exemplos de uso da função em questão. 
+
+Ainda sobre funções já presentes no R, vamos considerar agora a função `sample`. Veja a documentação dessa função para ver o que ela faz: 
+```{r, eval=FALSE,include=TRUE,echo=TRUE,error=TRUE}
+help(sample)
+```
+
+A função `sample` retorna uma amostra de um vetor com tamanho especificado em um de seus argumentos com ou sem reposição. Ela apresenta quatro argumentos: `sample(x, size, replace = FALSE, prob = NULL)`, em que: `x` é o vetor do qual será amostrado o número de elementos especificado no argumento `size`, seja com ou sem reposição (argumento `replace`) e com dadas probabilidades de seleção, especificadas em `prob`. 
+
+Quero usar essa função para amostrar do objeto oi (`x=oi`) dois elementos (`size=2`) em uma seleção com reposição (`replace = TRUE`) e que a probabilidade de seleção seja a mesma para todos os elementos do vetor oi. No caso da probabilidade, como podemos ver na documentação da função `sample`, o _default_ (padrão se o usuário não mudar o argumento) é ser a mesma probabilidade de seleção para todos os elementos. Assim, se o usuário nada especificar para esse argumento, o R entenderá o seu _default_. O mesmo vale para o argumento `replace`: caso fosse o interesse fazer a seleção sem reposição, não precisaríamos colocar esse argumento porque seu _default_ é `FALSE`. 
+
+```{r, eval=TRUE,include=TRUE,echo=FALSE,error=TRUE}
+oi <- c(10,20,2,1,0.5)
+```
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+sample(x=oi,size=2,replace=TRUE) #não colocamos argumento prob porque vamos usar o seu default (probs iguais).
+```
+
+Também poderíamos usar a mesma função sem colocar o nome dos argumentos:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+sample(oi,2,TRUE) 
+```
+Mas, nesse caso, é importante que se respeite a ordem dos argumentos: o vetor tem que ser o primeiro, o segundo argumento é `size` e assim por diante. 
+
+Vale ressaltar que as duas últimas saídas não necessariamente serão as mesmas, porque é feito um sorteio aleatório de dois elementos de oi em cada uma delas. 
+
+Além de usar funções já prontas, podemos criar novas funções. Suponha que queremos criar uma função de dois argumentos que retorna o primeiro mais três vezes o segundo argumento. Criamos a função no que segue:
+ 
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+f_conta <- function(x,y) {
+  out <- x+3*y
   return(out)
 }
 ```
  A função acima tem:
- * o nome: f.soma;
+ 
+ * o nome: f_conta;
  
  * os argumentos: x e y;
  
- * o corpo out <- x+y  e
+ * o corpo out <- x+3*y  e
  
  * o que retorna return(out).
 
-Vamos agora chamar a função:
-```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
-f.soma(x=10,y=20)
+Suponha que eu queira fazer a conta: 10+3*20. Podemos fazer isso ao chamar a função criada `f_conta`. 
 
-f.soma(10,20)
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+f_conta(x=10,y=20)
+```
+Veja que o cálculo acima retorna exatamente o mesmo que o seguinte:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+f_conta(y=20,x=10)
+```
+Pois mudei a ordem dos argumentos, mas acompanhado com os nomes dos argumentos.  Se eu não quiser colocar os nomes dos argumentos, precisa tomar cuidado para não errar a ordem deles. Pois:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+f_conta(10,20)
+```
+é diferente de 
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+f_conta(20,10)
 ```
 
-#### Dados faltantes, infinitos e indefinições matemáticas
 
-* NA (Not Available): dado faltante/indisponível. 
-
-* NaN (Not a Number): indefinições matemáticas. Como 0/0 e log(-1).
-
-* Inf (Infinito): número muito grande ou o limite matemático. Aceita sinal negativo -Inf.
 
 ## Como obter ajuda no R
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  27 OCT 2020 09:50
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  31 OCT 2020 11:33
 entering extended mode
 **./livro_R_Agatha.tex
 (livro_R_Agatha.tex
@@ -1037,946 +1037,948 @@ File: figures/rstudio6.png Graphic file (type bmp)
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 778.
 [36] [37]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 903--903
+Overfull \hbox (17.25pt too wide) in paragraph at lines 906--906
 []\TU/lmtt/m/n/10 ## Error in eval(expr, envir, enclos): objeto []banana[] não 
 encontrado[] 
  []
 
-[38] [39] [40] [41] [42] [43] [44] [45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1783--1784
+[38] [39] [40] [41]
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+[42] [43] [44] [45] [46] [47] [48] [49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 2019--2020
 []\TU/lmr/m/n/10 Help/documentação do R (comandos help(nome_da_funcao) ou
  []
 
 File: figures/help_R.png Graphic file (type bmp)
 <figures/help_R.png>
-[47] [48]
-Underfull \hbox (badness 2600) in paragraph at lines 1894--1895
+[51] [52]
+Underfull \hbox (badness 2600) in paragraph at lines 2130--2131
 []\TU/lmr/m/n/10 Se você tivesse carregado o pacote \TU/lmtt/m/n/10 dplyr \TU/l
 mr/m/n/10 anteriormente (pela função
  []
 
-[49] [50]
+[53] [54
+
+]
 Chapter 3.
 
 Underfull \vbox (badness 4096) has occurred while \output is active []
 
-[51
-
-]
+[55]
 File: figures/esquma_pop_amos.png Graphic file (type bmp)
 <figures/esquma_pop_amos.png>
-[52]
+[56]
 File: figures/tipos_variaveis.png Graphic file (type bmp)
 <figures/tipos_variaveis.png>
-[53] [54] [55]
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+[57]
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+[58] [59] [60]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##       ID Grupo CORION []Data aval[]         []Data nascime
 nto[]   []COR BRANCO[][] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##    <dbl> <dbl> <chr>  <dttm>              <dttm>          
            <dbl>[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  1     1     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00            1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  2     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00            1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  3     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00            1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  4     3     1 Di     2016-02-17 00:00:00 1991-02-23 00:00
 :00            2[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  5     5     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00            2[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  6     6     1 Di     2016-03-21 00:00:00 1989-03-28 00:00
 :00            2[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  7     7     2 Di     2016-02-17 00:00:00 1985-02-24 00:00
 :00            2[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  8     8     1 Di     2017-12-14 00:00:00 1988-12-21 00:00
 :00            1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ##  9     9     1 Di     2017-04-23 00:00:00 1980-05-02 00:00
 :00            3[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ## 10    10     2 Di     2016-03-21 00:00:00 1984-03-29 00:00
 :00            1[] 
  []
 
-[56]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2177--2177
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ## # ... with 98 more rows, and 15 more variables: []Peso Pré
 [] <dbl>, ALT <dbl>,[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ## #   Gesta <dbl>, Para <dbl>, Aborto <dbl>, IND_AP <dbl>, T
 abagismo <dbl>,[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ## #   Alcool <dbl>, Drogas <dbl>, IG_Aval <dbl>, MedidaColo 
 <dbl>,[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2433--2433
 []\TU/lmtt/m/n/10 ## #   Num_contra_CTG <dbl>, []IGP semana[] <dbl>, []IGP dia[
 ] <dbl>, oi <lgl>[] 
  []
 
 
-Overfull \hbox (38.25pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (38.25pt too wide) in paragraph at lines 2463--2463
 []\TU/lmtt/m/n/10 ##  [1] "ID"              "Grupo"           "CORION"         
  "Data aval"[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2463--2463
 []\TU/lmtt/m/n/10 ##  [5] "Data nascimento" "COR BRANCO"      "Peso Pré"       
  "ALT"[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2463--2463
 []\TU/lmtt/m/n/10 ##  [9] "Gesta"           "Para"            "Aborto"         
  "IND_AP"[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2463--2463
 []\TU/lmtt/m/n/10 ## [13] "Tabagismo"       "Alcool"          "Drogas"         
  "IG_Aval"[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2463--2463
 []\TU/lmtt/m/n/10 ## [17] "MedidaColo"      "Num_contra_CTG"  "IGP semana"     
  "IGP dia"[] 
  []
 
-
-Overfull \hbox (38.25pt too wide) in paragraph at lines 2238--2238
+[61]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 2494--2494
 []\TU/lmtt/m/n/10 ##  [1] "id"              "grupo"           "corion"         
  "data_aval"[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 2238--2238
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2494--2494
 []\TU/lmtt/m/n/10 ##  [5] "data_nascimento" "cor_branco"      "peso_pre"       
  "alt"[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2238--2238
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2494--2494
 []\TU/lmtt/m/n/10 ##  [9] "gesta"           "para"            "aborto"         
  "ind_ap"[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2238--2238
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2494--2494
 []\TU/lmtt/m/n/10 ## [13] "tabagismo"       "alcool"          "drogas"         
  "ig_aval"[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2238--2238
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2494--2494
 []\TU/lmtt/m/n/10 ## [17] "medida_colo"     "num_contra_ctg"  "igp_semana"     
  "igp_dia"[] 
  []
 
-[57]
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##       id grupo corion data_aval           data_nascimento 
     cor_branco[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##    <dbl> <dbl> <chr>  <dttm>              <dttm>          
          <dbl>[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  1     1     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  2     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  3     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  4     3     1 Di     2016-02-17 00:00:00 1991-02-23 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  5     5     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  6     6     1 Di     2016-03-21 00:00:00 1989-03-28 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  7     7     2 Di     2016-02-17 00:00:00 1985-02-24 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  8     8     1 Di     2017-12-14 00:00:00 1988-12-21 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ##  9     9     1 Di     2017-04-23 00:00:00 1980-05-02 00:00
 :00          3[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ## 10    10     2 Di     2016-03-21 00:00:00 1984-03-29 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ## # ... with 98 more rows, and 15 more variables: peso_pre <
 dbl>, alt <dbl>,[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ## #   gesta <dbl>, para <dbl>, aborto <dbl>, ind_ap <dbl>, t
 abagismo <dbl>,[] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ## #   alcool <dbl>, drogas <dbl>, ig_aval <dbl>, medida_colo
  <dbl>,[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2524--2524
 []\TU/lmtt/m/n/10 ## #   num_contra_ctg <dbl>, igp_semana <dbl>, igp_dia <dbl>,
  oi <lgl>[] 
  []
 
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+[62]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##       id grupo corion data_aval           data_nascimento 
     cor_branco[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##    <dbl> <dbl> <chr>  <dttm>              <dttm>          
          <dbl>[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  1     1     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  2     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  3     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  4     3     1 Di     2016-02-17 00:00:00 1991-02-23 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  5     5     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  6     6     1 Di     2016-03-21 00:00:00 1989-03-28 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  7     7     2 Di     2016-02-17 00:00:00 1985-02-24 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  8     8     1 Di     2017-12-14 00:00:00 1988-12-21 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ##  9     9     1 Di     2017-04-23 00:00:00 1980-05-02 00:00
 :00          3[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ## 10    10     2 Di     2016-03-21 00:00:00 1984-03-29 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ## # ... with 98 more rows, and 14 more variables: peso_pre <
 dbl>, alt <dbl>,[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2297--2297
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ## #   gesta <dbl>, para <dbl>, aborto <dbl>, ind_ap <dbl>, t
 abagismo <dbl>,[] 
  []
 
-[58]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 2297--2297
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2553--2553
 []\TU/lmtt/m/n/10 ## #   alcool <dbl>, drogas <dbl>, ig_aval <dbl>, medida_colo
  <dbl>,[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ##      id dupe_count grupo corion data_aval           data_n
 ascimento[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 1     2          2     1 Mono   2016-03-21 00:00:00 1982-0
 3-30 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 2     2          2     1 Mono   2016-03-21 00:00:00 1982-0
 3-30 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 3    11          2     2 Di     2016-02-17 00:00:00 1981-0
 2-25 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 4    11          2     2 Di     2016-02-17 00:00:00 1981-0
 2-25 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 5    17          2     1 Di     2017-04-23 00:00:00 1993-0
 4-29 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 6    17          2     1 Di     2017-04-23 00:00:00 1993-0
 4-29 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 7    23          2     2 Di     2016-02-17 00:00:00 1997-0
 2-21 00:00:00[] 
  []
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## 8    23          2     2 Di     2016-02-17 00:00:00 1997-0
 2-21 00:00:00[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## # ... with 15 more variables: cor_branco <dbl>, peso_pre <
 dbl>, alt <dbl>,[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## #   gesta <dbl>, para <dbl>, aborto <dbl>, ind_ap <dbl>, t
 abagismo <dbl>,[] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 2326--2326
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2582--2582
 []\TU/lmtt/m/n/10 ## #   alcool <dbl>, drogas <dbl>, ig_aval <dbl>, medida_colo
  <dbl>,[] 
  []
 
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+[63]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##       id grupo corion data_aval           data_nascimento 
     cor_branco[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##    <dbl> <dbl> <chr>  <dttm>              <dttm>          
          <dbl>[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  1     1     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  2     2     1 Mono   2016-03-21 00:00:00 1982-03-30 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  3     3     1 Di     2016-02-17 00:00:00 1991-02-23 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  4     5     2 Di     2017-04-23 00:00:00 1988-04-30 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  5     6     1 Di     2016-03-21 00:00:00 1989-03-28 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  6     7     2 Di     2016-02-17 00:00:00 1985-02-24 00:00
 :00          2[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  7     8     1 Di     2017-12-14 00:00:00 1988-12-21 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  8     9     1 Di     2017-04-23 00:00:00 1980-05-02 00:00
 :00          3[] 
  []
 
-[59]
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ##  9    10     2 Di     2016-03-21 00:00:00 1984-03-29 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ## 10    11     2 Di     2016-02-17 00:00:00 1981-02-25 00:00
 :00          1[] 
  []
 
 
-Overfull \hbox (59.25pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ## # ... with 94 more rows, and 14 more variables: peso_pre <
 dbl>, alt <dbl>,[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ## #   gesta <dbl>, para <dbl>, aborto <dbl>, ind_ap <dbl>, t
 abagismo <dbl>,[] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 2362--2362
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2618--2618
 []\TU/lmtt/m/n/10 ## #   alcool <dbl>, drogas <dbl>, ig_aval <dbl>, medida_colo
  <dbl>,[] 
  []
 
-
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2383--2383
-[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
-ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
-[]\n        class=[]table table-condensed[]")[] 
- []
-
-
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2406--2406
-[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
-ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
-[]\n        class=[]table table-condensed[]")[] 
- []
-
-[60]
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2432--2432
-[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
-ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
-[]\n        class=[]table table-condensed[]")[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
- peso_pre   alt gesta[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
-    <dbl> <dbl> <dbl>[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ## 1     9 1     Di     2017-04-23 1980-05-02      3         
-       72  1.65     8[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
-d_ap <fct>,[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
-dbl>,[] 
- []
-
-
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2452--2452
-[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
-bl>, igp_dia <dbl>[] 
- []
-
-[61]
-Overfull \vbox (2.20996pt too high) detected at line 2519
- []
-
-[62]
-File: figures/print-tela.png Graphic file (type bmp)
-<figures/print-tela.png>
-[63]
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
- peso_pre   alt gesta[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
-    <dbl> <dbl> <dbl>[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## 1    NA <NA>  <NA>   NA         NA              <NA>      
-       NA    NA    NA[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## 2    27 prog~ di     2016-02-17 1997-02-21      nbranca   
-       58   163     1[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## 3    NA <NA>  <NA>   NA         NA              <NA>      
-       NA    NA    NA[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
-d_ap <fct>,[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
-dbl>,[] 
- []
-
-
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2548--2548
-[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
-bl>, igp_dia <dbl>[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
- peso_pre   alt gesta[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
-    <dbl> <dbl> <dbl>[] 
- []
-
-
-Overfull \hbox (85.5pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ## 1    21 plac~ mono   2017-04-23 1988-04-30      branca    
-       44  1.64     1[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
-d_ap <fct>,[] 
- []
-
-
-Overfull \hbox (1.5pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
-dbl>,[] 
- []
-
-
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2574--2574
-[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
-bl>, igp_dia <dbl>[] 
- []
-
-
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2594--2594
-[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
-ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
-[]\n        class=[]table table-condensed[]")[] 
- []
-
 [64]
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2622--2622
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2639--2639
 []\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
 ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
 []\n        class=[]table table-condensed[]")[] 
  []
 
 
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2644--2644
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2662--2662
+[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
+ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
+[]\n        class=[]table table-condensed[]")[] 
+ []
+
+
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2688--2688
 []\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
 ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
 []\n        class=[]table table-condensed[]")[] 
  []
 
 [65]
-Overfull \hbox (605.25pt too wide) in paragraph at lines 2697--2697
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
+ peso_pre   alt gesta[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
+    <dbl> <dbl> <dbl>[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ## 1     9 1     Di     2017-04-23 1980-05-02      3         
+       72  1.65     8[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
+d_ap <fct>,[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
+dbl>,[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2708--2708
+[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
+bl>, igp_dia <dbl>[] 
+ []
+
+[66]
+File: figures/print-tela.png Graphic file (type bmp)
+<figures/print-tela.png>
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
+ peso_pre   alt gesta[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
+    <dbl> <dbl> <dbl>[] 
+ []
+
+[67]
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## 1    NA <NA>  <NA>   NA         NA              <NA>      
+       NA    NA    NA[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## 2    27 prog~ di     2016-02-17 1997-02-21      nbranca   
+       58   163     1[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## 3    NA <NA>  <NA>   NA         NA              <NA>      
+       NA    NA    NA[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
+d_ap <fct>,[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
+dbl>,[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2804--2804
+[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
+bl>, igp_dia <dbl>[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ##      id grupo corion data_aval  data_nascimento cor_branco
+ peso_pre   alt gesta[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ##   <dbl> <fct> <fct>  <date>     <date>          <fct>     
+    <dbl> <dbl> <dbl>[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ## 1    21 plac~ mono   2017-04-23 1988-04-30      branca    
+       44  1.64     1[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ## # ... with 11 more variables: para <dbl>, aborto <dbl>, in
+d_ap <fct>,[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ## #   tabagismo <fct>, alcool <fct>, drogas <fct>, ig_aval <
+dbl>,[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2830--2830
+[]\TU/lmtt/m/n/10 ## #   medida_colo <dbl>, num_contra_ctg <dbl>, igp_semana <d
+bl>, igp_dia <dbl>[] 
+ []
+
+[68]
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2850--2850
 []\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
 ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
 []\n        class=[]table table-condensed[]")[] 
  []
 
-[66] [67]
-Underfull \hbox (badness 1383) in paragraph at lines 2863--2866
+
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2878--2878
+[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
+ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
+[]\n        class=[]table table-condensed[]")[] 
+ []
+
+
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2900--2900
+[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
+ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
+[]\n        class=[]table table-condensed[]")[] 
+ []
+
+[69]
+Overfull \hbox (605.25pt too wide) in paragraph at lines 2953--2953
+[]\TU/lmtt/m/n/10 ## Error in kable_latex(x = structure(c("Name", "Number of ro
+ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
+[]\n        class=[]table table-condensed[]")[] 
+ []
+
+[70] [71] [72]
+Underfull \hbox (badness 1383) in paragraph at lines 3119--3122
 []\TU/lmr/m/n/10 Crie a variável igp (idade gestacional do parto) obtida ao som
 ar
  []
 
-[68] [69] [70
+[73] [74
 
 ]
 Chapter 4.
-[71]
-Overfull \hbox (36.092pt too wide) in paragraph at lines 2972--2973
+[75]
+Overfull \hbox (36.092pt too wide) in paragraph at lines 3228--3229
 \TU/lmr/m/n/10 que, ao utilizar \TU/lmtt/m/n/10 view(freq(dados$prematuridade,c
 umul=FALSE,report.nas=FALSE))
  []
 
-[72] [73] [74] [75]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+[76] [77] [78] [79]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
-[76]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+[80]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ##       placebo                         19 (18.3%)   33 (31.
 7%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ##       progest                         25 (24.0%)   27 (26.
 0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3165--3165
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ##       placebo                         19 (36.5%)   33 (63.
 5%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ##       progest                         25 (48.1%)   27 (51.
 9%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3186--3186
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade           nao         
   sim          Total[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ##       placebo                         19 ( 43.2%)   33 ( 5
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ##       progest                         25 ( 56.8%)   27 ( 4
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ##         Total                         44 (100.0%)   60 (10
 0.0%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3207--3207
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
 
-[77] [78]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-120-1.pdf Graphic file (t
+[81] [82]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-120-1.pdf>
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (t
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf>
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-121-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[79]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-122-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-122-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[80]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-123-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-123-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[81]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-124-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-124-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[82]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-125-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-125-1.pdf>
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [83]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-126-1.pdf Graphic file (t
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-126-1.pdf>
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [84]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-127-1.pdf Graphic file (t
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-127-1.pdf>
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [85]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-128-1.pdf Graphic file (t
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-128-1.pdf>
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [86]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-129-1.pdf Graphic file (t
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (t
 ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-129-1.pdf>
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [87]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[88]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[89]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[90]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[91]
 File: figures/esquise1.png Graphic file (type bmp)
 <figures/esquise1.png>
 File: figures/esquise2.png Graphic file (type bmp)
 <figures/esquise2.png>
-[88] [89]
-Overfull \hbox (3.05891pt too wide) in paragraph at lines 3500--3502
+[92] [93]
+Overfull \hbox (3.05891pt too wide) in paragraph at lines 3756--3758
 []\TU/lmr/m/n/10 Construa uma tabela cruzada entre EDPS_antes_SN e EDPS_depois_
 SN; 
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 3502--3504
+Underfull \hbox (badness 6094) in paragraph at lines 3758--3760
 []\TU/lmr/m/n/10 Apresente uma tabela com as medidas descritivas da variável
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 3502--3504
+Underfull \hbox (badness 2277) in paragraph at lines 3758--3760
 \TU/lmr/m/n/10 tempo_amamentacao_meses por grupo de amamentação. Refaça
  []
 
-[90]
+[94]
 Chapter 5.
-(livro_R_Agatha.bbl [91
+(livro_R_Agatha.bbl [95
 
-] [92
+] [96
 
-]) [93] (livro_R_Agatha.aux)
+]) [97] (livro_R_Agatha.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19342 strings out of 412249
- 338237 string characters out of 2855678
- 827029 words of memory out of 3000000
- 38486 multiletter control sequences out of 15000+200000
+ 19341 strings out of 412249
+ 338238 string characters out of 2855678
+ 825990 words of memory out of 3000000
+ 38485 multiletter control sequences out of 15000+200000
  541579 words of font info for 87 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,6n,118p,880b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 84i,6n,118p,880b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on livro_R_Agatha.pdf (93 pages).
+Output written on livro_R_Agatha.pdf (97 pages).

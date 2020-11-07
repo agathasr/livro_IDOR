@@ -24,7 +24,7 @@
 <meta name="author" content="Agatha Rodrigues" />
 
 
-<meta name="date" content="2020-10-31" />
+<meta name="date" content="2020-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,9 +180,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.7.3" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#manipulação-de-datas"><i class="fa fa-check"></i><b>3.7.3</b> Manipulação de datas</a></li>
 <li class="chapter" data-level="3.7.4" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#filtragem-de-observações"><i class="fa fa-check"></i><b>3.7.4</b> Filtragem de observações</a></li>
 </ul></li>
-<li class="chapter" data-level="3.8" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#exercícios"><i class="fa fa-check"></i><b>3.8</b> Exercícios</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#teóricos"><i class="fa fa-check"></i><b>3.8.1</b> Teóricos</a></li>
-<li class="chapter" data-level="3.8.2" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#práticos-no-r"><i class="fa fa-check"></i><b>3.8.2</b> Práticos no R</a></li>
+<li class="chapter" data-level="3.8" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#manipulando-os-formatos-das-bases-de-dados"><i class="fa fa-check"></i><b>3.8</b> Manipulando os formatos das bases de dados</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#combinando-bases-de-dados"><i class="fa fa-check"></i><b>3.8.1</b> Combinando bases de dados</a></li>
+<li class="chapter" data-level="3.8.2" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#mudando-formato-da-base-de-dado"><i class="fa fa-check"></i><b>3.8.2</b> Mudando formato da base de dado</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#exercícios"><i class="fa fa-check"></i><b>3.9</b> Exercícios</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#teóricos"><i class="fa fa-check"></i><b>3.9.1</b> Teóricos</a></li>
+<li class="chapter" data-level="3.9.2" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#práticos-no-r"><i class="fa fa-check"></i><b>3.9.2</b> Práticos no R</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html"><i class="fa fa-check"></i><b>4</b> Análise exploratória dos dados</a><ul>
@@ -199,7 +203,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="intro.html"><a href="intro.html#materiais-complementares"><i class="fa fa-check"></i><b>4.5</b> Materiais complementares</a></li>
 <li class="chapter" data-level="4.6" data-path="conceitos-iniciais.html"><a href="conceitos-iniciais.html#exercícios"><i class="fa fa-check"></i><b>4.6</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html"><i class="fa fa-check"></i><b>5</b> Testes paramétricos para média</a></li>
+<li class="chapter" data-level="5" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html"><i class="fa fa-check"></i><b>5</b> Testes paramétricos para média</a><ul>
+<li class="chapter" data-level="5.1" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-média-de-população-única"><i class="fa fa-check"></i><b>5.1</b> Teste para média de população única</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -307,42 +313,42 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 <div id="extensão-.txt-ou-.csv" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Extensão .txt ou .csv</h3>
 <p>Para importar dados para o R, com extensão .txt ou .csv, uma sugestão é utilizar o pacote <code>readr</code>. Como exemplo, consideramos um arquivo chamado dados1 que queremos importar para o R.</p>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="conceitos-iniciais.html#cb171-1"></a><span class="kw">library</span>(readr)</span>
-<span id="cb171-2"><a href="conceitos-iniciais.html#cb171-2"></a>dados_csv &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;caminho-para-o-arquivo/dados1.csv&quot;</span>)</span>
-<span id="cb171-3"><a href="conceitos-iniciais.html#cb171-3"></a>dados_txt &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="dt">file =</span> <span class="st">&quot;caminho-para-o-arquivo/dados1.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="conceitos-iniciais.html#cb1-1"></a><span class="kw">library</span>(readr)</span>
+<span id="cb1-2"><a href="conceitos-iniciais.html#cb1-2"></a>dados_csv &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;caminho-para-o-arquivo/dados1.csv&quot;</span>)</span>
+<span id="cb1-3"><a href="conceitos-iniciais.html#cb1-3"></a>dados_txt &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="dt">file =</span> <span class="st">&quot;caminho-para-o-arquivo/dados1.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
 <p>O argumento <code>file=</code> representa o caminho onde o arquivo está alocado. Se o arquivo estiver no diretório de trabalho (quando criamos o projeto e colocamos os arquivos de dados na pasta criada pelo projeto), não precisa especificar o caminho até o arquivo, como segue:</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="conceitos-iniciais.html#cb172-1"></a>dados_csv &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;dados1.csv&quot;</span>)</span>
-<span id="cb172-2"><a href="conceitos-iniciais.html#cb172-2"></a>dados_txt &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="dt">file =</span> <span class="st">&quot;dados1.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="conceitos-iniciais.html#cb2-1"></a>dados_csv &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;dados1.csv&quot;</span>)</span>
+<span id="cb2-2"><a href="conceitos-iniciais.html#cb2-2"></a>dados_txt &lt;-<span class="st"> </span><span class="kw">read_delim</span>(<span class="dt">file =</span> <span class="st">&quot;dados1.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
 <p>O argumento <code>delim=</code> indica qual o separador das colunas no arquivo de texto.</p>
 <p>Outra opção para leitura de arquivo .txt é usar a função <code>read.table</code> que já está salva na base, ou seja, não é necessário instalar pacotes.</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="conceitos-iniciais.html#cb173-1"></a>dados_txt2 &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;dados1.txt&quot;</span>,<span class="dt">header=</span>T)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="conceitos-iniciais.html#cb3-1"></a>dados_txt2 &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;dados1.txt&quot;</span>,<span class="dt">header=</span>T)</span></code></pre></div>
 <p>O argumento header indica se a primeira linha do arquivo consta o nome das variáveis. Se for T (TRUE), a primeira linha é indicada como nome das variáveis. O <em>default</em> (padrão se o usuário não mudar o argumento) é <code>header=F</code>.</p>
 <p>Vale ressaltar que para cada função <code>read_</code>, existe uma respectiva função <code>write_</code> para salvar o arquivo no formato de interesse. Como exemplo, queremos salvar a base de dados mtcars na pasta do meu computador com o nome cars:</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="conceitos-iniciais.html#cb174-1"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtcars, <span class="dt">path =</span> <span class="st">&quot;cars.csv&quot;</span>)</span>
-<span id="cb174-2"><a href="conceitos-iniciais.html#cb174-2"></a><span class="kw">write_delim</span>(<span class="dt">x =</span> mtcars, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>, <span class="dt">path =</span> <span class="st">&quot;cars.txt&quot;</span>)<span class="er">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="conceitos-iniciais.html#cb4-1"></a><span class="kw">write_csv</span>(<span class="dt">x =</span> mtcars, <span class="dt">path =</span> <span class="st">&quot;cars.csv&quot;</span>)</span>
+<span id="cb4-2"><a href="conceitos-iniciais.html#cb4-2"></a><span class="kw">write_delim</span>(<span class="dt">x =</span> mtcars, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>, <span class="dt">path =</span> <span class="st">&quot;cars.txt&quot;</span>)<span class="er">)</span></span></code></pre></div>
 </div>
 <div id="arquivos-em-excel" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Arquivos em Excel</h3>
 <p>O pacote <code>readxl</code> pode ser utilizado para leitura de arquivos do Excel, como .xls e xlsx.</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="conceitos-iniciais.html#cb175-1"></a><span class="kw">library</span>(readxl)</span>
-<span id="cb175-2"><a href="conceitos-iniciais.html#cb175-2"></a>dados_excel &lt;-<span class="st"> </span><span class="kw">read_xls</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xls&quot;</span>) <span class="co">#Leitura do arquivo .xls</span></span>
-<span id="cb175-3"><a href="conceitos-iniciais.html#cb175-3"></a>dados_excelx &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xlsx&quot;</span>) <span class="co">#Leitura do arquivo .xlsx</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="conceitos-iniciais.html#cb5-1"></a><span class="kw">library</span>(readxl)</span>
+<span id="cb5-2"><a href="conceitos-iniciais.html#cb5-2"></a>dados_excel &lt;-<span class="st"> </span><span class="kw">read_xls</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xls&quot;</span>) <span class="co">#Leitura do arquivo .xls</span></span>
+<span id="cb5-3"><a href="conceitos-iniciais.html#cb5-3"></a>dados_excelx &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xlsx&quot;</span>) <span class="co">#Leitura do arquivo .xlsx</span></span></code></pre></div>
 <p>Dentre os argumentos dessas funções (veja o <code>help()</code>de cada uma delas), o argumento <code>na</code> indica quais strings (textos) devem ser interpretados como <code>NA</code>. O <em>default</em> é considerar espaço em branco no excel.</p>
 <p>Uma maneira mais simples é a utilização da função <code>read_excel()</code>, pois ela auto detecta a extensão do arquivo.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="conceitos-iniciais.html#cb176-1"></a><span class="kw">library</span>(readxl)</span>
-<span id="cb176-2"><a href="conceitos-iniciais.html#cb176-2"></a>dados_excel1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xls&quot;</span>)</span>
-<span id="cb176-3"><a href="conceitos-iniciais.html#cb176-3"></a>dados_excelx1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="conceitos-iniciais.html#cb6-1"></a><span class="kw">library</span>(readxl)</span>
+<span id="cb6-2"><a href="conceitos-iniciais.html#cb6-2"></a>dados_excel1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xls&quot;</span>)</span>
+<span id="cb6-3"><a href="conceitos-iniciais.html#cb6-3"></a>dados_excelx1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dados1.xlsx&quot;</span>)</span></code></pre></div>
 <p>Podemos também exportar um arquivo em excel (.xls e .xlsx) ao considerar a função <code>write_xlsx</code> do pacote <code>writexl</code>. Suponha que temos o interesse em salvar a base de dados <code>dados</code> em excel na pasta do computador (exportar) com o nome de <code>dados_correto</code>:</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="conceitos-iniciais.html#cb177-1"></a><span class="kw">library</span>(writexl)</span>
-<span id="cb177-2"><a href="conceitos-iniciais.html#cb177-2"></a><span class="kw">write_xlsx</span>(dados, <span class="st">&quot;dados_correto.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="conceitos-iniciais.html#cb7-1"></a><span class="kw">library</span>(writexl)</span>
+<span id="cb7-2"><a href="conceitos-iniciais.html#cb7-2"></a><span class="kw">write_xlsx</span>(dados, <span class="st">&quot;dados_correto.xlsx&quot;</span>)</span></code></pre></div>
 </div>
 <div id="arquivos-de-outros-softwares" class="section level3">
 <h3><span class="header-section-number">3.5.3</span> Arquivos de outros softwares</h3>
 <p>Para ler dados salvos em extensão de outros softwares: SPSS, STATA e SAS, podem ser utilizadas as funções do pacote <code>haven</code>.</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="conceitos-iniciais.html#cb178-1"></a><span class="kw">library</span>(haven)</span>
-<span id="cb178-2"><a href="conceitos-iniciais.html#cb178-2"></a>dados_stata &lt;-<span class="st"> </span><span class="kw">read_stata</span>(<span class="st">&quot;dados1.dta&quot;</span>)</span>
-<span id="cb178-3"><a href="conceitos-iniciais.html#cb178-3"></a>dados_spss &lt;-<span class="st"> </span><span class="kw">read_spss</span>(<span class="st">&quot;dados1.sav&quot;</span>)</span>
-<span id="cb178-4"><a href="conceitos-iniciais.html#cb178-4"></a>dados_sas &lt;-<span class="st"> </span><span class="kw">read_sas</span>(<span class="st">&quot;dados1.sas7bdat&quot;</span>)  </span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="conceitos-iniciais.html#cb8-1"></a><span class="kw">library</span>(haven)</span>
+<span id="cb8-2"><a href="conceitos-iniciais.html#cb8-2"></a>dados_stata &lt;-<span class="st"> </span><span class="kw">read_stata</span>(<span class="st">&quot;dados1.dta&quot;</span>)</span>
+<span id="cb8-3"><a href="conceitos-iniciais.html#cb8-3"></a>dados_spss &lt;-<span class="st"> </span><span class="kw">read_spss</span>(<span class="st">&quot;dados1.sav&quot;</span>)</span>
+<span id="cb8-4"><a href="conceitos-iniciais.html#cb8-4"></a>dados_sas &lt;-<span class="st"> </span><span class="kw">read_sas</span>(<span class="st">&quot;dados1.sas7bdat&quot;</span>)  </span></code></pre></div>
 <p>Outra opção de pacote para importação de dados de outros softwares é o <code>foreign</code>. Além do SAS, STAT e SPSS, ele também lê dados do Octave, Minitab e Epi Info.</p>
 </div>
 </div>
@@ -360,9 +366,9 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 <p>Para exemplificar o que for discutido, consideramos os dados fictícios de <span class="math inline">\(n=104\)</span> gestações gemelares, apresentado no Capítulo 2. O dicionário contém a explicação das variáveis, a identificação dos valores ausentes de cada variável e o rótulo das categorias de variáveis qualitativas. Uma boa prática na tabulação dos dados é manter o dicionário junto com a base de dados. Se a tabulação for realizada no Excel, por exemplo, manter o dicionário em uma outra aba.</p>
 <div id="importação-dos-dados" class="section level3">
 <h3><span class="header-section-number">3.6.1</span> Importação dos dados</h3>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="conceitos-iniciais.html#cb179-1"></a><span class="kw">library</span>(readxl)</span>
-<span id="cb179-2"><a href="conceitos-iniciais.html#cb179-2"></a>dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_gemelares.xlsx&quot;</span>)</span>
-<span id="cb179-3"><a href="conceitos-iniciais.html#cb179-3"></a>dados</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="conceitos-iniciais.html#cb9-1"></a><span class="kw">library</span>(readxl)</span>
+<span id="cb9-2"><a href="conceitos-iniciais.html#cb9-2"></a>dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_gemelares.xlsx&quot;</span>)</span>
+<span id="cb9-3"><a href="conceitos-iniciais.html#cb9-3"></a>dados</span></code></pre></div>
 <pre><code>## # A tibble: 108 x 21
 ##       ID Grupo CORION `Data aval`         `Data nascimento`   `COR BRANCO`
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;                     &lt;dbl&gt;
@@ -381,13 +387,13 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 ## #   Alcool &lt;dbl&gt;, Drogas &lt;dbl&gt;, IG_Aval &lt;dbl&gt;, MedidaColo &lt;dbl&gt;,
 ## #   Num_contra_CTG &lt;dbl&gt;, `IGP semana` &lt;dbl&gt;, `IGP dia` &lt;dbl&gt;, oi &lt;lgl&gt;</code></pre>
 <p><strong>Exercício</strong>: Na base em excel, substitua o espaço em branco (dados faltantes) por NA e rode o seguinte comando:</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="conceitos-iniciais.html#cb181-1"></a>dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_gemelares.xlsx&quot;</span>,<span class="dt">na=</span><span class="st">&quot;NA&quot;</span>)</span></code></pre></div>
-<p>O default do missing é o espaço em branco. Acesse o help em ?read_excel e veja na = "".</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="conceitos-iniciais.html#cb11-1"></a>dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_gemelares.xlsx&quot;</span>,<span class="dt">na=</span><span class="st">&quot;NA&quot;</span>)</span></code></pre></div>
+<p>O default do missing é o espaço em branco. Acesse o help em ?read_excel e veja <code>na = ""</code>.</p>
 </div>
 <div id="arrumação-da-base-de-dados" class="section level3">
 <h3><span class="header-section-number">3.6.2</span> Arrumação da base de dados</h3>
 <p>Inicialmente, vamos verificar os nomes das variáveis na base de dados por meio da função <code>names</code>. Note que os nomes tem letras maiúsculas, espaços e acento. Utilizar os dados com essas características não impossibilita as futuras análises, mas pode atrapalhar quando precisamos selecionar algumas dessas variáveis.</p>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="conceitos-iniciais.html#cb182-1"></a><span class="kw">names</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="conceitos-iniciais.html#cb12-1"></a><span class="kw">names</span>(dados)</span></code></pre></div>
 <pre><code>##  [1] &quot;ID&quot;              &quot;Grupo&quot;           &quot;CORION&quot;          &quot;Data aval&quot;      
 ##  [5] &quot;Data nascimento&quot; &quot;COR BRANCO&quot;      &quot;Peso Pré&quot;        &quot;ALT&quot;            
 ##  [9] &quot;Gesta&quot;           &quot;Para&quot;            &quot;Aborto&quot;          &quot;IND_AP&quot;         
@@ -395,10 +401,10 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 ## [17] &quot;MedidaColo&quot;      &quot;Num_contra_CTG&quot;  &quot;IGP semana&quot;      &quot;IGP dia&quot;        
 ## [21] &quot;oi&quot;</code></pre>
 <p>uma boa prática consiste em padronizar os nomes das variáveis, até para facilitar a lembrança deles. Para isso, utilizaremos o pacote <code>janitor</code> para a arrumação da base de dados. Usamos a função <code>clean_names()</code> para primeiro ajuste dos nomes das variáveis.</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="conceitos-iniciais.html#cb184-1"></a><span class="kw">library</span>(janitor)</span></code></pre></div>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="conceitos-iniciais.html#cb185-1"></a>dados &lt;-<span class="st"> </span>janitor<span class="op">::</span><span class="kw">clean_names</span>(dados) </span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="conceitos-iniciais.html#cb14-1"></a><span class="kw">library</span>(janitor)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="conceitos-iniciais.html#cb15-1"></a>dados &lt;-<span class="st"> </span>janitor<span class="op">::</span><span class="kw">clean_names</span>(dados) </span></code></pre></div>
 <p>Agora vamos ver como ficou o nome das variáveis:</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="conceitos-iniciais.html#cb186-1"></a><span class="kw">names</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="conceitos-iniciais.html#cb16-1"></a><span class="kw">names</span>(dados)</span></code></pre></div>
 <pre><code>##  [1] &quot;id&quot;              &quot;grupo&quot;           &quot;corion&quot;          &quot;data_aval&quot;      
 ##  [5] &quot;data_nascimento&quot; &quot;cor_branco&quot;      &quot;peso_pre&quot;        &quot;alt&quot;            
 ##  [9] &quot;gesta&quot;           &quot;para&quot;            &quot;aborto&quot;          &quot;ind_ap&quot;         
@@ -407,7 +413,7 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 ## [21] &quot;oi&quot;</code></pre>
 <p>Veja que ele deixou todos os nomes minúsculos, substituindo o espaço por "_" e tirando acentos. Isso ajuda a evitar problemas futuros em algumas análises que não lidam muito bem com acentos e espaços nos nomes das variáveis.</p>
 <p>Outro problema comum é a presença de linhas e colunas vazias. Na base de dados em questão, não há linhas em branco, como pode ser visto na saída abaixo.</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="conceitos-iniciais.html#cb188-1"></a>janitor<span class="op">::</span><span class="kw">remove_empty</span>(dados,<span class="st">&quot;rows&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="conceitos-iniciais.html#cb18-1"></a>janitor<span class="op">::</span><span class="kw">remove_empty</span>(dados,<span class="st">&quot;rows&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 108 x 21
 ##       id grupo corion data_aval           data_nascimento     cor_branco
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;                   &lt;dbl&gt;
@@ -426,8 +432,8 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 ## #   alcool &lt;dbl&gt;, drogas &lt;dbl&gt;, ig_aval &lt;dbl&gt;, medida_colo &lt;dbl&gt;,
 ## #   num_contra_ctg &lt;dbl&gt;, igp_semana &lt;dbl&gt;, igp_dia &lt;dbl&gt;, oi &lt;lgl&gt;</code></pre>
 <p>Propositalmente, inclui a coluna “oi” vazia para podermos eliminá-la com o comando abaixo:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="conceitos-iniciais.html#cb190-1"></a>dados &lt;-<span class="st"> </span>janitor<span class="op">::</span><span class="kw">remove_empty</span>(dados,<span class="st">&quot;cols&quot;</span>) <span class="co">#limpando colunas vazias</span></span>
-<span id="cb190-2"><a href="conceitos-iniciais.html#cb190-2"></a>dados</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="conceitos-iniciais.html#cb20-1"></a>dados &lt;-<span class="st"> </span>janitor<span class="op">::</span><span class="kw">remove_empty</span>(dados,<span class="st">&quot;cols&quot;</span>) <span class="co">#limpando colunas vazias</span></span>
+<span id="cb20-2"><a href="conceitos-iniciais.html#cb20-2"></a>dados</span></code></pre></div>
 <pre><code>## # A tibble: 108 x 20
 ##       id grupo corion data_aval           data_nascimento     cor_branco
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;                   &lt;dbl&gt;
@@ -449,7 +455,7 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 <div id="identificação-de-casos-duplicados" class="section level3">
 <h3><span class="header-section-number">3.6.3</span> Identificação de casos duplicados</h3>
 <p>Uma boa prática consiste em identificar casos duplicados, isto é, identificar se há casos erroneamente repetidos. No exemplo, a variável chave é “id”, em que cada indivíduo distinto apresenta um id distinto. Para identificar casos duplicados pela variável chave “id”, usamos a função <code>get_dupes</code> do pacote <code>janitor</code>.</p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="conceitos-iniciais.html#cb192-1"></a>janitor<span class="op">::</span><span class="kw">get_dupes</span>(dados, id)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="conceitos-iniciais.html#cb22-1"></a>janitor<span class="op">::</span><span class="kw">get_dupes</span>(dados, id)</span></code></pre></div>
 <pre><code>## # A tibble: 8 x 21
 ##      id dupe_count grupo corion data_aval           data_nascimento    
 ##   &lt;dbl&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;             
@@ -467,9 +473,9 @@ da planilha corresponde a uma unidade de investigação e cada coluna correspond
 ## #   num_contra_ctg &lt;dbl&gt;, igp_semana &lt;dbl&gt;, igp_dia &lt;dbl&gt;</code></pre>
 <p>No exemplo, note que os ID’s = 2, 11, 17 e 23 aparecem duas vezes cada, o que não está correto para essa aplicação.
 Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct</code> do pacote <code>dplyr</code>.</p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="conceitos-iniciais.html#cb194-1"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="conceitos-iniciais.html#cb195-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">distinct</span>(dados,id, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb195-2"><a href="conceitos-iniciais.html#cb195-2"></a>dados</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="conceitos-iniciais.html#cb24-1"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="conceitos-iniciais.html#cb25-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">distinct</span>(dados,id, <span class="dt">.keep_all =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb25-2"><a href="conceitos-iniciais.html#cb25-2"></a>dados</span></code></pre></div>
 <pre><code>## # A tibble: 104 x 20
 ##       id grupo corion data_aval           data_nascimento     cor_branco
 ##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dttm&gt;              &lt;dttm&gt;                   &lt;dbl&gt;
@@ -492,11 +498,11 @@ Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct<
 <div id="identificar-problemas-nas-variáveis-da-base-de-dados" class="section level3">
 <h3><span class="header-section-number">3.6.4</span> Identificar problemas nas variáveis da base de dados</h3>
 <p>Outra etapa importante na análise de consistência é identificar o tipo de variável e ver se o R está interpretando corretamente o tipo de cada variável.</p>
-<p>Temos na nossa base de dados colunas de data, além de variáveis qualitativas e quantitativas (veja o dicionário das variáveis na Figura <a href="intro.html#fig:dic1">2.1</a>). São as variáveis de data: “data_aval” e “data_nascimento”. As variáveis qualitativas são: “grupo” (progesterona ou placebo), “corion” (mono ou dicoriônica), “cor_branco” (branca ou não branca), “ind_ap” (sim ou não), “tabagismo” (sim ou não), “alcool” (sim ou não) e “drogas” (sim ou não). As demais variáveis são quantitativa.</p>
+<p>Temos na nossa base de dados colunas de data, além de variáveis qualitativas e quantitativas (veja o dicionário das variáveis na Figura <a href="#fig:dic1"><strong>??</strong></a>). São as variáveis de data: “data_aval” e “data_nascimento”. As variáveis qualitativas são: “grupo” (progesterona ou placebo), “corion” (mono ou dicoriônica), “cor_branco” (branca ou não branca), “ind_ap” (sim ou não), “tabagismo” (sim ou não), “alcool” (sim ou não) e “drogas” (sim ou não). As demais variáveis são quantitativa.</p>
 <p>Mas precisamos entender se o R realmente entendeu todas as variáveis da maneira correta. Uma maneira de identificar isso e também de ver algumas descritivas das variáveis que nos auxiliam a ver possíveis inconsistências na base de dados é a a função <code>skim</code> do pacote <code>skimr</code>.</p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="conceitos-iniciais.html#cb197-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="conceitos-iniciais.html#cb27-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-91">Table 3.1: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-22">Table 3.1: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -844,12 +850,12 @@ Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct<
 </table>
 <p>No R, as variáveis qualititativas são nomeadas “factor”, as variáveis quantitativas são nomeadas “numeric” e as variáveis de data são “date”. Note que na importação dos dados o R não entendeu corretamente os tipos de variáveis. Mas vamos corrigir isso no que segue.</p>
 <p>Começando pela data, vamos rodar o seguinte código:</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="conceitos-iniciais.html#cb198-1"></a>dados<span class="op">$</span>data_aval  &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dados<span class="op">$</span>data_aval)</span>
-<span id="cb198-2"><a href="conceitos-iniciais.html#cb198-2"></a>dados<span class="op">$</span>data_nascimento  &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dados<span class="op">$</span>data_nascimento)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="conceitos-iniciais.html#cb28-1"></a>dados<span class="op">$</span>data_aval  &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dados<span class="op">$</span>data_aval)</span>
+<span id="cb28-2"><a href="conceitos-iniciais.html#cb28-2"></a>dados<span class="op">$</span>data_nascimento  &lt;-<span class="st"> </span><span class="kw">as.Date</span>(dados<span class="op">$</span>data_nascimento)</span></code></pre></div>
 <p>A função <code>as.Date</code> informa para o R que a variável do seu argumento é de data. Vamos ver como ficou:</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="conceitos-iniciais.html#cb199-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="conceitos-iniciais.html#cb29-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-93">Table 3.2: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-24">Table 3.2: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -1196,17 +1202,17 @@ Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct<
 </tbody>
 </table>
 <p>Agora vamos lidar com as variáveis qualitativas. Veja que “para”corion" foi identificada como <em>character</em>. Isso acontece porque ela foi tabulada como texto. Já as demais variáveis qualitativas estão identificadas como <em>numeric</em>, pois na tabulação suas categorias estão codificadas com números. Para então dizer ao R o verdadeiro tipo dessas variáveis, vamos utilizar os seguintes comandos:</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="conceitos-iniciais.html#cb200-1"></a>  dados<span class="op">$</span>grupo &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>grupo)</span>
-<span id="cb200-2"><a href="conceitos-iniciais.html#cb200-2"></a>  dados<span class="op">$</span>corion &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>corion)</span>
-<span id="cb200-3"><a href="conceitos-iniciais.html#cb200-3"></a>  dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>cor_branco)</span>
-<span id="cb200-4"><a href="conceitos-iniciais.html#cb200-4"></a>  dados<span class="op">$</span>ind_ap &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>ind_ap)</span>
-<span id="cb200-5"><a href="conceitos-iniciais.html#cb200-5"></a>  dados<span class="op">$</span>tabagismo &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>tabagismo)</span>
-<span id="cb200-6"><a href="conceitos-iniciais.html#cb200-6"></a>  dados<span class="op">$</span>alcool &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>alcool)</span>
-<span id="cb200-7"><a href="conceitos-iniciais.html#cb200-7"></a>  dados<span class="op">$</span>drogas &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>drogas)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="conceitos-iniciais.html#cb30-1"></a>  dados<span class="op">$</span>grupo &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>grupo)</span>
+<span id="cb30-2"><a href="conceitos-iniciais.html#cb30-2"></a>  dados<span class="op">$</span>corion &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>corion)</span>
+<span id="cb30-3"><a href="conceitos-iniciais.html#cb30-3"></a>  dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>cor_branco)</span>
+<span id="cb30-4"><a href="conceitos-iniciais.html#cb30-4"></a>  dados<span class="op">$</span>ind_ap &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>ind_ap)</span>
+<span id="cb30-5"><a href="conceitos-iniciais.html#cb30-5"></a>  dados<span class="op">$</span>tabagismo &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>tabagismo)</span>
+<span id="cb30-6"><a href="conceitos-iniciais.html#cb30-6"></a>  dados<span class="op">$</span>alcool &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>alcool)</span>
+<span id="cb30-7"><a href="conceitos-iniciais.html#cb30-7"></a>  dados<span class="op">$</span>drogas &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>drogas)</span></code></pre></div>
 <p>A função <code>as.factor</code> é análoga à função <code>as.Date</code>, mas agora informando que as variáveis no argumento da função são qualitativas (factor). Vamos ver como ficou:</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="conceitos-iniciais.html#cb201-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="conceitos-iniciais.html#cb31-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-95">Table 3.3: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-26">Table 3.3: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -1520,7 +1526,7 @@ Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct<
 </table>
 <p>Veja que agora as variáveis qualitativas da base estão identificadas no bloco <em>factor</em>.</p>
 <p>Mas ainda sobre as variáveis qualitativas, podemos identificar algumas inconsistências. Começando pela variável “cor_branco”, tem uma categoria 3, o que está errado (1 - branca e 2- não branca). Para poder corrigir essa observação, vamos primeiro identificar quem é esse caso. Para isso, usamos o seguinte comando:</p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="conceitos-iniciais.html#cb202-1"></a>dados[dados<span class="op">$</span>cor_branco<span class="op">==</span><span class="dv">3</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="conceitos-iniciais.html#cb32-1"></a>dados[dados<span class="op">$</span>cor_branco<span class="op">==</span><span class="dv">3</span>,]</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 20
 ##      id grupo corion data_aval  data_nascimento cor_branco peso_pre   alt gesta
 ##   &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  &lt;date&gt;     &lt;date&gt;          &lt;fct&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1529,46 +1535,46 @@ Para eliminar linhas duplicadas identificadas, usamos a função <code>distinct<
 ## #   tabagismo &lt;fct&gt;, alcool &lt;fct&gt;, drogas &lt;fct&gt;, ig_aval &lt;dbl&gt;,
 ## #   medida_colo &lt;dbl&gt;, num_contra_ctg &lt;dbl&gt;, igp_semana &lt;dbl&gt;, igp_dia &lt;dbl&gt;</code></pre>
 <p>Identificamos que o caso é id=9. O pesquisador viu em seus registros que foi um erro de digitação é o correto é 1 (cor branca). Vamos então corrigir esse ponto na base de dados:</p>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="conceitos-iniciais.html#cb204-1"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">9</span>,<span class="dv">1</span>,dados<span class="op">$</span>cor_branco)</span>
-<span id="cb204-2"><a href="conceitos-iniciais.html#cb204-2"></a></span>
-<span id="cb204-3"><a href="conceitos-iniciais.html#cb204-3"></a><span class="co">#precisamos informar novamente ao R que cor_branco é fator:</span></span>
-<span id="cb204-4"><a href="conceitos-iniciais.html#cb204-4"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>cor_branco)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="conceitos-iniciais.html#cb34-1"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">9</span>,<span class="dv">1</span>,dados<span class="op">$</span>cor_branco)</span>
+<span id="cb34-2"><a href="conceitos-iniciais.html#cb34-2"></a></span>
+<span id="cb34-3"><a href="conceitos-iniciais.html#cb34-3"></a><span class="co">#precisamos informar novamente ao R que cor_branco é fator:</span></span>
+<span id="cb34-4"><a href="conceitos-iniciais.html#cb34-4"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>cor_branco)</span></code></pre></div>
 <p>A função <code>ifelse</code> tem três argumentos. No primeiro, a condição é colocada (no exemplo, se a variável id for igual a 9), o segundo argumento é o que retorna se a condição for verdadeira (no exemplo, se id for realmente igual a 9, a variável “cor_branco” recebe 1) e, por fim, o último argumento é o que retorna se a condição for falsa (se id não for igual a 9 - todas as outras observações da base de dados, a variável “cor_branco” continua com o valor que está).</p>
 <p>Outra variável qualitativa com algum problema aparente é “corion”. Essa variável tem duas categorias: mono e dicoriônica, mas perceba que o R está entendendo que ela tem 4 categorias. Isso acontece porque ela é uma variável de texto (<em>caracter</em>) e o R é caso-sensível a letras maiúsculas e minúsculas (o R entende as 4 categorias: Mono, MONO, Di e DI). Por isso, devemos corrigir e deixar todas as respostas “mono” escritas da mesma maneira e fazer o mesmo com a categoria “di”.</p>
 <p>Para lidar com variáveis de texto (como é o caso de “corion”), um pacote no R bastante útil é o <code>stringr</code>. No nosso caso, conseguimos resolver o problema ao colocar todas as palavras em letra minúscula. Para isso, usamos a função <code>str_to_lower</code> do pacote <code>stringr</code>:</p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="conceitos-iniciais.html#cb205-1"></a>dados<span class="op">$</span>corion &lt;-<span class="st"> </span>stringr<span class="op">::</span><span class="kw">str_to_lower</span>(dados<span class="op">$</span>corion)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="conceitos-iniciais.html#cb35-1"></a>dados<span class="op">$</span>corion &lt;-<span class="st"> </span>stringr<span class="op">::</span><span class="kw">str_to_lower</span>(dados<span class="op">$</span>corion)</span></code></pre></div>
 <p>Como usei uma função para variáveis de texto, preciso avisar novamente ao R que “corion” é fator:</p>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="conceitos-iniciais.html#cb206-1"></a>dados<span class="op">$</span>corion &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>corion)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="conceitos-iniciais.html#cb36-1"></a>dados<span class="op">$</span>corion &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>corion)</span></code></pre></div>
 <p>Ótimo! Corrigimos as inconsistências das variáveis qualitativas. Mas outra questão surge: como faço para usar um rótulo nos números codificados nas categorias das variáveis qualitativas? Para o grupo, por exemplo, ao invés de aparecer 1 quero que apareça placebo.
 Para isso, vamos utilizar o pacote <code>forcats</code> que lida com variáveis qualitativas (categóricas). Para renomear as categorias das variáveis, vamos usar a função <code>fct_recode</code> desse pacote:</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="conceitos-iniciais.html#cb207-1"></a>dados<span class="op">$</span>grupo &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>grupo,</span>
-<span id="cb207-2"><a href="conceitos-iniciais.html#cb207-2"></a>                                        <span class="dt">placebo =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-3"><a href="conceitos-iniciais.html#cb207-3"></a>                                        <span class="dt">progest =</span> <span class="st">&quot;2&quot;</span>)</span>
-<span id="cb207-4"><a href="conceitos-iniciais.html#cb207-4"></a></span>
-<span id="cb207-5"><a href="conceitos-iniciais.html#cb207-5"></a><span class="co"># Agora vamos para a variável cor_branci  (1- branca e 2- nbranca)</span></span>
-<span id="cb207-6"><a href="conceitos-iniciais.html#cb207-6"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>cor_branco,</span>
-<span id="cb207-7"><a href="conceitos-iniciais.html#cb207-7"></a>                                <span class="dt">branca =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-8"><a href="conceitos-iniciais.html#cb207-8"></a>                                <span class="dt">nbranca =</span> <span class="st">&quot;2&quot;</span>)</span>
-<span id="cb207-9"><a href="conceitos-iniciais.html#cb207-9"></a></span>
-<span id="cb207-10"><a href="conceitos-iniciais.html#cb207-10"></a><span class="co"># Agora vamos para a variável ind_ap (1- sim e 0 -não)</span></span>
-<span id="cb207-11"><a href="conceitos-iniciais.html#cb207-11"></a>dados<span class="op">$</span>ind_ap &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>ind_ap,</span>
-<span id="cb207-12"><a href="conceitos-iniciais.html#cb207-12"></a>                                   <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-13"><a href="conceitos-iniciais.html#cb207-13"></a>                                   <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
-<span id="cb207-14"><a href="conceitos-iniciais.html#cb207-14"></a></span>
-<span id="cb207-15"><a href="conceitos-iniciais.html#cb207-15"></a><span class="co"># Agora vamos para a variável tabagismo (1- sim e 0 -não)</span></span>
-<span id="cb207-16"><a href="conceitos-iniciais.html#cb207-16"></a>dados<span class="op">$</span>tabagismo &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>tabagismo,</span>
-<span id="cb207-17"><a href="conceitos-iniciais.html#cb207-17"></a>                                    <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-18"><a href="conceitos-iniciais.html#cb207-18"></a>                                    <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
-<span id="cb207-19"><a href="conceitos-iniciais.html#cb207-19"></a></span>
-<span id="cb207-20"><a href="conceitos-iniciais.html#cb207-20"></a><span class="co"># Agora vamos para a variável alcool  (1- sim e 0 -não)</span></span>
-<span id="cb207-21"><a href="conceitos-iniciais.html#cb207-21"></a>dados<span class="op">$</span>alcool  &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>alcool,</span>
-<span id="cb207-22"><a href="conceitos-iniciais.html#cb207-22"></a>                                       <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-23"><a href="conceitos-iniciais.html#cb207-23"></a>                                       <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
-<span id="cb207-24"><a href="conceitos-iniciais.html#cb207-24"></a></span>
-<span id="cb207-25"><a href="conceitos-iniciais.html#cb207-25"></a><span class="co"># Agora vamos para a variável drogas  (1- sim e 0 -não)</span></span>
-<span id="cb207-26"><a href="conceitos-iniciais.html#cb207-26"></a>dados<span class="op">$</span>drogas  &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>drogas,</span>
-<span id="cb207-27"><a href="conceitos-iniciais.html#cb207-27"></a>                                     <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
-<span id="cb207-28"><a href="conceitos-iniciais.html#cb207-28"></a>                                     <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="conceitos-iniciais.html#cb37-1"></a>dados<span class="op">$</span>grupo &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>grupo,</span>
+<span id="cb37-2"><a href="conceitos-iniciais.html#cb37-2"></a>                                        <span class="dt">placebo =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-3"><a href="conceitos-iniciais.html#cb37-3"></a>                                        <span class="dt">progest =</span> <span class="st">&quot;2&quot;</span>)</span>
+<span id="cb37-4"><a href="conceitos-iniciais.html#cb37-4"></a></span>
+<span id="cb37-5"><a href="conceitos-iniciais.html#cb37-5"></a><span class="co"># Agora vamos para a variável cor_branci  (1- branca e 2- nbranca)</span></span>
+<span id="cb37-6"><a href="conceitos-iniciais.html#cb37-6"></a>dados<span class="op">$</span>cor_branco &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>cor_branco,</span>
+<span id="cb37-7"><a href="conceitos-iniciais.html#cb37-7"></a>                                <span class="dt">branca =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-8"><a href="conceitos-iniciais.html#cb37-8"></a>                                <span class="dt">nbranca =</span> <span class="st">&quot;2&quot;</span>)</span>
+<span id="cb37-9"><a href="conceitos-iniciais.html#cb37-9"></a></span>
+<span id="cb37-10"><a href="conceitos-iniciais.html#cb37-10"></a><span class="co"># Agora vamos para a variável ind_ap (1- sim e 0 -não)</span></span>
+<span id="cb37-11"><a href="conceitos-iniciais.html#cb37-11"></a>dados<span class="op">$</span>ind_ap &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>ind_ap,</span>
+<span id="cb37-12"><a href="conceitos-iniciais.html#cb37-12"></a>                                   <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-13"><a href="conceitos-iniciais.html#cb37-13"></a>                                   <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
+<span id="cb37-14"><a href="conceitos-iniciais.html#cb37-14"></a></span>
+<span id="cb37-15"><a href="conceitos-iniciais.html#cb37-15"></a><span class="co"># Agora vamos para a variável tabagismo (1- sim e 0 -não)</span></span>
+<span id="cb37-16"><a href="conceitos-iniciais.html#cb37-16"></a>dados<span class="op">$</span>tabagismo &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>tabagismo,</span>
+<span id="cb37-17"><a href="conceitos-iniciais.html#cb37-17"></a>                                    <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-18"><a href="conceitos-iniciais.html#cb37-18"></a>                                    <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
+<span id="cb37-19"><a href="conceitos-iniciais.html#cb37-19"></a></span>
+<span id="cb37-20"><a href="conceitos-iniciais.html#cb37-20"></a><span class="co"># Agora vamos para a variável alcool  (1- sim e 0 -não)</span></span>
+<span id="cb37-21"><a href="conceitos-iniciais.html#cb37-21"></a>dados<span class="op">$</span>alcool  &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>alcool,</span>
+<span id="cb37-22"><a href="conceitos-iniciais.html#cb37-22"></a>                                       <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-23"><a href="conceitos-iniciais.html#cb37-23"></a>                                       <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span>
+<span id="cb37-24"><a href="conceitos-iniciais.html#cb37-24"></a></span>
+<span id="cb37-25"><a href="conceitos-iniciais.html#cb37-25"></a><span class="co"># Agora vamos para a variável drogas  (1- sim e 0 -não)</span></span>
+<span id="cb37-26"><a href="conceitos-iniciais.html#cb37-26"></a>dados<span class="op">$</span>drogas  &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>drogas,</span>
+<span id="cb37-27"><a href="conceitos-iniciais.html#cb37-27"></a>                                     <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>,</span>
+<span id="cb37-28"><a href="conceitos-iniciais.html#cb37-28"></a>                                     <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>)</span></code></pre></div>
 <p>Aqui vale mais uma dica: se você rodar a função <code>View(dados)</code> vai abrir uma janela com a planilha dos dados para visualização. Aparecerá como segue:</p>
 <div class="figure"><span id="fig:view"></span>
 <img src="figures/print-tela.png" alt="Tela dos dados após comando View(dados)" width="100%" />
@@ -1579,7 +1585,7 @@ Figure 3.3: Tela dos dados após comando View(dados)
 <p>Finalmente chegamos nas variáveis quantitativas. Uma forma de identificar problemas em variáveis quantitativas é avaliar os valores mínimo e máximo de cada variável e ver se tem algum valor impossível para a mesma.</p>
 <p>Veja que tem uma altura de 163. A unidade de medida é em metros e a altura em questão foi um erro de digitação.
 O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrigir.</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="conceitos-iniciais.html#cb208-1"></a>dados[dados<span class="op">$</span>alt<span class="op">==</span><span class="dv">163</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="conceitos-iniciais.html#cb38-1"></a>dados[dados<span class="op">$</span>alt<span class="op">==</span><span class="dv">163</span>,]</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 20
 ##      id grupo corion data_aval  data_nascimento cor_branco peso_pre   alt gesta
 ##   &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  &lt;date&gt;     &lt;date&gt;          &lt;fct&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1590,9 +1596,9 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 ## #   tabagismo &lt;fct&gt;, alcool &lt;fct&gt;, drogas &lt;fct&gt;, ig_aval &lt;dbl&gt;,
 ## #   medida_colo &lt;dbl&gt;, num_contra_ctg &lt;dbl&gt;, igp_semana &lt;dbl&gt;, igp_dia &lt;dbl&gt;</code></pre>
 <p>O caso em questão é o id=27 e vamos novamente usar a função <code>ifelse</code> para substituir o valorr:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="conceitos-iniciais.html#cb210-1"></a>dados<span class="op">$</span>alt &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">27</span>,<span class="fl">1.63</span>,dados<span class="op">$</span>alt)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="conceitos-iniciais.html#cb40-1"></a>dados<span class="op">$</span>alt &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">27</span>,<span class="fl">1.63</span>,dados<span class="op">$</span>alt)</span></code></pre></div>
 <p>Há também um valor absurdo para “ig_aval” (idade gestacional da avalição) de 83.86. Vamos identificar o id para depois corrigir:</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="conceitos-iniciais.html#cb211-1"></a>dados[dados<span class="op">$</span>ig_aval<span class="op">==</span><span class="fl">83.86</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="conceitos-iniciais.html#cb41-1"></a>dados[dados<span class="op">$</span>ig_aval<span class="op">==</span><span class="fl">83.86</span>,]</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 20
 ##      id grupo corion data_aval  data_nascimento cor_branco peso_pre   alt gesta
 ##   &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  &lt;date&gt;     &lt;date&gt;          &lt;fct&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1601,11 +1607,11 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 ## #   tabagismo &lt;fct&gt;, alcool &lt;fct&gt;, drogas &lt;fct&gt;, ig_aval &lt;dbl&gt;,
 ## #   medida_colo &lt;dbl&gt;, num_contra_ctg &lt;dbl&gt;, igp_semana &lt;dbl&gt;, igp_dia &lt;dbl&gt;</code></pre>
 <p>Como podemos observar, o id=21 é o caso inconsistente para “ig_aval” e o pesquisador checou que o correto é 33.86. Vamos então corrigir novamente com a função <code>ifelse</code>.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="conceitos-iniciais.html#cb213-1"></a>dados<span class="op">$</span>ig_aval &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">21</span>,<span class="fl">33.86</span>,dados<span class="op">$</span>ig_aval)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="conceitos-iniciais.html#cb43-1"></a>dados<span class="op">$</span>ig_aval &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>id<span class="op">==</span><span class="dv">21</span>,<span class="fl">33.86</span>,dados<span class="op">$</span>ig_aval)</span></code></pre></div>
 <p>Agora está tudo certo?</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="conceitos-iniciais.html#cb214-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="conceitos-iniciais.html#cb44-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-105">Table 3.4: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-36">Table 3.4: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -1925,11 +1931,11 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 <div id="transformação-de-variáveis-quantitativas" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Transformação de variáveis quantitativas</h3>
 <p>Primeiramente, temos o interesse em criar a variável IMC, dada pelo peso (em kg) dividido pela altura (em metros) ao quadrado. Para isso, usamos a função <code>mutate</code> do <code>dplyr</code>:</p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="conceitos-iniciais.html#cb215-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(dados,<span class="dt">imc =</span> peso_pre<span class="op">/</span>(alt<span class="op">^</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="conceitos-iniciais.html#cb45-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(dados,<span class="dt">imc =</span> peso_pre<span class="op">/</span>(alt<span class="op">^</span><span class="dv">2</span>))</span></code></pre></div>
 <p>Vamos ver então como ficou:</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="conceitos-iniciais.html#cb216-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados<span class="op">$</span>imc) <span class="co">#coloquei só imc para só fazer descritivas para imc.</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="conceitos-iniciais.html#cb46-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados<span class="op">$</span>imc) <span class="co">#coloquei só imc para só fazer descritivas para imc.</span></span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-107">Table 3.5: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-38">Table 3.5: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -2000,11 +2006,11 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 </table>
 <p>Note que há três valores ausentes para “imc”, uma vez que há dois valores ausentes para “alt” e outro para “peso_pre”.</p>
 <p>Observe que na planilha tem duas colunas sobre idade gestacional: igp_semanas (idade gestacional em semanas fechadas) e igp_dia (dias ainda não de 1 semana completa). Vamos criar uma coluna que combine essas duas informações e que transforme os dias em semanas de maneira fracionada.</p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="conceitos-iniciais.html#cb217-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(dados,<span class="dt">igp =</span> igp_semana<span class="op">+</span>igp_dia<span class="op">/</span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="conceitos-iniciais.html#cb47-1"></a>dados &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(dados,<span class="dt">igp =</span> igp_semana<span class="op">+</span>igp_dia<span class="op">/</span><span class="dv">7</span>)</span></code></pre></div>
 <p>Vamos ver então como ficou:</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="conceitos-iniciais.html#cb218-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados<span class="op">$</span>igp) <span class="co">#coloquei só igp para só fazer descritivas para igp.</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="conceitos-iniciais.html#cb48-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados<span class="op">$</span>igp) <span class="co">#coloquei só igp para só fazer descritivas para igp.</span></span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-109">Table 3.6: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-40">Table 3.6: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -2077,23 +2083,23 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 <div id="transformação-de-variáveis-qualitativas" class="section level3">
 <h3><span class="header-section-number">3.7.2</span> Transformação de variáveis qualitativas</h3>
 <p>A variável “gesta” indica o número de gestações, contando com a atual da gestante em gestão. Logo, uma gestante com gesta=1 está em sua primeira gestação, ou seja, é primigesta. Queremos criar uma nova variável indicadora de gestação primigesta. Há diferentes forma de fazer isso. Vamos usar o comando <code>ifelse</code> já utilizado anteriormente:</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="conceitos-iniciais.html#cb219-1"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>gesta<span class="op">==</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="conceitos-iniciais.html#cb49-1"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>gesta<span class="op">==</span><span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div>
 <p>Agora vamos recodificar primigesta com o nome de cada categoria:</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="conceitos-iniciais.html#cb220-1"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>primigesta)</span>
-<span id="cb220-2"><a href="conceitos-iniciais.html#cb220-2"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>primigesta,</span>
-<span id="cb220-3"><a href="conceitos-iniciais.html#cb220-3"></a>                                <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>, </span>
-<span id="cb220-4"><a href="conceitos-iniciais.html#cb220-4"></a>                                <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="conceitos-iniciais.html#cb50-1"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>primigesta)</span>
+<span id="cb50-2"><a href="conceitos-iniciais.html#cb50-2"></a>dados<span class="op">$</span>primigesta &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>primigesta,</span>
+<span id="cb50-3"><a href="conceitos-iniciais.html#cb50-3"></a>                                <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>, </span>
+<span id="cb50-4"><a href="conceitos-iniciais.html#cb50-4"></a>                                <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>)</span></code></pre></div>
 <p>Outra variável qualitativa que é função de uma variável quantitativa da planilha é a prematuridade. Definimos aqui prematuridade se idade gestacional do parto for menor que 37 semanas.</p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="conceitos-iniciais.html#cb221-1"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>igp<span class="op">&lt;</span><span class="dv">37</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="conceitos-iniciais.html#cb51-1"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span><span class="kw">ifelse</span>(dados<span class="op">$</span>igp<span class="op">&lt;</span><span class="dv">37</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div>
 <p>Agora vamos recodificar “prematuridade” com o nome de cada categoria:</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="conceitos-iniciais.html#cb222-1"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>prematuridade)</span>
-<span id="cb222-2"><a href="conceitos-iniciais.html#cb222-2"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>prematuridade,</span>
-<span id="cb222-3"><a href="conceitos-iniciais.html#cb222-3"></a>                                <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>, </span>
-<span id="cb222-4"><a href="conceitos-iniciais.html#cb222-4"></a>                                <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="conceitos-iniciais.html#cb52-1"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados<span class="op">$</span>prematuridade)</span>
+<span id="cb52-2"><a href="conceitos-iniciais.html#cb52-2"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span>forcats<span class="op">::</span><span class="kw">fct_recode</span>(dados<span class="op">$</span>prematuridade,</span>
+<span id="cb52-3"><a href="conceitos-iniciais.html#cb52-3"></a>                                <span class="dt">nao =</span> <span class="st">&quot;0&quot;</span>, </span>
+<span id="cb52-4"><a href="conceitos-iniciais.html#cb52-4"></a>                                <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>)</span></code></pre></div>
 <p>Vamos ver então como ficou:</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="conceitos-iniciais.html#cb223-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados,primigesta,prematuridade) </span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="conceitos-iniciais.html#cb53-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(dados,primigesta,prematuridade) </span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-114">Table 3.7: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-45">Table 3.7: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -2171,20 +2177,20 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 <h3><span class="header-section-number">3.7.3</span> Manipulação de datas</h3>
 <p>Na base de dados, há duas variáveis de data: data da avaliação e data do nascimento. A diferença entre as duas datas, em anos, é a idade da gestante no momento da avaliação. Para realizar operações com data, usaremos o pacote <code>lubridate</code>.</p>
 <p>A data está salva no formato ano-mês-dia e por isso usamos a função <code>ymd(.)</code> para as variáveis de data. Para calcular a diferença entre as data, usamos a função <span class="math inline">\(%--%\)</span>, atribuindo ao objeto intervalo. Por fim, obtemos a idade ao dividir o intervalo por ano.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="conceitos-iniciais.html#cb224-1"></a>intervalo &lt;-<span class="st"> </span>lubridate<span class="op">::</span><span class="kw">ymd</span>(dados<span class="op">$</span>data_nascimento)<span class="op">%--%</span><span class="st">  </span>lubridate<span class="op">::</span><span class="kw">ymd</span>(dados<span class="op">$</span>data_aval)</span>
-<span id="cb224-2"><a href="conceitos-iniciais.html#cb224-2"></a>dados<span class="op">$</span>idade &lt;-<span class="st"> </span>intervalo <span class="op">/</span><span class="st"> </span>lubridate<span class="op">::</span><span class="kw">dyears</span>(<span class="dv">1</span>)  <span class="co">#número de anos</span></span>
-<span id="cb224-3"><a href="conceitos-iniciais.html#cb224-3"></a>dados<span class="op">$</span>idade &lt;-<span class="st"> </span><span class="kw">trunc</span>(dados<span class="op">$</span>idade) <span class="co">#usamos a idade completada </span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="conceitos-iniciais.html#cb54-1"></a>intervalo &lt;-<span class="st"> </span>lubridate<span class="op">::</span><span class="kw">ymd</span>(dados<span class="op">$</span>data_nascimento)<span class="op">%--%</span><span class="st">  </span>lubridate<span class="op">::</span><span class="kw">ymd</span>(dados<span class="op">$</span>data_aval)</span>
+<span id="cb54-2"><a href="conceitos-iniciais.html#cb54-2"></a>dados<span class="op">$</span>idade &lt;-<span class="st"> </span>intervalo <span class="op">/</span><span class="st"> </span>lubridate<span class="op">::</span><span class="kw">dyears</span>(<span class="dv">1</span>)  <span class="co">#número de anos</span></span>
+<span id="cb54-3"><a href="conceitos-iniciais.html#cb54-3"></a>dados<span class="op">$</span>idade &lt;-<span class="st"> </span><span class="kw">trunc</span>(dados<span class="op">$</span>idade) <span class="co">#usamos a idade completada </span></span></code></pre></div>
 <p>A última linha do código acima utiliza a função <code>trunc</code> para truncar a idade para não usar a fração dos meses da idade ainda não completa e sim usar a idade completada no último aniversário.</p>
 <p>Vale ressaltar que há várias funções importantes para lidar com variáveis de data no pacote <code>lubridate</code>. Para mais detalhes, ver a <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html">documentação do lubridate</a>.</p>
 </div>
 <div id="filtragem-de-observações" class="section level3">
 <h3><span class="header-section-number">3.7.4</span> Filtragem de observações</h3>
 <p>Uma função bastante importante quando estamos analisando dados é filtrar de acordo com uma condição de interesse. Suponha que temos interesse em realizar uma determinada análise apenas com gestantes com menos de 23 anos. Para selecionar apenas as gestantes mais novas, podemos utilizar a função <code>filter</code> do pacote <code>dplyr</code>.</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="conceitos-iniciais.html#cb225-1"></a>dados_jovens &lt;-<span class="st"> </span><span class="kw">filter</span>(dados,idade<span class="op">&lt;</span><span class="dv">23</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="conceitos-iniciais.html#cb55-1"></a>dados_jovens &lt;-<span class="st"> </span><span class="kw">filter</span>(dados,idade<span class="op">&lt;</span><span class="dv">23</span>)</span></code></pre></div>
 <p>Veja que agora o objeto dados_jovens é a base de dados apenas com aquelas cuja idade é menor que 23 (use o comando View(dados_jovens) para verificar).</p>
 <p>Utilizando os operadores lógicos “&amp;” (e) e “|” (ou), conseguimos realizar algumas condições, como mostrado no exemplo abaixo.</p>
 <p>Agora, queremos selecionar apenas as gestantes mais novas e do grupo progesterona. Para isso:</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="conceitos-iniciais.html#cb226-1"></a>dados_jovens_progest &lt;-<span class="st">  </span><span class="kw">filter</span>(dados,idade<span class="op">&lt;</span><span class="dv">23</span> <span class="op">&amp;</span><span class="st"> </span>grupo<span class="op">==</span><span class="st">&quot;progest&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="conceitos-iniciais.html#cb56-1"></a>dados_jovens_progest &lt;-<span class="st">  </span><span class="kw">filter</span>(dados,idade<span class="op">&lt;</span><span class="dv">23</span> <span class="op">&amp;</span><span class="st"> </span>grupo<span class="op">==</span><span class="st">&quot;progest&quot;</span>)</span></code></pre></div>
 <p>Acho que aqui vale uma nota sobre o pacote <code>dplyr</code> e por isso dediquei uma subseção para ele, no que segue.</p>
 <div id="pacote-dplyr" class="section level4">
 <h4><span class="header-section-number">3.7.4.1</span> Pacote dplyr</h4>
@@ -2198,22 +2204,139 @@ O certo era 1.63. Então vamos primeiro identificar o caso e depois vamos corrig
 </ul>
 <p>Já falamos das funções <code>filter</code> e <code>mutate</code> anteriormente, então falamos brevemente das outras funções no que segue.</p>
 <p>A função <code>select()</code> seleciona colunas (variáveis). Vamos supor que eu tenha interesse em criar um objeto com só as variáveis “id”, “grupo”, “prematuridade”.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="conceitos-iniciais.html#cb227-1"></a>dados_s &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(dados,id, grupo, prematuridade)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="conceitos-iniciais.html#cb57-1"></a>dados_s &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(dados,id, grupo, prematuridade)</span></code></pre></div>
 <p>Veja em <code>View(dados_s)</code> que essa base de dados só contém as colunas selecionadas.</p>
 <p>Sempre quando queremos retirar algo do banco de dados, colocamos um “-” antes da variável. No exemplo abaixo, queremos rerirar “igp_semana” e “igp_dia”.</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="conceitos-iniciais.html#cb228-1"></a>dados_s1 &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(dados,<span class="op">-</span>igp_semana,<span class="op">-</span>igp_dia)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="conceitos-iniciais.html#cb58-1"></a>dados_s1 &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(dados,<span class="op">-</span>igp_semana,<span class="op">-</span>igp_dia)</span></code></pre></div>
 <p>Veja em <code>View(dados_s1)</code> que essa base de dados só contém as colunas selecionadas.</p>
 <p>Com a função <code>arrange()</code>, conseguimos ordenar a base de acordo com uma ou mais colunas. Para gerar uma ordem descescente de alguma variável, utilizamos a função <code>desc</code> como segue:</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="conceitos-iniciais.html#cb229-1"></a>dados_cres &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(dados,alt)</span></code></pre></div>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="conceitos-iniciais.html#cb230-1"></a>dados_decres &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(dados,<span class="kw">desc</span>(alt))</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="conceitos-iniciais.html#cb59-1"></a>dados_cres &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(dados,alt)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="conceitos-iniciais.html#cb60-1"></a>dados_decres &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(dados,<span class="kw">desc</span>(alt))</span></code></pre></div>
 <p>No primeiro código acima, ordenamos a planilha em ordem crescente pela altura. Já no segundo código, ordenamos a planilha em ordem decrescente pela altura (a primeira observação na planilha dados_decres é aquela cuja gestante é a mais alta).</p>
 </div>
 </div>
 </div>
+<div id="manipulando-os-formatos-das-bases-de-dados" class="section level2">
+<h2><span class="header-section-number">3.8</span> Manipulando os formatos das bases de dados</h2>
+<div id="combinando-bases-de-dados" class="section level3">
+<h3><span class="header-section-number">3.8.1</span> Combinando bases de dados</h3>
+<p>Vamos considerar que temos interesse em juntar as bases de dados “dados_gemelares” e “dados_gemelares_2”. As duas bases apresentam os mesmos indivíduos (linhas), mas com variáveis (colunas) diferentes.</p>
+<p>Vamos então ler a base de dados, atribuindo para o objeto “dados2”.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="conceitos-iniciais.html#cb61-1"></a><span class="kw">library</span>(readxl)</span>
+<span id="cb61-2"><a href="conceitos-iniciais.html#cb61-2"></a>dados2 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_gemelares_2.xlsx&quot;</span>)</span>
+<span id="cb61-3"><a href="conceitos-iniciais.html#cb61-3"></a></span>
+<span id="cb61-4"><a href="conceitos-iniciais.html#cb61-4"></a>dados2</span></code></pre></div>
+<pre><code>## # A tibble: 104 x 7
+##       ID EPDS_antes EPDS_depois EDPS_antes_SN EDPS_depois_SN Grupo_amamentac~
+##    &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;         &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt;
+##  1     1         20          22             1              1                3
+##  2     2         20          24             1              1                1
+##  3     3          7           6             0              0                2
+##  4     5         10          11             0              0                1
+##  5     6          5          20             0              1                2
+##  6     7          2           3             0              0                1
+##  7     8         12          16             1              1                3
+##  8     9         10          16             0              1                3
+##  9    10          1           4             0              0                3
+## 10    11         10          12             0              1                3
+## # ... with 94 more rows, and 1 more variable: Tempo_amamentacao_meses &lt;dbl&gt;</code></pre>
+<p>Há algumas funções de combinação de duas bases de dados no pacote <code>dplyr</code>. Elas recebem três argumentos: a primeira base a ser declarada <code>(x=)</code>, a segunda base a ser declarada <code>(y=)</code> e a variável de identificação informada no argumento <code>by=</code>. Aqui estão as funções mais úteis:</p>
+<ul>
+<li><p><code>left_join()</code> - retorna todas as linhas da base de dados no argumento <code>x</code> e todas as colunas das duas bases de dados. Linhas da base de dados de <code>x</code> sem correspondentes em <code>y</code> receberão <code>NA</code> na base de dados combinada.</p></li>
+<li><p><code>right_join()</code> - retorna todas as linhas da base de dados no argumento <code>y</code> e todas as colunas das duas bases de dados. Linhas da base de dados de <code>y</code> sem correspondentes em <code>x</code> receberão <code>NA</code> na base de dados combinada.</p></li>
+<li><p><code>full_join()</code> - retorna todas as linhas e todas as colunas de <code>x</code> e de <code>y</code>. As linhas sem correspondência entre as bases receberão <code>NA</code> na base de dados combinada.</p></li>
+<li><p><code>inner_join()</code> - filtra a base de dados no argumento <code>x</code> apenas onde tem valores correspondentes na base de dados no argumento <code>y</code> e todas as colunas das duas bases de dados.</p></li>
+<li><p><code>semi_join()</code> - filtra a base de dados no argumento <code>x</code> apenas onde tem valores correspondentes na base de dados no argumento <code>y</code>, mantendo apenas as colunas da base de dados de <code>x</code>.</p></li>
+<li><p><code>anti_join()</code> - filtra a base de dados no argumento <code>x</code> para incluir apenas valores que <strong>não possuem</strong> correspondências na base de dados no argumento <code>y</code>.</p></li>
+</ul>
+<p>Assim sendo, no nosso exemplo, tanto as funções <code>left_join()</code>, <code>right_join()</code>, <code>full_join()</code> e <code>inner_join()</code> retornarão a mesma combinação, pois “dados” e “dados2” possuem exatamente os mesmos indivíduos, ou seja, não há nenhuma linha que esteja em uma das bases de dados e que não está na outra.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="conceitos-iniciais.html#cb63-1"></a>dados_todos &lt;-<span class="st"> </span><span class="kw">full_join</span>(dados, dados2, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;ID&quot;</span>)) </span>
+<span id="cb63-2"><a href="conceitos-iniciais.html#cb63-2"></a><span class="co">#faço c(&quot;id&quot; = &quot;ID&quot;) porque id está em dados e ID (maiúsculo) está em dados2.</span></span>
+<span id="cb63-3"><a href="conceitos-iniciais.html#cb63-3"></a></span>
+<span id="cb63-4"><a href="conceitos-iniciais.html#cb63-4"></a><span class="kw">str</span>(dados_todos)</span></code></pre></div>
+<pre><code>## tibble [104 x 31] (S3: tbl_df/tbl/data.frame)
+##  $ id                     : num [1:104] 1 2 3 5 6 7 8 9 10 11 ...
+##  $ grupo                  : Factor w/ 2 levels &quot;placebo&quot;,&quot;progest&quot;: 2 1 1 2 1 2 1 1 2 2 ...
+##  $ corion                 : Factor w/ 2 levels &quot;di&quot;,&quot;mono&quot;: 1 2 1 1 1 1 1 1 1 1 ...
+##  $ data_aval              : Date[1:104], format: &quot;2017-04-23&quot; &quot;2016-03-21&quot; ...
+##  $ data_nascimento        : Date[1:104], format: &quot;1988-04-30&quot; &quot;1982-03-30&quot; ...
+##  $ cor_branco             : Factor w/ 2 levels &quot;branca&quot;,&quot;nbranca&quot;: 1 1 2 2 2 2 1 1 1 1 ...
+##  $ peso_pre               : num [1:104] 93 59 87 78 62 54 72 72 102 55 ...
+##  $ alt                    : num [1:104] 1.63 1.45 1.69 1.59 1.64 NA 1.64 1.65 1.68 1.45 ...
+##  $ gesta                  : num [1:104] 3 3 2 7 7 2 2 8 3 1 ...
+##  $ para                   : num [1:104] 1 1 1 2 4 1 1 4 2 0 ...
+##  $ aborto                 : num [1:104] 1 1 0 4 2 0 0 3 0 0 ...
+##  $ ind_ap                 : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 1 1 2 1 1 1 1 2 ...
+##  $ tabagismo              : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 1 2 1 1 2 1 1 2 ...
+##  $ alcool                 : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 1 2 1 1 1 1 1 2 ...
+##  $ drogas                 : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ ig_aval                : num [1:104] 33.7 33.4 30.9 32.9 28.4 ...
+##  $ medida_colo            : num [1:104] 33 34.6 25 32.8 20.6 33.1 28 21.8 46.3 36 ...
+##  $ num_contra_ctg         : num [1:104] 9 4 5 5 2 1 3 2 8 2 ...
+##  $ igp_semana             : num [1:104] 37 37 35 38 29 38 34 36 37 33 ...
+##  $ igp_dia                : num [1:104] 4 3 0 3 3 3 6 3 5 3 ...
+##  $ imc                    : num [1:104] 35 28.1 30.5 30.9 23.1 ...
+##  $ igp                    : num [1:104] 37.6 37.4 35 38.4 29.4 ...
+##  $ primigesta             : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 1 1 1 1 1 1 1 2 ...
+##  $ prematuridade          : Factor w/ 2 levels &quot;nao&quot;,&quot;sim&quot;: 1 1 2 1 2 1 2 2 1 2 ...
+##  $ idade                  : num [1:104] 28 33 24 28 26 30 28 36 31 34 ...
+##  $ EPDS_antes             : num [1:104] 20 20 7 10 5 2 12 10 1 10 ...
+##  $ EPDS_depois            : num [1:104] 22 24 6 11 20 3 16 16 4 12 ...
+##  $ EDPS_antes_SN          : num [1:104] 1 1 0 0 0 0 1 0 0 0 ...
+##  $ EDPS_depois_SN         : num [1:104] 1 1 0 0 1 0 1 1 0 1 ...
+##  $ Grupo_amamentacao      : num [1:104] 3 1 2 1 2 1 3 3 3 3 ...
+##  $ Tempo_amamentacao_meses: num [1:104] 8 17 3 11 14 13 8 11 9 4 ...</code></pre>
+</div>
+<div id="mudando-formato-da-base-de-dado" class="section level3">
+<h3><span class="header-section-number">3.8.2</span> Mudando formato da base de dado</h3>
+<p>Considere a base de dados abaixo. Veja que ela está no formato <em>long</em>, em que as avaliações do mesmo indivíduo (variável de identificação de indivíduo é “registro”) estão nas linhas.</p>
+<div class="figure"><span id="fig:unnamed-chunk-56"></span>
+<img src="figures/dados_exemplo.png" alt="Variáveis da base de dados gestações gemelares." width="100%" />
+<p class="caption">
+Figure 3.4: Variáveis da base de dados gestações gemelares.
+</p>
+</div>
+<p>Primeiro vamos ler a base de dados e atribuí-la ao objeto “dadosa”:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="conceitos-iniciais.html#cb65-1"></a>dadosa &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;dataset/dados_exemplo.xlsx&quot;</span>)</span></code></pre></div>
+<p>Queremos que as avaliações fiquem nas colunas, com as três colunas: aval1, aval2, aval3, ou seja, queremos o formato <em>wide</em>. Um pacote do R que pode nos auxiliar a transformar formato <em>long</em> em <em>wide</em> e vice-versa é o <code>tidyr</code>. A função que usaremos é <code>spread</code>, como segue:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="conceitos-iniciais.html#cb66-1"></a><span class="kw">library</span>(tidyr)</span>
+<span id="cb66-2"><a href="conceitos-iniciais.html#cb66-2"></a>dadosa1 &lt;-<span class="st"> </span><span class="kw">spread</span>(<span class="dt">data=</span>dadosa, <span class="dt">key =</span> avaliacao,<span class="dt">value =</span> peso_fetal)</span>
+<span id="cb66-3"><a href="conceitos-iniciais.html#cb66-3"></a>dadosa1</span></code></pre></div>
+<pre><code>## # A tibble: 5 x 5
+##   registro grupo    aval1 aval2 aval3
+##      &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1        1 caso       500   800  1300
+## 2        2 controle   670   990  1470
+## 3        3 caso       600   730  1200
+## 4        4 caso       700   930  1580
+## 5        5 controle   640   890  1500</code></pre>
+<p>Agora, se o interesse for transformar o formato <em>wide</em> para <em>long</em>, a função do <code>tidyr</code> é <code>gather</code>. Vamos ver como fica:</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="conceitos-iniciais.html#cb68-1"></a>dadosa2 &lt;-<span class="st">  </span><span class="kw">gather</span>(<span class="dt">data=</span>dadosa1, <span class="dt">key =</span><span class="st">&quot;avaliacao&quot;</span>, <span class="dt">value =</span> <span class="st">&quot;peso_feto&quot;</span>, aval1, aval2, aval3)</span>
+<span id="cb68-2"><a href="conceitos-iniciais.html#cb68-2"></a>dadosa2</span></code></pre></div>
+<pre><code>## # A tibble: 15 x 4
+##    registro grupo    avaliacao peso_feto
+##       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt;
+##  1        1 caso     aval1           500
+##  2        2 controle aval1           670
+##  3        3 caso     aval1           600
+##  4        4 caso     aval1           700
+##  5        5 controle aval1           640
+##  6        1 caso     aval2           800
+##  7        2 controle aval2           990
+##  8        3 caso     aval2           730
+##  9        4 caso     aval2           930
+## 10        5 controle aval2           890
+## 11        1 caso     aval3          1300
+## 12        2 controle aval3          1470
+## 13        3 caso     aval3          1200
+## 14        4 caso     aval3          1580
+## 15        5 controle aval3          1500</code></pre>
+</div>
+</div>
 <div id="exercícios" class="section level2">
-<h2><span class="header-section-number">3.8</span> Exercícios</h2>
+<h2><span class="header-section-number">3.9</span> Exercícios</h2>
 <div id="teóricos" class="section level3">
-<h3><span class="header-section-number">3.8.1</span> Teóricos</h3>
+<h3><span class="header-section-number">3.9.1</span> Teóricos</h3>
 <ol style="list-style-type: decimal">
 <li><p>Por que é importante ter a população bem definida?</p></li>
 <li><p>Por que é importante pensar em todo planejamento amostral ao
@@ -2232,7 +2355,7 @@ invés de pensar apenas no cálculo do tamanho amostral?</p></li>
 </ol>
 </div>
 <div id="práticos-no-r" class="section level3">
-<h3><span class="header-section-number">3.8.2</span> Práticos no R</h3>
+<h3><span class="header-section-number">3.9.2</span> Práticos no R</h3>
 <ol start="5" style="list-style-type: decimal">
 <li>Considere a base de dados “dados_gemelares”:</li>
 </ol>

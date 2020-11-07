@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  31 OCT 2020 11:33
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  7 NOV 2020 07:25
 entering extended mode
 **./livro_R_Agatha.tex
 (livro_R_Agatha.tex
@@ -528,6 +528,10 @@ LaTeX Warning: Label `materiais-complementares' multiply defined.
 
 LaTeX Warning: Label `exercuxedcios' multiply defined.
 
+
+LaTeX Warning: Label `teste-para-comparauxe7uxe3o-de-mais-de-dois-grupos-indepe
+ndentes' multiply defined.
+
 )
 \openout1 = `livro_R_Agatha.aux'.
 
@@ -899,15 +903,15 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 2.
-)
+[3])
 \tf@toc=\write4
 \openout4 = `livro_R_Agatha.toc'.
 
-[3] [4
-
-]
+[4]
 Chapter 1.
-[5] [6]
+[5
+
+] [6]
 Chapter 2.
 [7
 
@@ -1750,235 +1754,1307 @@ ws", "Number of columns", : unused argument (table.attr = "style=[]width: auto;
 []\n        class=[]table table-condensed[]")[] 
  []
 
-[70] [71] [72]
-Underfull \hbox (badness 1383) in paragraph at lines 3119--3122
+[70] [71]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##       ID EPDS_antes EPDS_depois EDPS_antes_SN EDPS_depois_
+SN Grupo_amamentac~[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##    <dbl>      <dbl>       <dbl>         <dbl>          <db
+l>            <dbl>[] 
+ []
+
+[72]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  1     1         20          22             1             
+ 1                3[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  2     2         20          24             1             
+ 1                1[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  3     3          7           6             0             
+ 0                2[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  4     5         10          11             0             
+ 0                1[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  5     6          5          20             0             
+ 1                2[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  6     7          2           3             0             
+ 0                1[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  7     8         12          16             1             
+ 1                3[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  8     9         10          16             0             
+ 1                3[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ##  9    10          1           4             0             
+ 0                3[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ## 10    11         10          12             0             
+ 1                3[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 3102--3102
+[]\TU/lmtt/m/n/10 ## # ... with 94 more rows, and 1 more variable: Tempo_amamen
+tacao_meses <dbl>[] 
+ []
+
+[73]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ id                     : num [1:104] 1 2 3 5 6 7 8 9 10
+ 11 ...[] 
+ []
+
+
+Overfull \hbox (148.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ grupo                  : Factor w/ 2 levels "placebo","
+progest": 2 1 1 2 1 2 1 1 2 2 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ corion                 : Factor w/ 2 levels "di","mono"
+: 1 2 1 1 1 1 1 1 1 1 ...[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ data_aval              : Date[1:104], format: "2017-04-
+23" "2016-03-21" ...[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ data_nascimento        : Date[1:104], format: "1988-04-
+30" "1982-03-30" ...[] 
+ []
+
+
+Overfull \hbox (143.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ cor_branco             : Factor w/ 2 levels "branca","n
+branca": 1 1 2 2 2 2 1 1 1 1 ...[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ peso_pre               : num [1:104] 93 59 87 78 62 54 
+72 72 102 55 ...[] 
+ []
+
+
+Overfull \hbox (148.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ alt                    : num [1:104] 1.63 1.45 1.69 1.5
+9 1.64 NA 1.64 1.65 1.68 1.45 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ gesta                  : num [1:104] 3 3 2 7 7 2 2 8 3 
+1 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ para                   : num [1:104] 1 1 1 2 4 1 1 4 2 
+0 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ aborto                 : num [1:104] 1 1 0 4 2 0 0 3 0 
+0 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ ind_ap                 : Factor w/ 2 levels "nao","sim"
+: 1 1 1 1 2 1 1 1 1 2 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ tabagismo              : Factor w/ 2 levels "nao","sim"
+: 1 1 1 2 1 1 2 1 1 2 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ alcool                 : Factor w/ 2 levels "nao","sim"
+: 1 1 1 2 1 1 1 1 1 2 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ drogas                 : Factor w/ 2 levels "nao","sim"
+: 1 1 1 1 1 1 1 1 1 1 ...[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ ig_aval                : num [1:104] 33.7 33.4 30.9 32.
+9 28.4 ...[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ medida_colo            : num [1:104] 33 34.6 25 32.8 20
+.6 33.1 28 21.8 46.3 36 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ num_contra_ctg         : num [1:104] 9 4 5 5 2 1 3 2 8 
+2 ...[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ igp_semana             : num [1:104] 37 37 35 38 29 38 
+34 36 37 33 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ igp_dia                : num [1:104] 4 3 0 3 3 3 6 3 5 
+3 ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ imc                    : num [1:104] 35 28.1 30.5 30.9 
+23.1 ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ igp                    : num [1:104] 37.6 37.4 35 38.4 
+29.4 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ primigesta             : Factor w/ 2 levels "nao","sim"
+: 1 1 1 1 1 1 1 1 1 2 ...[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ prematuridade          : Factor w/ 2 levels "nao","sim"
+: 1 1 2 1 2 1 2 2 1 2 ...[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ idade                  : num [1:104] 28 33 24 28 26 30 
+28 36 31 34 ...[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ EPDS_antes             : num [1:104] 20 20 7 10 5 2 12 
+10 1 10 ...[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ EPDS_depois            : num [1:104] 22 24 6 11 20 3 16
+ 16 4 12 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ EDPS_antes_SN          : num [1:104] 1 1 0 0 0 0 1 0 0 
+0 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ EDPS_depois_SN         : num [1:104] 1 1 0 0 1 0 1 1 0 
+1 ...[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ Grupo_amamentacao      : num [1:104] 3 1 2 1 2 1 3 3 3 
+3 ...[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 3165--3165
+[]\TU/lmtt/m/n/10 ##  $ Tempo_amamentacao_meses: num [1:104] 8 17 3 11 14 13 8 
+11 9 4 ...[] 
+ []
+
+File: figures/dados_exemplo.png Graphic file (type bmp)
+<figures/dados_exemplo.png>
+[74] [75]
+Underfull \hbox (badness 1383) in paragraph at lines 3286--3289
 []\TU/lmr/m/n/10 Crie a variável igp (idade gestacional do parto) obtida ao som
 ar
  []
 
-[73] [74
+[76] [77] [78
 
 ]
 Chapter 4.
-[75]
-Overfull \hbox (36.092pt too wide) in paragraph at lines 3228--3229
+[79]
+Overfull \hbox (36.092pt too wide) in paragraph at lines 3395--3396
 \TU/lmr/m/n/10 que, ao utilizar \TU/lmtt/m/n/10 view(freq(dados$prematuridade,c
 umul=FALSE,report.nas=FALSE))
  []
 
-[76] [77] [78] [79]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+[80] [81] [82] [83]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
-[80]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+[84]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ##       placebo                         19 (18.3%)   33 (31.
 7%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ##       progest                         25 (24.0%)   27 (26.
 0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3421--3421
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3588--3588
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
 sim          Total[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ##       placebo                         19 (36.5%)   33 (63.
 5%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ##       progest                         25 (48.1%)   27 (51.
 9%)    52 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
 7%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 3442--3442
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3609--3609
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
 --- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ##                 dados$prematuridade           nao         
   sim          Total[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ##       placebo                         19 ( 43.2%)   33 ( 5
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ##       progest                         25 ( 56.8%)   27 ( 4
 5.0%)    52 ( 50.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ##         Total                         44 (100.0%)   60 (10
 0.0%)   104 (100.0%)[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 3463--3463
+Overfull \hbox (80.25pt too wide) in paragraph at lines 3630--3630
 []\TU/lmtt/m/n/10 ## ------------- --------------------- ------------- --------
 ----- --------------[] 
  []
 
-[81] [82]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf>
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[83]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[84]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[85]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[86]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[87]
-File: livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf Graphic file (t
-ype pdf)
-<use livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[88]
+[85] [86]
 File: livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf Graphic file (t
 ype pdf)
 <use livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[89]
 File: livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf Graphic file (t
 ype pdf)
 <use livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[90]
+[87]
 File: livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf Graphic file (t
 ype pdf)
 <use livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[88]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-149-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-149-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[89]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-150-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-150-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[90]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-151-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-151-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [91]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-152-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-152-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[92]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-153-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-153-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[93]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-154-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-154-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[94]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-155-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-155-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[95]
 File: figures/esquise1.png Graphic file (type bmp)
 <figures/esquise1.png>
 File: figures/esquise2.png Graphic file (type bmp)
 <figures/esquise2.png>
-[92] [93]
-Overfull \hbox (3.05891pt too wide) in paragraph at lines 3756--3758
+[96] [97]
+Overfull \hbox (3.05891pt too wide) in paragraph at lines 3923--3925
 []\TU/lmr/m/n/10 Construa uma tabela cruzada entre EDPS_antes_SN e EDPS_depois_
 SN; 
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 3758--3760
+Underfull \hbox (badness 6094) in paragraph at lines 3925--3927
 []\TU/lmr/m/n/10 Apresente uma tabela com as medidas descritivas da variável
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 3758--3760
+Underfull \hbox (badness 2277) in paragraph at lines 3925--3927
 \TU/lmr/m/n/10 tempo_amamentacao_meses por grupo de amamentação. Refaça
  []
 
-[94]
+[98]
 Chapter 5.
-(livro_R_Agatha.bbl [95
 
-] [96
+Overfull \vbox (0.5284pt too high) detected at line 3966
+ []
 
-]) [97] (livro_R_Agatha.aux)
+[99
+
+]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3992--3992
+[]\TU/lmtt/m/n/10 ##               N.Valid    Min    Mean   Median   Std.Dev   
+  Max[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3992--3992
+[]\TU/lmtt/m/n/10 ## ----------- --------- ------ ------- -------- --------- --
+-----[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 3992--3992
+[]\TU/lmtt/m/n/10 ##       value    104.00   2.70   24.67    24.75      9.93   
+46.30[] 
+ []
+
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-161-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-161-1.pdf>
+[100]
+Overfull \hbox (70.59122pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  TESTE PARA COMPARAÇÃO DE MÉDIAS DE DOIS GRUPOS INDEPENDEN
+TES \TU/lmr/m/n/10 101
+ []
+
+[101]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-166-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-166-1.pdf>
+[102]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4124--4124
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
+ []
+
+
+Overfull \hbox (70.59122pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.2.  TESTE PARA COMPARAÇÃO DE MÉDIAS DE DOIS GRUPOS INDEPENDEN
+TES \TU/lmr/m/n/10 103
+ []
+
+[103]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4167--4167
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
+ []
+
+[104]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-174-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-174-1.pdf>
+
+Overfull \hbox (59.48122pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.3.  TESTE PARA COMPARAÇÃO DE MÉDIAS DE DOIS GRUPOS DEPENDENTE
+S \TU/lmr/m/n/10 105
+ []
+
+[105]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4249--4249
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
+ []
+
+File: figures/descritivas_amament.png Graphic file (type bmp)
+<figures/descritivas_amament.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[106]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-179-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-179-1.pdf>
+
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+
+Overfull \hbox (56.1412pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.4.  TESTE PARA COMPARAÇÃO DE MAIS DE DOIS GRUPOS INDEPENDENTE
+S \TU/lmr/m/n/10 107
+ []
+
+[107]
+File: figures/normalidade_amament.png Graphic file (type bmp)
+<figures/normalidade_amament.png>
+[108]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 4377--4377
+[]\TU/lmtt/m/n/10 ## Fit: aov(formula = tempo_amamentacao_meses ~ grupo_amament
+acao, data = dados)[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4377--4377
+[]\TU/lmtt/m/n/10 ##                                 diff       lwr       upr  
+   p adj[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4377--4377
+[]\TU/lmtt/m/n/10 ## orientacao-acompanhamento -3.9696970 -5.852252 -2.087142 0
+.0000067[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4377--4377
+[]\TU/lmtt/m/n/10 ## nada-acompanhamento       -4.6285714 -6.482852 -2.774291 0
+.0000001[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4377--4377
+[]\TU/lmtt/m/n/10 ## nada-orientacao           -0.6588745 -2.554248  1.236499 0
+.6872588[] 
+ []
+
+
+Overfull \hbox (56.1412pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.4.  TESTE PARA COMPARAÇÃO DE MAIS DE DOIS GRUPOS INDEPENDENTE
+S \TU/lmr/m/n/10 109
+ []
+
+[109] [110
+
+]
+Chapter 6.
+File: figures/exemplo_posto.png Graphic file (type bmp)
+<figures/exemplo_posto.png>
+[111]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ id                     : num [1:21] 14 20 22 23 26 27 3
+0 35 42 51 ...[] 
+ []
+
+
+Overfull \hbox (101.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ grupo                  : chr [1:21] "placebo" "placebo"
+ "progest" "progest" ...[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ corion                 : chr [1:21] "mono" "di" "di" "d
+i" ...[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ data_aval              : Date[1:21], format: "2016-03-2
+1" "2017-12-14" ...[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ data_nascimento        : Date[1:21], format: "1998-03-2
+6" "1998-12-19" ...[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ cor_branco             : chr [1:21] "branca" "nbranca" 
+"nbranca" "branca" ...[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ peso_pre               : num [1:21] 48 61 100 61 71 58 
+94 47 107 65 ...[] 
+ []
+
+
+Overfull \hbox (148.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ alt                    : num [1:21] 1.56 1.64 1.59 1.64
+ 1.71 1.63 1.52 1.43 1.7 1.63 ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ ind_ap                 : chr [1:21] "nao" "nao" "sim" "
+sim" ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ tabagismo              : chr [1:21] "nao" "nao" "nao" "
+nao" ...[] 
+ []
+
+[112]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ alcool                 : chr [1:21] "nao" "nao" "sim" "
+nao" ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ drogas                 : chr [1:21] "nao" "nao" "nao" "
+nao" ...[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ ig_aval                : num [1:21] 28.3 33.7 33.7 27.3
+ 34.9 ...[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ medida_colo            : num [1:21] 20.7 7 12.1 37 16 2
+8.6 11 10 34 18.3 ...[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ num_contra_ctg         : num [1:21] 1 10 3 2 10 2 6 5 8
+ 9 ...[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ igp_semana             : num [1:21] 34 35 37 34 37 30 3
+5 36 35 33 ...[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ imc                    : num [1:21] 19.7 22.7 39.6 22.7
+ 24.3 ...[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ igp                    : num [1:21] 34.9 35.4 37.9 34.1
+ 37.4 ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ primigesta             : chr [1:21] "sim" "sim" "nao" "
+sim" ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ prematuridade          : chr [1:21] "sim" "sim" "nao" "
+sim" ...[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ idade                  : num [1:21] 17 18 20 18 17 18 2
+1 18 18 20 ...[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ epds_antes             : num [1:21] 10 10 3 6 13 11 7 2
+0 10 7 ...[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ epds_depois            : num [1:21] 9 8 4 8 16 11 15 29
+ 10 5 ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ edps_antes_sn          : chr [1:21] "nao" "nao" "nao" "
+nao" ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ edps_depois_sn         : chr [1:21] "nao" "nao" "nao" "
+nao" ...[] 
+ []
+
+
+Overfull \hbox (206.25pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ grupo_amamentacao      : chr [1:21] "acompanhamento" "o
+rientacao" "orientacao" "acompanhamento" ...[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4495--4495
+[]\TU/lmtt/m/n/10 ##  $ tempo_amamentacao_meses: num [1:21] 16 15 8 17 10 2 8 1
+6 9 15 ...[] 
+ []
+
+
+Overfull \hbox (11.4134pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  TESTE PARA COMPARAÇÃO DE DOIS GRUPOS INDEPENDENTES \TU/lm
+r/m/n/10 113
+ []
+
+[113] [114]
+Overfull \hbox (56.1412pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.3.  TESTE PARA COMPARAÇÃO DE MAIS DE DOIS GRUPOS INDEPENDENTE
+S \TU/lmr/m/n/10 115
+ []
+
+[115] [116]
+Chapter 7.
+[117
+
+]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ## ------------------ -------------- ------------ -----------
+- --------------[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ##                      dados$ind_ap          nao          si
+m          Total[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ##                nao                  50 (48.1%)   19 (18.3%
+)    69 ( 66.3%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ##                sim                  25 (24.0%)   10 ( 9.6%
+)    35 ( 33.7%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ##              Total                  75 (72.1%)   29 (27.9%
+)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4633--4633
+[]\TU/lmtt/m/n/10 ## ------------------ -------------- ------------ -----------
+- --------------[] 
+ []
+
+[118]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ## ------------------ -------------- ------------ -----------
+- --------------[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ##                      dados$ind_ap          nao          si
+m          Total[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ##                nao                  50 (48.1%)   19 (18.3%
+)    69 ( 66.3%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ##                sim                  25 (24.0%)   10 ( 9.6%
+)    35 ( 33.7%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ##              Total                  75 (72.1%)   29 (27.9%
+)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4686--4686
+[]\TU/lmtt/m/n/10 ## ------------------ -------------- ------------ -----------
+- --------------[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 4721--4721
+[]\TU/lmtt/m/n/10 ## Warning in chisq.test(freq_table_min): Chi-squared approxi
+mation may be[] 
+ []
+
+
+Overfull \hbox (20.07343pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 7.1.  TESTES DE ASSOCIAÇÃO ENTRE DUAS VARIÁVEIS QUALITATIVAS \T
+U/lmr/m/n/10 119
+ []
+
+[119]
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ## ----------------- -------------- ------------ ------------
+ --------------[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ##                     dados$alcool          nao          sim
+          Total[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ##               nao                  79 (76.0%)    7 ( 6.7%)
+    86 ( 82.7%)[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ##               sim                  10 ( 9.6%)    8 ( 7.7%)
+    18 ( 17.3%)[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ##             Total                  89 (85.6%)   15 (14.4%)
+   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4741--4741
+[]\TU/lmtt/m/n/10 ## ----------------- -------------- ------------ ------------
+ --------------[] 
+ []
+
+[120]
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ## --------------------- ---------------------- ------------ 
+------------ --------------[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ##                         dados$edps_depois_sn          nao 
+         sim          Total[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ##                   nao                          45 (43.3%) 
+  35 (33.7%)    80 ( 76.9%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ##                   sim                           9 ( 8.7%) 
+  15 (14.4%)    24 ( 23.1%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ##                 Total                          54 (51.9%) 
+  50 (48.1%)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4786--4786
+[]\TU/lmtt/m/n/10 ## --------------------- ---------------------- ------------ 
+------------ --------------[] 
+ []
+
+[121]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
+sim          Total[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ##       placebo                         19 (36.5%)   33 (63.
+5%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ##       progest                         25 (48.1%)   27 (51.
+9%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
+7%)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4830--4830
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ##                 dados$prematuridade          nao          
+sim          Total[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ##       placebo                         19 (36.5%)   33 (63.
+5%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ##       progest                         25 (48.1%)   27 (51.
+9%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ##         Total                         44 (42.3%)   60 (57.
+7%)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4862--4862
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+[122]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ##                 dados$prematuridade          sim          
+nao          Total[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ##       progest                         27 (51.9%)   25 (48.
+1%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ##       placebo                         33 (63.5%)   19 (36.
+5%)    52 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ##         Total                         60 (57.7%)   44 (42.
+3%)   104 (100.0%)[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4924--4924
+[]\TU/lmtt/m/n/10 ## ------------- --------------------- ------------ ---------
+--- --------------[] 
+ []
+
+[123]
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ## ---------------------- ------------------- ------------- -
+------------ --------------[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ##                          dados_mama$cancer           sim  
+         nao          Total[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ##                    sim                       50 ( 78.1%)  
+ 43 ( 55.1%)    93 ( 65.5%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ##                    nao                       14 ( 21.9%)  
+ 35 ( 44.9%)    49 ( 34.5%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ##                  Total                       64 (100.0%)  
+ 78 (100.0%)   142 (100.0%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4962--4962
+[]\TU/lmtt/m/n/10 ## ---------------------- ------------------- ------------- -
+------------ --------------[] 
+ []
+
+[124]
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ## ---------------------- ------------------- ------------- -
+------------ --------------[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ##                          dados_mama$cancer           sim  
+         nao          Total[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ##                    sim                       50 ( 78.1%)  
+ 43 ( 55.1%)    93 ( 65.5%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ##                    nao                       14 ( 21.9%)  
+ 35 ( 44.9%)    49 ( 34.5%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ##                  Total                       64 (100.0%)  
+ 78 (100.0%)   142 (100.0%)[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 5025--5025
+[]\TU/lmtt/m/n/10 ## ---------------------- ------------------- ------------- -
+------------ --------------[] 
+ []
+
+[125] [126]
+Chapter 8.
+[127
+
+]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ##         imc    colo   contra idade  igp    epds_a epds_d a
+mament[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## imc            0.5115 0.2571 0.5127 0.6107 0.8567 0.2336 0
+.0711[] 
+ []
+
+[128]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## colo    0.5115        0.7957 0.7702 0.6916 0.0731 0.7296 0
+.0363[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## contra  0.2571 0.7957        0.1256 0.7313 0.1090 0.0176 0
+.6672[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## idade   0.5127 0.7702 0.1256        0.3791 0.9528 0.5852 0
+.2259[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## igp     0.6107 0.6916 0.7313 0.3791        0.6339 0.2512 0
+.6026[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## epds_a  0.8567 0.0731 0.1090 0.9528 0.6339        0.0000 0
+.0724[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5128--5128
+[]\TU/lmtt/m/n/10 ## epds_d  0.2336 0.7296 0.0176 0.5852 0.2512 0.0000        0
+.9476[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ##                 imc        colo      contra        idade  
+       igp[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## imc      1.00000000  0.06607835  0.11382295  0.065884942  
+0.05125493[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## colo     0.06607835  1.00000000 -0.02569084  0.028987512 -
+0.03936321[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## contra   0.11382295 -0.02569084  1.00000000 -0.151166111 -
+0.03407257[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## idade    0.06588494  0.02898751 -0.15116611  1.000000000  
+0.08713997[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## igp      0.05125493 -0.03936321 -0.03407257  0.087139969  
+1.00000000[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## epds_a   0.01819407 -0.17648916  0.15805936  0.005878708 -
+0.04724312[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## epds_d  -0.11958486 -0.03430514  0.23238785 -0.054129034 -
+0.11353009[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5157--5157
+[]\TU/lmtt/m/n/10 ## amament -0.18033322 -0.20553417 -0.04265977 -0.119767500  
+0.05164852[] 
+ []
+
+[129]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ##         imc    colo   contra idade  igp    epds_a epds_d a
+mament[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## imc            0.5113 0.2502 0.1172 0.5777 0.8562 0.4216 0
+.0811[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## colo    0.5113        0.9487 0.7560 0.9927 0.0529 0.9200 0
+.0694[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## contra  0.2502 0.9487        0.1437 0.7335 0.5383 0.0632 0
+.8179[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## idade   0.1172 0.7560 0.1437        0.3351 0.8152 0.7557 0
+.2415[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## igp     0.5777 0.9927 0.7335 0.3351        0.3764 0.2878 0
+.2625[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## epds_a  0.8562 0.0529 0.5383 0.8152 0.3764        0.0002 0
+.1297[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
+[]\TU/lmtt/m/n/10 ## epds_d  0.4216 0.9200 0.0632 0.7557 0.2878 0.0002        0
+.9711[] 
+ []
+
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-215-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-215-1.pdf>
+(livro_R_Agatha.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[130] [131] [132
+
+]) [133] (livro_R_Agatha.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19341 strings out of 412249
- 338238 string characters out of 2855678
- 825990 words of memory out of 3000000
- 38485 multiletter control sequences out of 15000+200000
+ 19444 strings out of 412249
+ 341794 string characters out of 2855678
+ 833174 words of memory out of 3000000
+ 38579 multiletter control sequences out of 15000+200000
  541579 words of font info for 87 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,6n,118p,880b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 84i,6n,118p,880b,476s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on livro_R_Agatha.pdf (97 pages).
+Output written on livro_R_Agatha.pdf (133 pages).

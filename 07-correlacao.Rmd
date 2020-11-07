@@ -1,0 +1,79 @@
+# Correlação entre variáveis quantitativas
+
+
+Nos Capítulos \@ref(param) e \@ref(nparam) vimos como comparar grupos com relação a variáveis quantitativas e no Capítulo \@ref(qualis) vimos como avaliar a associação entre duas variáveis qualitativas. Agora, vamos abordar nesse capítulo  medidas que quantificam a correlação linear entre duas variáveis quantitativas: coeficiente de correlação linear de Pearson e coeficiente de Spearman. 
+
+Considermos novamente a base de dados das gestações gemelares. Antes de importar a base de dados, vamos carregar os pacotes que usaremos aqui. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+library(readr) #leitor da base de dados
+library(dplyr) #para manipulação dos dados
+library(Hmisc)  #para matriz de correlação com valor p
+library(corrplot) #para fazer o gráfico correlograma
+```
+
+Agora vamos importar a base de dados gemelares:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+dados <- read_csv(file = "dataset/dados_completos.csv") #importando base de dados
+```
+
+O coeficiente de correlação de Pearson é uma medida do grau  correlação linear entre duas variáveis quantitativas. Mede a proximidade dos dados a uma reta.
+ 
+ Dados os valores observados $(x_1,y_1), (x_2, y_2),\cdots, (x_n,y_n)$, o coeficiente de correlação linear de Pearson é
+
+$$\rho=\frac{1}{n}\sum\limits_{i=1}^n\left(\frac{x_i-\bar{x}}{s_x}\right)\left(\frac{y_i-\bar{y}}{s_y}\right)$$
+
+em que: 
+
+- $\bar{x}$ e $\bar{y}$ são as médias das observações das variaveis $X$ e $Y$.
+
+- $s_{x}$ e $s_{y}$ são os devios padrão das variáveis $X$ e $Y$.
+
+O coeficiente de correlação de Peason assume valor no intervalo [-1,1], em que:
+
+ - $\rho$ próximo de -1, indícios de que há uma correlação linear **negativa** entre as variáveis;
+    
+ - $\rho$ próximo de 0, não há indícios de correlação entre as variáveis;
+    
+ - $\rho$ próximo de 1, indícios de que há uma correlação linear **positiva** entre as variáveis.
+
+Para calcular o coeficiente de correlação linear de Pearson no R, vamos primeiro selecionar  as variáveis quantitativas da base de dados gemelares. Vamos usar a função `select` do pacote `dplyr`. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+dados_select <- select(dados,imc,colo=medida_colo,contra=num_contra_ctg,idade,igp,epds_a=epds_antes,epds_d=epds_depois,amament=tempo_amamentacao_meses)
+#renomeamos algumas variaveis para não aparecer nomes muito grandes
+
+```
+
+Vamos usar a função `rcorr` do pacote `Hmisc` para calcular o coeficiente de correlação de Pearson e também apresentar o valor p do teste que apresenta as seguintes hipóteses: $H_0: \rho=0$ e $H_1:\rho\neq 0$. Vale ressaltar que esse teste avalia se a correlação é nula, mas nada diz sobre a sua intensidade. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+rcorr(as.matrix(dados_select),type="pearson")
+```
+
+Se eu quiser apenas a matriz de correlação:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+rcorr(as.matrix(dados_select),type="pearson")$r
+```
+
+Em cenários que há pontos discrepantes (possível ver por meio de um gráfico de dispersão entre as duas variáveis) ou os dados não pertencem a uma escala de medida padrão, mas existe uma ordenação clara (por exemplo, escores numa escala de 1 a 10), o coeficiente de correlação de Spearman pode ser utilizado. É uma medida não paramétrica de correlação de postos. Tanto a interpretação do valor do coeficiente quanto o teste de hipóteses discutidos para Pearson são similares para Spearman. 
+
+
+Para calcular o coeficiente de Spearman no R, precisamos mudar o argumento `type="spearman`, como segue:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+rcorr(as.matrix(dados_select),type="spearman")
+```
+
+
+Podemos também fazer um correlograma com o auxílio do pacote  `corrplot`:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+corrplot.mixed(cor(dados_select,use="pairwise",
+                   method="pearson")) #se quiser spearman, mudar method="spearman"
+```
+
+
+
+

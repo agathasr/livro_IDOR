@@ -227,7 +227,7 @@ datasummary(primigesta*grupo~(igp+idade+imc+medida_colo+
 
 Para mais detalhes sobre as medidas descritivas veja o Capítulo 3 de Morettin e Singer [@morettin2020introduccaoa].
 
-## Tabelas cruzadas - duas variáveis qualitativas
+## Tabelas cruzadas - duas variáveis qualitativas {#tabelas}
 
 Tabelas cruzadas ou tabelas de contingência são tabelas que apresentam frequências de duas variáveis qualitativas conjuntamente. 
 

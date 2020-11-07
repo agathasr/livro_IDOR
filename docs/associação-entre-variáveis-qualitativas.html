@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo7 Associação entre variáveis qualitativas | Estatística Aplicada à Pesquisa</title>
+  <meta name="description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo7 Associação entre variáveis qualitativas | Estatística Aplicada à Pesquisa" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo7 Associação entre variáveis qualitativas | Estatística Aplicada à Pesquisa" />
+  
+  <meta name="twitter:description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  
+
+<meta name="author" content="Agatha Rodrigues" />
+
+
+<meta name="date" content="2020-11-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="testes-não-paramétricos.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Estatística Aplicada à Pesquisa </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre esse livro</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sobre-mim"><i class="fa fa-check"></i><b>1.1</b> Sobre mim</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introdução</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#bases-de-dados"><i class="fa fa-check"></i><b>2.1</b> Bases de dados</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#dados_gemelares"><i class="fa fa-check"></i><b>2.1.1</b> Gestações gemelares</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#gestações-gemelares---depressão-e-amamentação"><i class="fa fa-check"></i><b>2.1.2</b> Gestações gemelares - depressão e amamentação</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sobre-o-software-r"><i class="fa fa-check"></i><b>2.2</b> Sobre o software R</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#instalação-r-e-rstudio"><i class="fa fa-check"></i><b>2.3</b> Instalação R e RStudio</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#instalação-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalação R</a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#instalação-rstudio"><i class="fa fa-check"></i><b>2.3.2</b> Instalação RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#primeiros-passos-com-r-e-rstudio."><i class="fa fa-check"></i><b>2.4</b> Primeiros passos com R e RStudio.</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="intro.html"><a href="intro.html#primeiros-contatos-com-rstudio"><i class="fa fa-check"></i><b>2.4.1</b> Primeiros contatos com RStudio</a></li>
+<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#primeiros-passos-no-r"><i class="fa fa-check"></i><b>2.4.2</b> Primeiros passos no R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#como-obter-ajuda-no-r"><i class="fa fa-check"></i><b>2.5</b> Como obter ajuda no R</a></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#pacotes"><i class="fa fa-check"></i><b>2.6</b> Pacotes</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#instalação"><i class="fa fa-check"></i><b>2.6.1</b> Instalação</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#carregar-pacotes"><i class="fa fa-check"></i><b>2.6.2</b> Carregar pacotes:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#materiais-complementares"><i class="fa fa-check"></i><b>2.7</b> Materiais complementares</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="conceitos.html"><a href="conceitos.html"><i class="fa fa-check"></i><b>3</b> Conceitos iniciais</a><ul>
+<li class="chapter" data-level="3.1" data-path="conceitos.html"><a href="conceitos.html#população"><i class="fa fa-check"></i><b>3.1</b> População</a></li>
+<li class="chapter" data-level="3.2" data-path="conceitos.html"><a href="conceitos.html#amostra"><i class="fa fa-check"></i><b>3.2</b> Amostra</a></li>
+<li class="chapter" data-level="3.3" data-path="conceitos.html"><a href="conceitos.html#variaveis"><i class="fa fa-check"></i><b>3.3</b> Variáveis</a></li>
+<li class="chapter" data-level="3.4" data-path="conceitos.html"><a href="conceitos.html#tabulação-de-dados"><i class="fa fa-check"></i><b>3.4</b> Tabulação de dados</a></li>
+<li class="chapter" data-level="3.5" data-path="conceitos.html"><a href="conceitos.html#importação-de-dados-no-r"><i class="fa fa-check"></i><b>3.5</b> Importação de dados no R</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="conceitos.html"><a href="conceitos.html#extensão-.txt-ou-.csv"><i class="fa fa-check"></i><b>3.5.1</b> Extensão .txt ou .csv</a></li>
+<li class="chapter" data-level="3.5.2" data-path="conceitos.html"><a href="conceitos.html#arquivos-em-excel"><i class="fa fa-check"></i><b>3.5.2</b> Arquivos em Excel</a></li>
+<li class="chapter" data-level="3.5.3" data-path="conceitos.html"><a href="conceitos.html#arquivos-de-outros-softwares"><i class="fa fa-check"></i><b>3.5.3</b> Arquivos de outros softwares</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="conceitos.html"><a href="conceitos.html#consistencia"><i class="fa fa-check"></i><b>3.6</b> Análise de consistência e tratamento dos dados</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="conceitos.html"><a href="conceitos.html#importação-dos-dados"><i class="fa fa-check"></i><b>3.6.1</b> Importação dos dados</a></li>
+<li class="chapter" data-level="3.6.2" data-path="conceitos.html"><a href="conceitos.html#arrumação-da-base-de-dados"><i class="fa fa-check"></i><b>3.6.2</b> Arrumação da base de dados</a></li>
+<li class="chapter" data-level="3.6.3" data-path="conceitos.html"><a href="conceitos.html#identificação-de-casos-duplicados"><i class="fa fa-check"></i><b>3.6.3</b> Identificação de casos duplicados</a></li>
+<li class="chapter" data-level="3.6.4" data-path="conceitos.html"><a href="conceitos.html#identificar-problemas-nas-variáveis-da-base-de-dados"><i class="fa fa-check"></i><b>3.6.4</b> Identificar problemas nas variáveis da base de dados</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="conceitos.html"><a href="conceitos.html#transformação-dos-dados"><i class="fa fa-check"></i><b>3.7</b> Transformação dos dados</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="conceitos.html"><a href="conceitos.html#transformação-de-variáveis-quantitativas"><i class="fa fa-check"></i><b>3.7.1</b> Transformação de variáveis quantitativas</a></li>
+<li class="chapter" data-level="3.7.2" data-path="conceitos.html"><a href="conceitos.html#transformação-de-variáveis-qualitativas"><i class="fa fa-check"></i><b>3.7.2</b> Transformação de variáveis qualitativas</a></li>
+<li class="chapter" data-level="3.7.3" data-path="conceitos.html"><a href="conceitos.html#manipulação-de-datas"><i class="fa fa-check"></i><b>3.7.3</b> Manipulação de datas</a></li>
+<li class="chapter" data-level="3.7.4" data-path="conceitos.html"><a href="conceitos.html#filtragem-de-observações"><i class="fa fa-check"></i><b>3.7.4</b> Filtragem de observações</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="conceitos.html"><a href="conceitos.html#manipulando-os-formatos-das-bases-de-dados"><i class="fa fa-check"></i><b>3.8</b> Manipulando os formatos das bases de dados</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="conceitos.html"><a href="conceitos.html#combinando-bases-de-dados"><i class="fa fa-check"></i><b>3.8.1</b> Combinando bases de dados</a></li>
+<li class="chapter" data-level="3.8.2" data-path="conceitos.html"><a href="conceitos.html#formato"><i class="fa fa-check"></i><b>3.8.2</b> Mudando formato da base de dado</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="conceitos.html"><a href="conceitos.html#exercícios"><i class="fa fa-check"></i><b>3.9</b> Exercícios</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="conceitos.html"><a href="conceitos.html#teóricos"><i class="fa fa-check"></i><b>3.9.1</b> Teóricos</a></li>
+<li class="chapter" data-level="3.9.2" data-path="conceitos.html"><a href="conceitos.html#práticos-no-r"><i class="fa fa-check"></i><b>3.9.2</b> Práticos no R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html"><i class="fa fa-check"></i><b>4</b> Análise exploratória dos dados</a><ul>
+<li class="chapter" data-level="4.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#tabelas-de-frequências"><i class="fa fa-check"></i><b>4.1</b> Tabelas de frequências</a></li>
+<li class="chapter" data-level="4.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-resumo"><i class="fa fa-check"></i><b>4.2</b> Medidas resumo</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-de-posição"><i class="fa fa-check"></i><b>4.2.1</b> Medidas de posição</a></li>
+<li class="chapter" data-level="4.2.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>4.2.2</b> Medidas de dispersão</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#tabelas"><i class="fa fa-check"></i><b>4.3</b> Tabelas cruzadas - duas variáveis qualitativas</a></li>
+<li class="chapter" data-level="4.4" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#gráficos"><i class="fa fa-check"></i><b>4.4</b> Gráficos</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#pacote-ggplot2"><i class="fa fa-check"></i><b>4.4.1</b> Pacote ggplot2</a></li>
+<li class="chapter" data-level="4.4.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#pacote-esquisse"><i class="fa fa-check"></i><b>4.4.2</b> Pacote esquisse</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="intro.html"><a href="intro.html#materiais-complementares"><i class="fa fa-check"></i><b>4.5</b> Materiais complementares</a></li>
+<li class="chapter" data-level="4.6" data-path="conceitos.html"><a href="conceitos.html#exercícios"><i class="fa fa-check"></i><b>4.6</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html"><i class="fa fa-check"></i><b>5</b> Testes paramétricos para média</a><ul>
+<li class="chapter" data-level="5.1" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-média-de-população-única"><i class="fa fa-check"></i><b>5.1</b> Teste para média de população única</a></li>
+<li class="chapter" data-level="5.2" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-comparação-de-médias-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>5.2</b> Teste para comparação de médias de dois grupos independentes</a></li>
+<li class="chapter" data-level="5.3" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-comparação-de-médias-de-dois-grupos-dependentes"><i class="fa fa-check"></i><b>5.3</b> Teste para comparação de médias de dois grupos dependentes</a></li>
+<li class="chapter" data-level="5.4" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-comparação-de-mais-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>5.4</b> Teste para comparação de mais de dois grupos independentes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="testes-não-paramétricos.html"><a href="testes-não-paramétricos.html"><i class="fa fa-check"></i><b>6</b> Testes não paramétricos</a><ul>
+<li class="chapter" data-level="6.1" data-path="testes-não-paramétricos.html"><a href="testes-não-paramétricos.html#teste-para-comparação-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>6.1</b> Teste para comparação de dois grupos independentes</a></li>
+<li class="chapter" data-level="6.2" data-path="testes-não-paramétricos.html"><a href="testes-não-paramétricos.html#teste-para-comparação-de-dois-grupos-dependentes"><i class="fa fa-check"></i><b>6.2</b> Teste para comparação de dois grupos dependentes</a></li>
+<li class="chapter" data-level="6.3" data-path="testes-paramétricos-para-média.html"><a href="testes-paramétricos-para-média.html#teste-para-comparação-de-mais-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>6.3</b> Teste para comparação de mais de dois grupos independentes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="associação-entre-variáveis-qualitativas.html"><a href="associação-entre-variáveis-qualitativas.html"><i class="fa fa-check"></i><b>7</b> Associação entre variáveis qualitativas</a><ul>
+<li class="chapter" data-level="7.1" data-path="associação-entre-variáveis-qualitativas.html"><a href="associação-entre-variáveis-qualitativas.html#testes-de-associação-entre-duas-variáveis-qualitativas"><i class="fa fa-check"></i><b>7.1</b> Testes de associação entre duas variáveis qualitativas</a></li>
+<li class="chapter" data-level="7.2" data-path="associação-entre-variáveis-qualitativas.html"><a href="associação-entre-variáveis-qualitativas.html#medidas-de-associação"><i class="fa fa-check"></i><b>7.2</b> Medidas de associação</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estatística Aplicada à Pesquisa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="associação-entre-variáveis-qualitativas" class="section level1">
+<h1><span class="header-section-number">Capítulo7</span> Associação entre variáveis qualitativas</h1>
+<p>Nesse capítulo, vamos discutir alguns testes para duas variáveis qualitativas.
+Usaremos aqui já as informações sobre testes de hipóteses apresentadas em <a href="https://daslab-ufes.github.io/materiais/" class="uri">https://daslab-ufes.github.io/materiais/</a> no arquivo “Inferência Estatística”.</p>
+<div id="testes-de-associação-entre-duas-variáveis-qualitativas" class="section level2">
+<h2><span class="header-section-number">7.1</span> Testes de associação entre duas variáveis qualitativas</h2>
+<p>Considere que a obstetra tenha o interesse em verificar se há associação entre ser primigesta (sim ou não) com antecedente de doença materna (sim ou não). Para fazer essa análise no R, antes de tudo precisamos carregar os seguintes pacotes (já instalados em minha máquina):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="associação-entre-variáveis-qualitativas.html#cb1-1"></a><span class="kw">library</span>(readr) <span class="co">#leitor da base de dados</span></span>
+<span id="cb1-2"><a href="associação-entre-variáveis-qualitativas.html#cb1-2"></a><span class="kw">library</span>(forcats) <span class="co">#para lidar com variáveis categóricas</span></span>
+<span id="cb1-3"><a href="associação-entre-variáveis-qualitativas.html#cb1-3"></a><span class="kw">library</span>(summarytools) <span class="co">#para medidas descritivas e testes para vars qualitativas</span></span></code></pre></div>
+<p>Agora vamos importar a base de dados gemelares:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="associação-entre-variáveis-qualitativas.html#cb2-1"></a>dados &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;dataset/dados_completos.csv&quot;</span>) <span class="co">#importando base de dados</span></span></code></pre></div>
+<p>Como primeira análise, podemos fazer uma tabela cruzada entre as variáveis qualitativas “primigesta” e “ind_ap” (antecedente de doença materna) por meio da função <code>ctable</code> do pacote <code>summarytools</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="associação-entre-variáveis-qualitativas.html#cb3-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>primigesta,dados<span class="op">$</span>ind_ap,<span class="dt">prop=</span><span class="st">&quot;t&quot;</span>) </span></code></pre></div>
+<pre><code>## Cross-Tabulation, Total Proportions  
+## primigesta * ind_ap  
+## Data Frame: dados  
+## 
+## ------------ -------- ------------ ------------ --------------
+##                ind_ap          nao          sim          Total
+##   primigesta                                                  
+##          nao            50 (48.1%)   19 (18.3%)    69 ( 66.3%)
+##          sim            25 (24.0%)   10 ( 9.6%)    35 ( 33.7%)
+##        Total            75 (72.1%)   29 (27.9%)   104 (100.0%)
+## ------------ -------- ------------ ------------ --------------</code></pre>
+<p>Já usamos essa função anteriormente, em <a href="análise-exploratória-dos-dados.html#tabelas">4.3</a>. Volte lá para alguns detalhes da função.</p>
+<p>Podemos observar, por exemplo, que 48,1% das gestantes são primigestas e não tem antecedente de doença materna. Para testar se há associação entre duas variáveis qualitativas, podemos usar o <strong>teste qui-quadrado para independência</strong>. Nesse teste,
+são as hipóteses: <span class="math inline">\(H_0\)</span>: As duas variáveis são independentes e <span class="math inline">\(H_1\)</span>: As duas variáveis não são independentes, ou seja, há associação entre as duas variáveis.</p>
+<p>De uma maneira bastante resumida, o teste qui-quadrado compara as frequências observadas das caselas (combinações das categorias das duas variáveis) com as frequências esperadas em um cenário de independência. A frequência esperada é dada por: frequência de uma categoria vezes frequência da outra categoria dividido pelo total de observações.</p>
+<p>Como exemplo, considere a casela de sim para primigesta e sim para ind_ap. A frequência observada é 10 e a esperada é <span class="math inline">\((35 \times 29)/104= 9.75\)</span>, em que 35 é o total de casos primigesta=sim e 29 é o total de casos ind_ap=sim, como podemos ver na tabela acima.</p>
+<p>Assim, fica intuitivo pensar que se as distâncias entre o valor observado e o esperado sob <span class="math inline">\(H_0\)</span> de todas as caselas da tabela (combinação das categorias das duas variáveis) forem pequenas, indica que <span class="math inline">\(H_0\)</span> é verdade. Caso as distâncias sejam grandes, indica que temos indícios para rejeitar <span class="math inline">\(H_0\)</span>.</p>
+<p>Um observação bastante importante: o teste qui-quadrado é um teste assintótico (requer tamanho de amostra e frequências nas caselas grandes) e, por isso, requer alguns pré-requisitos para a utilização:</p>
+<ul>
+<li>Tamanho da amostra grande;</li>
+<li>Pelo menos 5 observações em cada casela;</li>
+<li>Valor esperado em cada casela não deve ser inferior a 5.</li>
+</ul>
+<p>Podemos realizar o teste qui-quadrado para independência no R de algumas formas. Aqui apresentamos duas delas.</p>
+<p>A primeira é usando o argumento <code>chisq=TRUE</code> na função <code>ctable</code>. No nosso exemplo, fica:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="associação-entre-variáveis-qualitativas.html#cb5-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>primigesta,dados<span class="op">$</span>ind_ap,<span class="dt">prop=</span><span class="st">&quot;t&quot;</span>,<span class="dt">chisq=</span><span class="ot">TRUE</span>) </span></code></pre></div>
+<pre><code>## Cross-Tabulation, Total Proportions  
+## primigesta * ind_ap  
+## Data Frame: dados  
+## 
+## 
+## ------------ -------- ------------ ------------ --------------
+##                ind_ap          nao          sim          Total
+##   primigesta                                                  
+##          nao            50 (48.1%)   19 (18.3%)    69 ( 66.3%)
+##          sim            25 (24.0%)   10 ( 9.6%)    35 ( 33.7%)
+##        Total            75 (72.1%)   29 (27.9%)   104 (100.0%)
+## ------------ -------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##       0        1       1    
+## ----------------------------</code></pre>
+<p>Veja que a estatística qui-quadrado (saída <em>Chi.squared</em>), que leva em conta as distâncias entre o observado e o esperado sob <span class="math inline">\(H_0\)</span>, é bem pequena, perto de 0 (por isso que na saída só está 0 por aproximação). Assim, o valor p é bem grande, próximo de 1 (por isso que a saída já arredonda para 1), e não há indícios para rejeitar a hipótese nula de independência entre as duas variáveis.</p>
+<p>Outra função é a <code>chisq.test</code> (não precisa instalar pacote), que retorna o mesmo teste da saída anterior:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="associação-entre-variáveis-qualitativas.html#cb7-1"></a><span class="kw">chisq.test</span>(dados<span class="op">$</span>primigesta,dados<span class="op">$</span>ind_ap)</span></code></pre></div>
+<pre><code>## 
+## 	Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  dados$primigesta and dados$ind_ap
+## X-squared = 1.4794e-30, df = 1, p-value = 1</code></pre>
+<p>Veja que as suposições para a utilização do teste qui-quadrado foram satisfeitas: n grande, frequências das caselas observadas maior que 5 (a menor é 10) e frequências esperadas maior que 5 (verifique).</p>
+<p>Vamos agora para outro exemplo. A obstetra também quer saber se há associação entre tabagismo (sim ou não) e alcool (sim ou não).</p>
+<p>Vamos então obter a tabela cruzada e realizar o teste qui-quadrado no R:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="associação-entre-variáveis-qualitativas.html#cb9-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>tabagismo,dados<span class="op">$</span>alcool,<span class="dt">prop=</span><span class="st">&quot;t&quot;</span>,<span class="dt">chisq=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## Warning in chisq.test(freq_table_min): Chi-squared approximation may be
+## incorrect</code></pre>
+<pre><code>## Cross-Tabulation, Total Proportions  
+## tabagismo * alcool  
+## Data Frame: dados  
+## 
+## 
+## ----------- -------- ------------ ------------ --------------
+##               alcool          nao          sim          Total
+##   tabagismo                                                  
+##         nao            79 (76.0%)    7 ( 6.7%)    86 ( 82.7%)
+##         sim            10 ( 9.6%)    8 ( 7.7%)    18 ( 17.3%)
+##       Total            89 (85.6%)   15 (14.4%)   104 (100.0%)
+## ----------- -------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##     13.09      1     3e-04  
+## ----------------------------</code></pre>
+<p>Veja que o R dá um aviso ( <em>warning</em> ) dizendo que o teste qui-quadrado pode estar errado. Ao pensar nos pré-requisitos do teste, vemos que o n é grande e não há nenhuma frequência observada menor que 5 (a menor é 7). No entanto, a frequência esperada da casela tagabismo=sim e alcool=sim é 2.59 (<span class="math inline">\(18\times 15 /140=2.59\)</span>), menor que 5. Logo, o teste qui-quadrado não é adequado. Uma alternativa é considerar o <strong>teste exato de Fisher</strong> que faz suposições assintóticas. As hipóteses desse teste são as mesmas do teste qui-quadrado e para realizá-lo no R, usamos a função <code>fisher.test</code>:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="associação-entre-variáveis-qualitativas.html#cb12-1"></a><span class="kw">fisher.test</span>(dados<span class="op">$</span>tabagismo,dados<span class="op">$</span>alcool)</span></code></pre></div>
+<pre><code>## 
+## 	Fisher&#39;s Exact Test for Count Data
+## 
+## data:  dados$tabagismo and dados$alcool
+## p-value = 0.0005441
+## alternative hypothesis: true odds ratio is not equal to 1
+## 95 percent confidence interval:
+##   2.250842 35.676583
+## sample estimates:
+## odds ratio 
+##   8.730027</code></pre>
+<p>O valor p é bem pequeno (<span class="math inline">\(0.0005441\)</span>), indicando indícios para dizer que há associação entre tabagismo e alcool.</p>
+<p>Considere agora que a psicóloga que faz parte do projeto deseja sabe se houve mudança no status de depressão (sim e não) antes e depois do parto. Abaixo está a tabela cruzada da variável de depressão avaliada nos dois momentos.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="associação-entre-variáveis-qualitativas.html#cb14-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>edps_antes_sn,dados<span class="op">$</span>edps_depois_sn,<span class="dt">prop=</span><span class="st">&quot;t&quot;</span>)</span></code></pre></div>
+<pre><code>## Cross-Tabulation, Total Proportions  
+## edps_antes_sn * edps_depois_sn  
+## Data Frame: dados  
+## 
+## --------------- ---------------- ------------ ------------ --------------
+##                   edps_depois_sn          nao          sim          Total
+##   edps_antes_sn                                                          
+##             nao                    45 (43.3%)   35 (33.7%)    80 ( 76.9%)
+##             sim                     9 ( 8.7%)   15 (14.4%)    24 ( 23.1%)
+##           Total                    54 (51.9%)   50 (48.1%)   104 (100.0%)
+## --------------- ---------------- ------------ ------------ --------------</code></pre>
+<p>Podemos observar que 43.3% dos casos foram classificados como não depressivas antes e depois do parto, 14.4% eram depressivas e continuaram depois do parto e agora temos as mudanças: 8.7% eram depressivas e depois ficaram não depressivas depois do parto e 33.7% não eram antes e ficaram depois do parto.</p>
+<p>Para verificar se houve mudança no status de depressão das gestantes antes e depois parto, não é indicado usar nenhum dos testes anteriormente citados, uma vez que as frequências aqui são correlacionadas. Um teste candidato nesse caso é o <strong>teste de McNemar</strong>. As hipóteses desse teste são: <span class="math inline">\(H_0\)</span>: o parto não alternou o status de depressão e <span class="math inline">\(H_1\)</span>: o parto alternou o status de depressão. No R, a função para o teste de McNemar é:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="associação-entre-variáveis-qualitativas.html#cb16-1"></a><span class="kw">mcnemar.test</span>(dados<span class="op">$</span>edps_antes_sn,dados<span class="op">$</span>edps_depois_sn)</span></code></pre></div>
+<pre><code>## 
+## 	McNemar&#39;s Chi-squared test with continuity correction
+## 
+## data:  dados$edps_antes_sn and dados$edps_depois_sn
+## McNemar&#39;s chi-squared = 14.205, df = 1, p-value = 0.000164</code></pre>
+<p>Podemos observar pela saída acima que há indícios para dizer que houve mudança no status de depressão das mulheres após o parto (valor p =0.000164).</p>
+</div>
+<div id="medidas-de-associação" class="section level2">
+<h2><span class="header-section-number">7.2</span> Medidas de associação</h2>
+<p>A pergunta principal do estudo dos gemelares é se a progesterona diminui o risco de prematuridade (idade gestacional menor que 37 semanas). Na tabela abaixo temos as porcentagens de prematuridade em cada grupo (progesterona e placebo).</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="associação-entre-variáveis-qualitativas.html#cb18-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>grupo,dados<span class="op">$</span>prematuridade,<span class="dt">prop=</span><span class="st">&quot;r&quot;</span>)</span></code></pre></div>
+<pre><code>## Cross-Tabulation, Row Proportions  
+## grupo * prematuridade  
+## Data Frame: dados  
+## 
+## --------- --------------- ------------ ------------ --------------
+##             prematuridade          nao          sim          Total
+##     grupo                                                         
+##   placebo                   19 (36.5%)   33 (63.5%)    52 (100.0%)
+##   progest                   25 (48.1%)   27 (51.9%)    52 (100.0%)
+##     Total                   44 (42.3%)   60 (57.7%)   104 (100.0%)
+## --------- --------------- ------------ ------------ --------------</code></pre>
+<p>Podemos observar que a porcentagem de prematuridade no grupo placebo é de 63.5%, enquanto que no grupo progesterona é de 51.9%. Esses são resultados obtidos nessa amostra e queremos inferir para a população.</p>
+<p>Queremos saber se os grupos são homogêneos com relação à prematuridade, ou seja, queremos saber se o risco de prematuridade é diferente entre os grupos. Para isso, seja <span class="math inline">\(p_1\)</span> a probabilidade de prematuridade do grupo progesterona e <span class="math inline">\(p_2\)</span> a probabilidade de prematuridade do grupo placebo. Um teste para comparar os grupos com relação às probabilidades de um evento de interesse é o <strong>teste qui-quadrado de homogeneidade</strong>. Tanto a estatística quanto a distribuição de referência do teste para homogeneidade são as mesmas do teste de independência. Assim, a função no R é a mesma que usamos anteriormente:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="associação-entre-variáveis-qualitativas.html#cb20-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>grupo,dados<span class="op">$</span>prematuridade,<span class="dt">prop=</span><span class="st">&quot;r&quot;</span>,<span class="dt">chisq=</span><span class="ot">TRUE</span>) <span class="co">##ou chisq.test(dados$grupo,dados$prematuridade)</span></span></code></pre></div>
+<pre><code>## Cross-Tabulation, Row Proportions  
+## grupo * prematuridade  
+## Data Frame: dados  
+## 
+## 
+## --------- --------------- ------------ ------------ --------------
+##             prematuridade          nao          sim          Total
+##     grupo                                                         
+##   placebo                   19 (36.5%)   33 (63.5%)    52 (100.0%)
+##   progest                   25 (48.1%)   27 (51.9%)    52 (100.0%)
+##     Total                   44 (42.3%)   60 (57.7%)   104 (100.0%)
+## --------- --------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##    0.9848      1     0.321  
+## ----------------------------</code></pre>
+<p>Podemos observar que não há indícios para dizer que a progesterona diminui o risco de prematuridade. Há outra forma de comparar os dois grupos com relação à prematuridade: pelo <strong>risco relativo</strong>.</p>
+<p>O risco relativo é dado pela razão das probabilidades (riscos) de prematuridade. Assim, temos que
+<span class="math display">\[
+RR=\frac{0.519}{0.635}=0.8173. 
+\]</span>
+Antes de interpretar o risco relativo de prematuridade acima, vamos discutir os possíveis valores de RR:</p>
+<ul>
+<li><p><span class="math inline">\(RR&gt;1\)</span>: indica que a categoria do numerador <strong>aumenta</strong> o risco do evento.</p></li>
+<li><p><span class="math inline">\(RR&lt;1\)</span>: indica que a categoria do numerador <strong>diminui</strong> o risco do evento.</p></li>
+<li><p><span class="math inline">\(RR=1\)</span>: indica que os riscos são iguais.</p></li>
+</ul>
+<p>Vamos obter o risco relativo no R por meio da função <code>ctable</code> ao inserir o argumento <code>RR=TRUE</code>. Mas vale uma observação: a função calcula o risco ao considerar como evento a primeira categoria da coluna e no numerador da razão é a primeira categoria da variável que está na linha. Como queremos o risco de prematuridade (sim) com o grupo progesterona no numerador, precisamos mudar a ordem das categorias das duas variáveis:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="associação-entre-variáveis-qualitativas.html#cb22-1"></a><span class="co">#Para isso, usamos a função factor e informar a ordem de </span></span>
+<span id="cb22-2"><a href="associação-entre-variáveis-qualitativas.html#cb22-2"></a><span class="co">#suas categorias (levels)</span></span>
+<span id="cb22-3"><a href="associação-entre-variáveis-qualitativas.html#cb22-3"></a>dados<span class="op">$</span>grupo &lt;-<span class="st"> </span><span class="kw">factor</span>(dados<span class="op">$</span>grupo,<span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;progest&quot;</span>,<span class="st">&quot;placebo&quot;</span>))</span>
+<span id="cb22-4"><a href="associação-entre-variáveis-qualitativas.html#cb22-4"></a>dados<span class="op">$</span>prematuridade &lt;-<span class="st"> </span><span class="kw">factor</span>(dados<span class="op">$</span>prematuridade,<span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;sim&quot;</span>,<span class="st">&quot;nao&quot;</span>))</span></code></pre></div>
+<p>Agora sim:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="associação-entre-variáveis-qualitativas.html#cb23-1"></a><span class="kw">ctable</span>(dados<span class="op">$</span>grupo,dados<span class="op">$</span>prematuridade,<span class="dt">prop=</span><span class="st">&quot;r&quot;</span>,<span class="dt">chisq=</span><span class="ot">TRUE</span>,<span class="dt">RR=</span><span class="ot">TRUE</span>) </span></code></pre></div>
+<pre><code>## Cross-Tabulation, Row Proportions  
+## grupo * prematuridade  
+## Data Frame: dados  
+## 
+## 
+## --------- --------------- ------------ ------------ --------------
+##             prematuridade          sim          nao          Total
+##     grupo                                                         
+##   progest                   27 (51.9%)   25 (48.1%)    52 (100.0%)
+##   placebo                   33 (63.5%)   19 (36.5%)    52 (100.0%)
+##     Total                   60 (57.7%)   44 (42.3%)   104 (100.0%)
+## --------- --------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##    0.9848      1     0.321  
+## ----------------------------
+## 
+## ----------------------------------
+##  Risk Ratio   Lo - 95%   Hi - 95% 
+## ------------ ---------- ----------
+##     0.82        0.59       1.14   
+## ----------------------------------</code></pre>
+<p>Além da estimativa pontual do risco relativo já discutida anteriormente (<span class="math inline">\(RR=0.82\)</span>), também está na saída acima o intervalo com 95% de confiança (em Lo - 95% e Hi - 95%). Como o 1 está dentro do intervalo de confiança (0.59- 1.14), não há indícios que a progesterona muda o risco de prematuridade a um nível de 5% de significância, como já havíamos visto anteriormente.</p>
+<p>Vamos agora considerar um outro problema não associado aos dados das gestações gemelares. Nesse estudo, o objetivo consiste em verificar se os casos com câncer de mama diferem significantemente dos controles (sem câncer de mama) em relação à exposição ao fumo passivo.</p>
+<p>Vamos primeiramente importar a base de dados e depois fazer uma tabele cruzada entre as duas variáveis:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="associação-entre-variáveis-qualitativas.html#cb25-1"></a>dados_mama &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;dataset/dados_mama.csv&quot;</span>) <span class="co">#importando base de dados</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="associação-entre-variáveis-qualitativas.html#cb26-1"></a><span class="co">#arrumando os labels de exposicao</span></span>
+<span id="cb26-2"><a href="associação-entre-variáveis-qualitativas.html#cb26-2"></a>dados_mama<span class="op">$</span>exposicao &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados_mama<span class="op">$</span>exposicao)</span>
+<span id="cb26-3"><a href="associação-entre-variáveis-qualitativas.html#cb26-3"></a>dados_mama<span class="op">$</span>exposicao  &lt;-<span class="st"> </span><span class="kw">fct_recode</span>(dados_mama<span class="op">$</span>exposicao,</span>
+<span id="cb26-4"><a href="associação-entre-variáveis-qualitativas.html#cb26-4"></a>                                <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>, </span>
+<span id="cb26-5"><a href="associação-entre-variáveis-qualitativas.html#cb26-5"></a>                                nã<span class="dt">o =</span> <span class="st">&quot;2&quot;</span>)</span>
+<span id="cb26-6"><a href="associação-entre-variáveis-qualitativas.html#cb26-6"></a><span class="co">#arrumando os labels de cancer</span></span>
+<span id="cb26-7"><a href="associação-entre-variáveis-qualitativas.html#cb26-7"></a>dados_mama<span class="op">$</span>cancer &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dados_mama<span class="op">$</span>cancer)</span>
+<span id="cb26-8"><a href="associação-entre-variáveis-qualitativas.html#cb26-8"></a>dados_mama<span class="op">$</span>cancer &lt;-<span class="st"> </span><span class="kw">fct_recode</span>(dados_mama<span class="op">$</span>cancer,</span>
+<span id="cb26-9"><a href="associação-entre-variáveis-qualitativas.html#cb26-9"></a>                                    <span class="dt">sim =</span> <span class="st">&quot;1&quot;</span>, </span>
+<span id="cb26-10"><a href="associação-entre-variáveis-qualitativas.html#cb26-10"></a>                                    nã<span class="dt">o =</span> <span class="st">&quot;2&quot;</span>)</span>
+<span id="cb26-11"><a href="associação-entre-variáveis-qualitativas.html#cb26-11"></a>dados_mama<span class="op">$</span>cancer &lt;-<span class="st"> </span><span class="kw">factor</span>(dados_mama<span class="op">$</span>cancer, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;sim&quot;</span>, <span class="st">&quot;não&quot;</span>))</span>
+<span id="cb26-12"><a href="associação-entre-variáveis-qualitativas.html#cb26-12"></a></span>
+<span id="cb26-13"><a href="associação-entre-variáveis-qualitativas.html#cb26-13"></a><span class="kw">ctable</span>(dados_mama<span class="op">$</span>exposicao,dados_mama<span class="op">$</span>cancer,<span class="dt">prop=</span><span class="st">&quot;c&quot;</span>)</span></code></pre></div>
+<pre><code>## Cross-Tabulation, Column Proportions  
+## exposicao * cancer  
+## Data Frame: dados_mama  
+## 
+## ----------- -------- ------------- ------------- --------------
+##               cancer           sim           não          Total
+##   exposicao                                                    
+##         sim            50 ( 78.1%)   43 ( 55.1%)    93 ( 65.5%)
+##         não            14 ( 21.9%)   35 ( 44.9%)    49 ( 34.5%)
+##       Total            64 (100.0%)   78 (100.0%)   142 (100.0%)
+## ----------- -------- ------------- ------------- --------------</code></pre>
+<p>Foi realizado um estudo de caso-controle (veja os slides “Tipos de estudos” disponível em <a href="https://daslab-ufes.github.io/materiais/" class="uri">https://daslab-ufes.github.io/materiais/</a>) e, nesses estudos, não podemos calcular o risco de câncer de mama uma vez que partimos dos casos e controles e não seria possível estimar a incidência da doença. Uma medida de associação que pode ser usada nesses casos é a <strong>razão de chances</strong>.</p>
+<p>A chance de um evento é a probabilidade de apresentar o evento de interesse dividido pela probabilidade de não apresentar o evento de interesse. Se <span class="math inline">\(p\)</span> é a probabilidade de um evento, a chance é dada por: <span class="math inline">\(C=p/(1-p)\)</span>.</p>
+<p>A chance de câncer entre os expostos ao fumo passico é
+<span class="math display">\[
+C_1=\frac{50/93}{43/93}=\frac{50}{43}=1.163.
+\]</span>
+Já a chance de câncer entre os não expostos ao fumo passivo é</p>
+<p><span class="math display">\[
+C_2=\frac{14/49}{35/49}=\frac{14}{35}=0.40.
+\]</span></p>
+<p>Assim, a razão das chances (OR - <em>odds ratio</em>) é dada por:
+<span class="math display">\[
+OR=\frac{C_1}{C_2}=\frac{1.163}{0.400}=2.91.
+\]</span>
+De maneira similar ao que conversamos sobre o risco relativo, para a razão de chances, temos que:</p>
+<ul>
+<li><p><span class="math inline">\(OR&gt;1\)</span>: indica que a categoria do numerador <strong>aumenta</strong> a chance do evento.</p></li>
+<li><p><span class="math inline">\(OR&lt;1\)</span>: indica que a categoria do numerador <strong>diminui</strong> a chance do evento.</p></li>
+<li><p><span class="math inline">\(OR=1\)</span>: indica que as chances são iguais.</p></li>
+</ul>
+<p>Para obter estimativas pontuais e intervalares para a OR no R, inserimos o argumento <code>OR=TRUE</code> na função <code>ctable</code>:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="associação-entre-variáveis-qualitativas.html#cb28-1"></a><span class="kw">ctable</span>(dados_mama<span class="op">$</span>exposicao,dados_mama<span class="op">$</span>cancer,<span class="dt">prop=</span><span class="st">&quot;c&quot;</span>,<span class="dt">OR=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## Cross-Tabulation, Column Proportions  
+## exposicao * cancer  
+## Data Frame: dados_mama  
+## 
+## 
+## ----------- -------- ------------- ------------- --------------
+##               cancer           sim           não          Total
+##   exposicao                                                    
+##         sim            50 ( 78.1%)   43 ( 55.1%)    93 ( 65.5%)
+##         não            14 ( 21.9%)   35 ( 44.9%)    49 ( 34.5%)
+##       Total            64 (100.0%)   78 (100.0%)   142 (100.0%)
+## ----------- -------- ------------- ------------- --------------
+## 
+## ----------------------------------
+##  Odds Ratio   Lo - 95%   Hi - 95% 
+## ------------ ---------- ----------
+##     2.91        1.38       6.10   
+## ----------------------------------
+## 
+## --------------------------------
+##  Risk Ratio   Lo - 0%   Hi - 0% 
+## ------------ --------- ---------
+##     1.88       1.88      1.88   
+## --------------------------------</code></pre>
+<p>Pelas saídas, observamos que um intervalo com 95% de confiança para a razão de chances é (1.38, 6.10) e o 1 não está no intervalo. Com isso, temos que a chance de câncer de mama do grupo exposto ao fumo passivo é 2.91 vezes a chance do grupo não exposto.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="testes-não-paramétricos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["livro_R_Agatha.pdf", "livro_R_Agatha.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

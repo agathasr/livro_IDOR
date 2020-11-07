@@ -113,7 +113,7 @@
 
 \title{Estatística Aplicada à Pesquisa}
 \author{Agatha Rodrigues}
-\date{2020-10-31}
+\date{2020-11-07}
 
 \begin{document}
 \maketitle
@@ -1917,7 +1917,7 @@ Quero usar essa função para amostrar do objeto oi (\texttt{x=oi}) dois element
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 20.0  0.5
+## [1] 1 1
 \end{verbatim}
 
 Também poderíamos usar a mesma função sem colocar o nome dos argumentos:
@@ -1929,7 +1929,7 @@ Também poderíamos usar a mesma função sem colocar o nome dos argumentos:
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  1 10
+## [1] 10 20
 \end{verbatim}
 
 Mas, nesse caso, é importante que se respeite a ordem dos argumentos: o vetor tem que ser o primeiro, o segundo argumento é \texttt{size} e assim por diante.
@@ -2156,8 +2156,8 @@ Se você tivesse carregado o pacote \texttt{dplyr} anteriormente (pela função 
   Peter M Rothwell; Commentary: External validity of results of randomized trials: disentangling a complex concept, International Journal of Epidemiology, Volume 39, Issue 1, 1 February 2010, Pages 94--96, \url{https://doi.org/10.1093/ije/dyp305}
 \end{itemize}
 
-\hypertarget{conceitos-iniciais}{%
-\chapter{Conceitos iniciais}\label{conceitos-iniciais}}
+\hypertarget{conceitos}{%
+\chapter{Conceitos iniciais}\label{conceitos}}
 
 \hypertarget{populauxe7uxe3o}{%
 \section{População}\label{populauxe7uxe3o}}
@@ -2440,7 +2440,7 @@ Para exemplificar o que for discutido, consideramos os dados fictícios de \(n=1
 \end{Highlighting}
 \end{Shaded}
 
-O default do missing é o espaço em branco. Acesse o help em ?read\_excel e veja na = "".
+O default do missing é o espaço em branco. Acesse o help em ?read\_excel e veja \texttt{na\ =\ ""}.
 
 \hypertarget{arrumauxe7uxe3o-da-base-de-dados}{%
 \subsection{Arrumação da base de dados}\label{arrumauxe7uxe3o-da-base-de-dados}}
@@ -3065,6 +3065,173 @@ Com a função \texttt{arrange()}, conseguimos ordenar a base de acordo com uma 
 
 No primeiro código acima, ordenamos a planilha em ordem crescente pela altura. Já no segundo código, ordenamos a planilha em ordem decrescente pela altura (a primeira observação na planilha dados\_decres é aquela cuja gestante é a mais alta).
 
+\hypertarget{manipulando-os-formatos-das-bases-de-dados}{%
+\section{Manipulando os formatos das bases de dados}\label{manipulando-os-formatos-das-bases-de-dados}}
+
+\hypertarget{combinando-bases-de-dados}{%
+\subsection{Combinando bases de dados}\label{combinando-bases-de-dados}}
+
+Vamos considerar que temos interesse em juntar as bases de dados ``dados\_gemelares'' e ``dados\_gemelares\_2''. As duas bases apresentam os mesmos indivíduos (linhas), mas com variáveis (colunas) diferentes.
+
+Vamos então ler a base de dados, atribuindo para o objeto ``dados2''.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readxl)}
+\NormalTok{dados2 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(}\DataTypeTok{path =} \StringTok{"dataset/dados_gemelares_2.xlsx"}\NormalTok{)}
+
+\NormalTok{dados2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 104 x 7
+##       ID EPDS_antes EPDS_depois EDPS_antes_SN EDPS_depois_SN Grupo_amamentac~
+##    <dbl>      <dbl>       <dbl>         <dbl>          <dbl>            <dbl>
+##  1     1         20          22             1              1                3
+##  2     2         20          24             1              1                1
+##  3     3          7           6             0              0                2
+##  4     5         10          11             0              0                1
+##  5     6          5          20             0              1                2
+##  6     7          2           3             0              0                1
+##  7     8         12          16             1              1                3
+##  8     9         10          16             0              1                3
+##  9    10          1           4             0              0                3
+## 10    11         10          12             0              1                3
+## # ... with 94 more rows, and 1 more variable: Tempo_amamentacao_meses <dbl>
+\end{verbatim}
+
+Há algumas funções de combinação de duas bases de dados no pacote \texttt{dplyr}. Elas recebem três argumentos: a primeira base a ser declarada \texttt{(x=)}, a segunda base a ser declarada \texttt{(y=)} e a variável de identificação informada no argumento \texttt{by=}. Aqui estão as funções mais úteis:
+
+\begin{itemize}
+\item
+  \texttt{left\_join()} - retorna todas as linhas da base de dados no argumento \texttt{x} e todas as colunas das duas bases de dados. Linhas da base de dados de \texttt{x} sem correspondentes em \texttt{y} receberão \texttt{NA} na base de dados combinada.
+\item
+  \texttt{right\_join()} - retorna todas as linhas da base de dados no argumento \texttt{y} e todas as colunas das duas bases de dados. Linhas da base de dados de \texttt{y} sem correspondentes em \texttt{x} receberão \texttt{NA} na base de dados combinada.
+\item
+  \texttt{full\_join()} - retorna todas as linhas e todas as colunas de \texttt{x} e de \texttt{y}. As linhas sem correspondência entre as bases receberão \texttt{NA} na base de dados combinada.
+\item
+  \texttt{inner\_join()} - filtra a base de dados no argumento \texttt{x} apenas onde tem valores correspondentes na base de dados no argumento \texttt{y} e todas as colunas das duas bases de dados.
+\item
+  \texttt{semi\_join()} - filtra a base de dados no argumento \texttt{x} apenas onde tem valores correspondentes na base de dados no argumento \texttt{y}, mantendo apenas as colunas da base de dados de \texttt{x}.
+\item
+  \texttt{anti\_join()} - filtra a base de dados no argumento \texttt{x} para incluir apenas valores que \textbf{não possuem} correspondências na base de dados no argumento \texttt{y}.
+\end{itemize}
+
+Assim sendo, no nosso exemplo, tanto as funções \texttt{left\_join()}, \texttt{right\_join()}, \texttt{full\_join()} e \texttt{inner\_join()} retornarão a mesma combinação, pois ``dados'' e ``dados2'' possuem exatamente os mesmos indivíduos, ou seja, não há nenhuma linha que esteja em uma das bases de dados e que não está na outra.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados_todos <-}\StringTok{ }\KeywordTok{full_join}\NormalTok{(dados, dados2, }\DataTypeTok{by=}\KeywordTok{c}\NormalTok{(}\StringTok{"id"}\NormalTok{ =}\StringTok{ "ID"}\NormalTok{)) }
+\CommentTok{#faço c("id" = "ID") porque id está em dados e ID (maiúsculo) está em dados2.}
+
+\KeywordTok{str}\NormalTok{(dados_todos)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## tibble [104 x 31] (S3: tbl_df/tbl/data.frame)
+##  $ id                     : num [1:104] 1 2 3 5 6 7 8 9 10 11 ...
+##  $ grupo                  : Factor w/ 2 levels "placebo","progest": 2 1 1 2 1 2 1 1 2 2 ...
+##  $ corion                 : Factor w/ 2 levels "di","mono": 1 2 1 1 1 1 1 1 1 1 ...
+##  $ data_aval              : Date[1:104], format: "2017-04-23" "2016-03-21" ...
+##  $ data_nascimento        : Date[1:104], format: "1988-04-30" "1982-03-30" ...
+##  $ cor_branco             : Factor w/ 2 levels "branca","nbranca": 1 1 2 2 2 2 1 1 1 1 ...
+##  $ peso_pre               : num [1:104] 93 59 87 78 62 54 72 72 102 55 ...
+##  $ alt                    : num [1:104] 1.63 1.45 1.69 1.59 1.64 NA 1.64 1.65 1.68 1.45 ...
+##  $ gesta                  : num [1:104] 3 3 2 7 7 2 2 8 3 1 ...
+##  $ para                   : num [1:104] 1 1 1 2 4 1 1 4 2 0 ...
+##  $ aborto                 : num [1:104] 1 1 0 4 2 0 0 3 0 0 ...
+##  $ ind_ap                 : Factor w/ 2 levels "nao","sim": 1 1 1 1 2 1 1 1 1 2 ...
+##  $ tabagismo              : Factor w/ 2 levels "nao","sim": 1 1 1 2 1 1 2 1 1 2 ...
+##  $ alcool                 : Factor w/ 2 levels "nao","sim": 1 1 1 2 1 1 1 1 1 2 ...
+##  $ drogas                 : Factor w/ 2 levels "nao","sim": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ ig_aval                : num [1:104] 33.7 33.4 30.9 32.9 28.4 ...
+##  $ medida_colo            : num [1:104] 33 34.6 25 32.8 20.6 33.1 28 21.8 46.3 36 ...
+##  $ num_contra_ctg         : num [1:104] 9 4 5 5 2 1 3 2 8 2 ...
+##  $ igp_semana             : num [1:104] 37 37 35 38 29 38 34 36 37 33 ...
+##  $ igp_dia                : num [1:104] 4 3 0 3 3 3 6 3 5 3 ...
+##  $ imc                    : num [1:104] 35 28.1 30.5 30.9 23.1 ...
+##  $ igp                    : num [1:104] 37.6 37.4 35 38.4 29.4 ...
+##  $ primigesta             : Factor w/ 2 levels "nao","sim": 1 1 1 1 1 1 1 1 1 2 ...
+##  $ prematuridade          : Factor w/ 2 levels "nao","sim": 1 1 2 1 2 1 2 2 1 2 ...
+##  $ idade                  : num [1:104] 28 33 24 28 26 30 28 36 31 34 ...
+##  $ EPDS_antes             : num [1:104] 20 20 7 10 5 2 12 10 1 10 ...
+##  $ EPDS_depois            : num [1:104] 22 24 6 11 20 3 16 16 4 12 ...
+##  $ EDPS_antes_SN          : num [1:104] 1 1 0 0 0 0 1 0 0 0 ...
+##  $ EDPS_depois_SN         : num [1:104] 1 1 0 0 1 0 1 1 0 1 ...
+##  $ Grupo_amamentacao      : num [1:104] 3 1 2 1 2 1 3 3 3 3 ...
+##  $ Tempo_amamentacao_meses: num [1:104] 8 17 3 11 14 13 8 11 9 4 ...
+\end{verbatim}
+
+\hypertarget{formato}{%
+\subsection{Mudando formato da base de dado}\label{formato}}
+
+Considere a base de dados abaixo. Veja que ela está no formato \emph{long}, em que as avaliações do mesmo indivíduo (variável de identificação de indivíduo é ``registro'') estão nas linhas.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{figures/dados_exemplo} \caption{Variáveis da base de dados gestações gemelares.}\label{fig:unnamed-chunk-125}
+\end{figure}
+
+Primeiro vamos ler a base de dados e atribuí-la ao objeto ``dadosa'':
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dadosa <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(}\DataTypeTok{path =} \StringTok{"dataset/dados_exemplo.xlsx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Queremos que as avaliações fiquem nas colunas, com as três colunas: aval1, aval2, aval3, ou seja, queremos o formato \emph{wide}. Um pacote do R que pode nos auxiliar a transformar formato \emph{long} em \emph{wide} e vice-versa é o \texttt{tidyr}. A função que usaremos é \texttt{spread}, como segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyr)}
+\NormalTok{dadosa1 <-}\StringTok{ }\KeywordTok{spread}\NormalTok{(}\DataTypeTok{data=}\NormalTok{dadosa, }\DataTypeTok{key =}\NormalTok{ avaliacao,}\DataTypeTok{value =}\NormalTok{ peso_fetal)}
+\NormalTok{dadosa1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 5
+##   registro grupo    aval1 aval2 aval3
+##      <dbl> <chr>    <dbl> <dbl> <dbl>
+## 1        1 caso       500   800  1300
+## 2        2 controle   670   990  1470
+## 3        3 caso       600   730  1200
+## 4        4 caso       700   930  1580
+## 5        5 controle   640   890  1500
+\end{verbatim}
+
+Agora, se o interesse for transformar o formato \emph{wide} para \emph{long}, a função do \texttt{tidyr} é \texttt{gather}. Vamos ver como fica:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dadosa2 <-}\StringTok{  }\KeywordTok{gather}\NormalTok{(}\DataTypeTok{data=}\NormalTok{dadosa1, }\DataTypeTok{key =}\StringTok{"avaliacao"}\NormalTok{, }\DataTypeTok{value =} \StringTok{"peso_feto"}\NormalTok{, aval1, aval2, aval3)}
+\NormalTok{dadosa2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 15 x 4
+##    registro grupo    avaliacao peso_feto
+##       <dbl> <chr>    <chr>         <dbl>
+##  1        1 caso     aval1           500
+##  2        2 controle aval1           670
+##  3        3 caso     aval1           600
+##  4        4 caso     aval1           700
+##  5        5 controle aval1           640
+##  6        1 caso     aval2           800
+##  7        2 controle aval2           990
+##  8        3 caso     aval2           730
+##  9        4 caso     aval2           930
+## 10        5 controle aval2           890
+## 11        1 caso     aval3          1300
+## 12        2 controle aval3          1470
+## 13        3 caso     aval3          1200
+## 14        4 caso     aval3          1580
+## 15        5 controle aval3          1500
+\end{verbatim}
+
 \hypertarget{exercuxedcios}{%
 \section{Exercícios}\label{exercuxedcios}}
 
@@ -3394,8 +3561,8 @@ Agora veja como fica se eu considerar as medidas descritivas das variáveis quan
 
 Para mais detalhes sobre as medidas descritivas veja o Capítulo 3 de Morettin e Singer \citep{morettin2020introduccaoa}.
 
-\hypertarget{tabelas-cruzadas---duas-variuxe1veis-qualitativas}{%
-\section{Tabelas cruzadas - duas variáveis qualitativas}\label{tabelas-cruzadas---duas-variuxe1veis-qualitativas}}
+\hypertarget{tabelas}{%
+\section{Tabelas cruzadas - duas variáveis qualitativas}\label{tabelas}}
 
 Tabelas cruzadas ou tabelas de contingência são tabelas que apresentam frequências de duas variáveis qualitativas conjuntamente.
 
@@ -3536,7 +3703,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-139-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3548,7 +3715,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-140-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf}
 
 \textbf{Gráfico de barras} - analisando duas variáveis qualitativas:
 
@@ -3563,7 +3730,7 @@ Vamos fazer alguns gráficos para as variáveis da base de dados gestacoes gemel
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-141-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf}
 
 Mesmo gráfico acima, mas agora com a porcentagem escrito no gráfico:
 
@@ -3580,7 +3747,7 @@ Mesmo gráfico acima, mas agora com a porcentagem escrito no gráfico:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-142-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-149-1.pdf}
 
 Outra forma de fazer um gráfico de barras para duas variáveis qualitativas:
 
@@ -3593,7 +3760,7 @@ Outra forma de fazer um gráfico de barras para duas variáveis qualitativas:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-143-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-150-1.pdf}
 
 Veja o site para mais detalhes sobre gráfico de barras:
 \url{http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization\#barplot-of-counts}.
@@ -3611,7 +3778,7 @@ Histograma:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-144-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-151-1.pdf}
 
 Boxplot:
 
@@ -3625,7 +3792,7 @@ Boxplot:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-145-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-152-1.pdf}
 
 \textbf{Gráficos para variáveis quantitativas} - variável quantitativa por uma variável de grupo:
 
@@ -3639,7 +3806,7 @@ Boxplot:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-146-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-153-1.pdf}
 
 \textbf{Gráficos para variáveis quantitativas} - duas variáveis quantitativas:
 
@@ -3655,7 +3822,7 @@ Gráfico de dispersão:
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-147-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-154-1.pdf}
 
 Gráfico de dispersão identificando o grupo (progesterona ou placebo):
 
@@ -3670,7 +3837,7 @@ Gráfico de dispersão identificando o grupo (progesterona ou placebo):
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-148-1.pdf}
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-155-1.pdf}
 
 \hypertarget{pacote-esquisse}{%
 \subsection{Pacote esquisse}\label{pacote-esquisse}}
@@ -3764,8 +3931,1285 @@ Ao rodar o código \texttt{esquisser()}, abrirá a janela da Figura \ref{fig:esq
 
 \textbf{Observação importante:} Interprete todas as análises realizadas.
 
-\hypertarget{testes-paramuxe9tricos-para-muxe9dia}{%
-\chapter{Testes paramétricos para média}\label{testes-paramuxe9tricos-para-muxe9dia}}
+\hypertarget{param}{%
+\chapter{Testes paramétricos para média}\label{param}}
+
+Nesse capítulo, vamos discutir alguns testes de hipóteses para média.
+Usaremos aqui já as informações sobre testes de hipóteses e intervalos de confiança apresentadas em \url{https://daslab-ufes.github.io/materiais/} no arquivo ``Inferência Estatística''.
+
+\hypertarget{teste-para-muxe9dia-de-populauxe7uxe3o-uxfanica}{%
+\section{Teste para média de população única}\label{teste-para-muxe9dia-de-populauxe7uxe3o-uxfanica}}
+
+Seja \(\mu\) a média de uma variável quantitativa e queremos testá-la a um valor de referência \(\mu_0\). O teste de hipóteses para a média de uma população é conhecido como \textbf{teste t de amostra única}.
+
+Como exemplo, considere que a obstetra do estudo dos gemelares acredita que a media do colo média de gestações gemelares brasileiras é menor que a
+média americana, conhecida ser de 27mm.
+
+Aqui, \(\mu\) é a média da medida do colo de gestações gemelares brasileira e o valor de referência é \(\mu_0=27\). São as hipóteses: \(H_0: \mu\geq 27\) e \(H_1: \mu< 27\).
+
+Para realizar o teste t de amostra única, a distribuição da variável quantitativa deve seguir uma distribuição normal ou ter um tamanho da amostra grande. Neste último caso, é importante avaliar se há valores atípicos que possam interferir individualmente nas conclusões inferenciais.
+
+Primeiramente, vamos carregar os pacotes que usaremos aqui.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr) }\CommentTok{#leitor da base de dados csv}
+\KeywordTok{library}\NormalTok{(dplyr) }\CommentTok{#para manipulação de dados}
+\KeywordTok{library}\NormalTok{(tidyr) }\CommentTok{#para mudar formato da base de dados}
+\KeywordTok{library}\NormalTok{(summarytools) }\CommentTok{#para medidas descritivas}
+\KeywordTok{library}\NormalTok{(modelsummary) }\CommentTok{#para medidas descritivas}
+\KeywordTok{library}\NormalTok{(ggplot2) }\CommentTok{#para graficos}
+\KeywordTok{library}\NormalTok{(esquisse) }\CommentTok{#para graficos}
+\KeywordTok{library}\NormalTok{(car) }\CommentTok{## para teste de Levene}
+\KeywordTok{library}\NormalTok{(nortest) }\CommentTok{## para testes de normalidade}
+\end{Highlighting}
+\end{Shaded}
+
+Agora vamos importar a base de dados gemelares:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dataset/dados_completos.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Primeiro estudamos a distribuição da variável ``medida do colo'' no que segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{descr}\NormalTok{(dados}\OperatorTok{$}\NormalTok{medida_colo,}\DataTypeTok{stats =} \KeywordTok{c}\NormalTok{(}\StringTok{"n.valid"}\NormalTok{,}\StringTok{"min"}\NormalTok{, }\StringTok{"mean"}\NormalTok{, }\StringTok{"med"}\NormalTok{,}\StringTok{"sd"}\NormalTok{,}\StringTok{"max"}\NormalTok{), }\DataTypeTok{transpose =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Descriptive Statistics  
+## value  
+## N: 104  
+## 
+##               N.Valid    Min    Mean   Median   Std.Dev     Max
+## ----------- --------- ------ ------- -------- --------- -------
+##       value    104.00   2.70   24.67    24.75      9.93   46.30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(dados) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{aes}\NormalTok{( }\DataTypeTok{y =}\NormalTok{ medida_colo) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{fill =} \StringTok{"#0c4c8a"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-161-1.pdf}
+
+Podemos observar que a média e a mediana da medida do colo são próximas e pelo boxplot, a distribuição é aproximadamente simétrica e não há valores atípicos.
+
+Agora sim, podemos realizar o teste t. No R, a função que realiza o teste t é a \texttt{t.test} (não precisa carregar pacote).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{t.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{medida_colo,}\DataTypeTok{mu=}\DecValTok{27}\NormalTok{,}\DataTypeTok{alternative =} \StringTok{"less"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	One Sample t-test
+## 
+## data:  dados$medida_colo
+## t = -2.3888, df = 103, p-value = 0.009362
+## alternative hypothesis: true mean is less than 27
+## 95 percent confidence interval:
+##     -Inf 26.2901
+## sample estimates:
+## mean of x 
+##  24.67385
+\end{verbatim}
+
+Para realizar o teste t de amostra única, indicamos no primeiro argumento a variável que faremos a análise e usamos o argumento \texttt{mu=} para indicar o valor de referência. No argumento \texttt{alternative=} indicamos o tipo de teste que será realizado: unilateral à esquerda (``less''), unilateral à direita (``greater'') e bilateral (``two.sided'').
+
+Se quisermos apenas o valor p, podemos pedir que o R retorne apenas ele da seguinte maneira:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{t.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{medida_colo,}\DataTypeTok{mu=}\DecValTok{27}\NormalTok{,}\DataTypeTok{alternative =} \StringTok{"less"}\NormalTok{)}\OperatorTok{$}\NormalTok{p.value}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.009361955
+\end{verbatim}
+
+Pelos resultados do teste, há indícios de que a obstetra tem razão.
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-muxe9dias-de-dois-grupos-independentes}{%
+\section{Teste para comparação de médias de dois grupos independentes}\label{teste-para-comparauxe7uxe3o-de-muxe9dias-de-dois-grupos-independentes}}
+
+Considere agora que temos dois grupos independentes e queremos comparar as médias de uma variável quantitativa de interesse desses dois grupos. Seja \(\mu_1\) a média do primeiro grupo e seja \(\mu_2\) a média do segundo. O teste de hipóteses para a comparação de médias de dois grupos independentes é conhecido como \textbf{teste t de amostras independentes}.
+
+Como exemplo, queremos comparar os grupos progesterona e placebo com relação ao número de contrações medido na última avaliação antes do parto.
+
+Assim como no teste para amostra única discutido anteriormente, a distribuição da variável quantitativa deve seguir uma distribuição normal em cada grupo ou ter um tamanho da amostra grande. Neste último caso, é importante avaliar se há valores atípicos que possam interferir individualmente nas conclusões inferenciais.
+
+Para isso, analisamos primeiramente a distribuição de medida do colo em cada grupo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{### Essas funcoes abaixo são auxiliares para calcular as descritivas}
+\CommentTok{#em cenário de presença de dados faltantes}
+\NormalTok{media <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{mean}\NormalTok{(x, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{medi <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{median}\NormalTok{(x, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{dp <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{sd}\NormalTok{(x, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{mini <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{min}\NormalTok{(x, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{maxi <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{max}\NormalTok{(x, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{n <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{sum}\NormalTok{(}\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{datasummary}\NormalTok{(grupo}\OperatorTok{~}\NormalTok{num_contra_ctg}\OperatorTok{*}\NormalTok{(n}\OperatorTok{+}\NormalTok{media}\OperatorTok{+}\NormalTok{dp}\OperatorTok{+}\NormalTok{mini}\OperatorTok{+}\NormalTok{medi}\OperatorTok{+}\NormalTok{maxi), }\DataTypeTok{data =}\NormalTok{ dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(dados) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ num_contra_ctg, }\DataTypeTok{fill =}\NormalTok{ grupo) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{scale_fill_hue}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{theme_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-166-1.pdf}
+
+Podemos observar que há um outlier no grupo progesterona. Para avaliar se esse ponto é decisivo nas conclusões inferenciais, vamos realizar o teste t com e sem esse ponto.
+
+A função para realizar o teste t é novamente a \texttt{t.test}, mas com argumentos diferentes. Um deles é o \texttt{var.equal=}, em que \texttt{var.equal=TRUE} se as variâncias dos dois grupos forem iguais e \texttt{var.equal=FALSE}, caso contrário. Para saber qual informar na função, vamos primeiro realizar o teste de Levene para a comparação das variâncias dos dois grupos. A hipótese nula do teste é de igualdade de variâncias e no R, a função é \texttt{leveneTest} do pacote \texttt{car}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{leveneTest}\NormalTok{(num_contra_ctg}\OperatorTok{~}\NormalTok{grupo,}\DataTypeTok{data=}\NormalTok{dados,}\DataTypeTok{center=}\NormalTok{mean) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = mean)
+##        Df F value Pr(>F)
+## group   1  0.5834 0.4468
+##       102
+\end{verbatim}
+
+Note que usamos o símbolo \(\sim\) na função para indicar que queremos a análise do ``num\_contra\_ctg'' por ``grupo'' e que vamos também utilizar na função \texttt{t.test}. Ao observar o valor p do teste de Levene, há indícios para considerar variâncias iguais. Logo, vamos para o teste t:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{t.test}\NormalTok{(num_contra_ctg}\OperatorTok{~}\NormalTok{grupo,}\DataTypeTok{data=}\NormalTok{dados,}\DataTypeTok{var.equal=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{alternative =}\StringTok{"two.sided"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Two Sample t-test
+## 
+## data:  num_contra_ctg by grupo
+## t = 1.1051, df = 102, p-value = 0.2717
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.5655337  1.9886106
+## sample estimates:
+## mean in group placebo mean in group progest 
+##              4.288462              3.576923
+\end{verbatim}
+
+Pelo teste t, não há indícios para dizer que os grupos diferem em média no número de contrações. Agora vamos refazer as análises, sem considerar o valor atípico.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados1 <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(dados,num_contra_ctg}\OperatorTok{<}\KeywordTok{max}\NormalTok{(num_contra_ctg)) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{leveneTest}\NormalTok{(num_contra_ctg}\OperatorTok{~}\NormalTok{grupo,}\DataTypeTok{data=}\NormalTok{dados1,}\DataTypeTok{center=}\NormalTok{mean) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = mean)
+##        Df F value Pr(>F)
+## group   1  1.8916 0.1721
+##       101
+\end{verbatim}
+
+Ao observar o valor p do teste de Levene, há também indícios para considerar variâncias iguais. Logo, vamos para o teste t:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{t.test}\NormalTok{(num_contra_ctg}\OperatorTok{~}\NormalTok{grupo,}\DataTypeTok{data=}\NormalTok{dados1,}\DataTypeTok{var.equal=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{alternative =}\StringTok{"two.sided"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Two Sample t-test
+## 
+## data:  num_contra_ctg by grupo
+## t = 1.4855, df = 101, p-value = 0.1405
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.3071906  2.1390156
+## sample estimates:
+## mean in group placebo mean in group progest 
+##              4.288462              3.372549
+\end{verbatim}
+
+Pelo teste t, não há indícios para dizer que os grupos diferem em média em relação ao número de contrações, sendo a mesma conclusão inferencial com todas as observações. Logo, o ponto atípico não interferiu na conclusão inferencial.
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-muxe9dias-de-dois-grupos-dependentes}{%
+\section{Teste para comparação de médias de dois grupos dependentes}\label{teste-para-comparauxe7uxe3o-de-muxe9dias-de-dois-grupos-dependentes}}
+
+Considere agora que temos dois grupos dependentes e queremos comparar as médias de uma variável quantitativa de interesse desses dois grupos. A dependência entre os grupos pode ser devido a avaliar os mesmos indivíduos em dois momentos: antes e depois de uma intervenção.
+
+Como exemplo, queremos comparar o escore médio de EPDS (depressão) antes e depois do parto. Seja \(\mu_A\) a média do escore do EPDS antes e seja \(\mu_D\) a média do EPDS depois do parto. Queremos testar as seguintes hipóteses: \(H_0: \mu_A=\mu_D\) versus \(H_0: \mu_A \neq \mu_D\). O teste de hipóteses para a comparação de médias de dois grupos dependentes é conhecido como \textbf{teste t de amostras pareadas}.
+
+Antes de realizar o teste t para amostras pareadas, a distribuição da variável quantitativa nos dois momentos deve seguir uma distribuição normal ou ter um tamanho da amostra grande. Neste último caso, é importante avaliar se há valores atípicos que possam interferir individualmente nas conclusões inferenciais. Para isso, fazemos as seguintes análises exploratórias:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{datasummary}\NormalTok{(grupo}\OperatorTok{~}\NormalTok{num_contra_ctg}\OperatorTok{*}\NormalTok{(n}\OperatorTok{+}\NormalTok{media}\OperatorTok{+}\NormalTok{dp}\OperatorTok{+}\NormalTok{mini}\OperatorTok{+}\NormalTok{medi}\OperatorTok{+}\NormalTok{maxi), }\DataTypeTok{data =}\NormalTok{ dados)}
+\end{Highlighting}
+\end{Shaded}
+
+Para fazer um gráfico boxplot de EPDS antes e depois, precisamos arrumar o formato da base de dados. Utilizamos a função \texttt{gather} do pacote \texttt{tidyr} (veja em \ref{formato}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados_epds <-}\StringTok{  }\KeywordTok{gather}\NormalTok{(}\DataTypeTok{data=}\NormalTok{dados, }\DataTypeTok{key =}\StringTok{"momento"}\NormalTok{, }\DataTypeTok{value =} \StringTok{"epds"}\NormalTok{,}
+\NormalTok{                      epds_antes, epds_depois)}
+\NormalTok{dados_epds <-}\StringTok{ }\KeywordTok{select}\NormalTok{(dados_epds,id,momento,epds) }
+\CommentTok{#selecionando só as colunas que vamos utilizar para fazer o grafico}
+\NormalTok{dados_epds}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 208 x 3
+##       id momento     epds
+##    <dbl> <chr>      <dbl>
+##  1     1 epds_antes    20
+##  2     2 epds_antes    20
+##  3     3 epds_antes     7
+##  4     5 epds_antes    10
+##  5     6 epds_antes     5
+##  6     7 epds_antes     2
+##  7     8 epds_antes    12
+##  8     9 epds_antes    10
+##  9    10 epds_antes     1
+## 10    11 epds_antes    10
+## # ... with 198 more rows
+\end{verbatim}
+
+Agora sim podemos fazer o gráfico:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(dados_epds) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ epds, }\DataTypeTok{fill =}\NormalTok{ momento) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{scale_fill_hue}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{theme_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-174-1.pdf}
+
+Podemos observar que, apesar da distribuição do EPDS nos dois momentos não ser muito simétrica, não há valores atípicos em nenhum momento. Vamos então fazer o teste t de amostras pareadas no R:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{t.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{epds_depois,dados}\OperatorTok{$}\NormalTok{epds_antes,}\DataTypeTok{paired=}\OtherTok{TRUE}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Paired t-test
+## 
+## data:  dados$epds_depois and dados$epds_antes
+## t = 5.6183, df = 103, p-value = 1.652e-07
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  2.724850 5.698227
+## sample estimates:
+## mean of the differences 
+##                4.211538
+\end{verbatim}
+
+Veja que para o teste de amostras pareadas, usamos o argumento \texttt{paired=TRUE}.
+Ao analisar o valor p do teste, há indícios de mudança no escore médio de EPDS entre os momentos antes e depois do parto.
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-mais-de-dois-grupos-independentes}{%
+\section{Teste para comparação de mais de dois grupos independentes}\label{teste-para-comparauxe7uxe3o-de-mais-de-dois-grupos-independentes}}
+
+Em um cenário que queremos comparar as médias de uma variável quantitativa de três ou mais grupos independentes, o teste estatístico é a \textbf{Análise de Variância - ANOVA}.
+
+Como exemplo, queremos comparar os três grupos de orientação sobre amamentação no pré-natal (acompanhamento, só orientação e nenhuma orientação) em relação ao tempo de amamentação. Seja \(\mu_1\), \(\mu_2\) e \(\mu_3\) as médias do tempo de amamentação dos grupos acompanhamento, só orientação e nenhuma orientação, respectivamente. São as hipóteses que queremos testar: \(H_0:\mu_1=\mu_2=\mu_3\) e \(H_1: \mu_i\neq \mu_j\), com \(i\neq j\) e \(i,j=1,2,3\).
+
+Vamos primeiramente realizar uma análise exploratória para a comparação dos grupos com relação ao tempo de amamentação:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{datasummary}\NormalTok{(grupo_amamentacao }\OperatorTok{~}\StringTok{ }\NormalTok{tempo_amamentacao_meses}\OperatorTok{*}\NormalTok{(n}\OperatorTok{+}\NormalTok{media}\OperatorTok{+}\NormalTok{dp}\OperatorTok{+}\NormalTok{mini}\OperatorTok{+}\NormalTok{medi}\OperatorTok{+}\NormalTok{maxi), }\DataTypeTok{data =}\NormalTok{ dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=1\linewidth]{figures/descritivas_amament}
+
+Observe pela tabela acima que as categorias de grupo de orientação sobre amamentação está em ordem alfabética. No entanto, queremos que a ordem seja: acompanhamento, orientaco e nada. Para informar isso ao R, vamos reorganizar as categorias da seguinte maneira:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados}\OperatorTok{$}\NormalTok{grupo_amamentacao <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dados}\OperatorTok{$}\NormalTok{grupo_amamentacao, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"acompanhamento"}\NormalTok{, }\StringTok{"orientacao"}\NormalTok{, }\StringTok{"nada"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(dados) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ tempo_amamentacao_meses, }\DataTypeTok{fill =}\NormalTok{ grupo_amamentacao) }\OperatorTok{+}
+\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{scale_fill_hue}\NormalTok{() }\OperatorTok{+}
+\StringTok{ }\KeywordTok{theme_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-179-1.pdf}
+
+Para a realização a ANOVA, existem alguns pré-requisitos que precisam ser verificados: grupos independentes, normalidade da variável quantitativa em cada grupo e variâncias iguais de todos os grupos.
+
+No exemplo em questão, os grupos são independentes. Para testar a igualdade das variâncias, consideramos o teste de Levene já utilizado anteriormente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{leveneTest}\NormalTok{(tempo_amamentacao_meses}\OperatorTok{~}\NormalTok{grupo_amamentacao,}\DataTypeTok{data=}\NormalTok{dados,}\DataTypeTok{center=}\NormalTok{mean) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = mean)
+##        Df F value  Pr(>F)  
+## group   2  2.8025 0.06538 .
+##       101                  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+Ao considerar um nível de significância de 5\%, não há indícios para rejeitar a hipótese de igualdade das variâncias. Para testar a normalidade, consideramos as seguintes funções criadas para os testes de Shapiro-Wilk e Kolmogorov-Smirnov (as funções só precisam ser rodadas, não mudar nada).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{##Funcoes dos testes de Shapiro-Wilk e Kolmogorov-Smirnov}
+\CommentTok{###Não mudar nada, apenas rodar!}
+\NormalTok{sw_test <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(var)\{}
+\NormalTok{  out <-}\StringTok{ }\KeywordTok{shapiro.test}\NormalTok{(var)}
+  \KeywordTok{return}\NormalTok{(out}\OperatorTok{$}\NormalTok{p.value)}
+\NormalTok{\}}
+\NormalTok{ks_test <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(var)\{}
+\NormalTok{  out <-}\StringTok{ }\KeywordTok{lillie.test}\NormalTok{(var)}
+  \KeywordTok{return}\NormalTok{(out}\OperatorTok{$}\NormalTok{p.value)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Agora, vamos realizar os testes de normalidade para os dados em questão:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{datasummary}\NormalTok{(grupo_amamentacao }\OperatorTok{~}\StringTok{ }\NormalTok{tempo_amamentacao_meses}\OperatorTok{*}\NormalTok{(sw_test}\OperatorTok{+}\NormalTok{ks_test),}
+            \DataTypeTok{data =}\NormalTok{ dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=1\linewidth]{figures/normalidade_amament}
+
+Ao considerar um nível de significância de 5\%, não há indícios para rejeitar a hipótese de normalidade dos dados. Uma vez verificadas e satisfeitas as suposições da ANOVA, vamos para o ajuste do modelo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aj <-}\StringTok{ }\KeywordTok{aov}\NormalTok{(tempo_amamentacao_meses}\OperatorTok{~}\NormalTok{grupo_amamentacao,}
+          \DataTypeTok{data=}\NormalTok{dados)  }\CommentTok{#aj recebe o ajuste ANOVA}
+\KeywordTok{summary}\NormalTok{(aj) }\CommentTok{#com a funcao summary chamamos os ajustes}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    Df Sum Sq Mean Sq F value   Pr(>F)    
+## grupo_amamentacao   2  444.4  222.19   20.61 3.13e-08 ***
+## Residuals         101 1089.1   10.78                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+Na saída da ANOVA, o valo p é \texttt{Pr(\textgreater{}F)}. Podemos observar que o valor p é \(3.13e-08=0.0000000313\), ou seja, valor p bem próximo de 0. Com isso, há indícios para rejeitar a hipótese nula de igualdade das médias dos três grupos e assim, temos que pelo menos um grupo apresenta tempo de amamentação médio diferente dos demais.
+
+Para encontrar onde está essa diferença indicada na hipótese alternativa da ANOVA, vamos realizar uma análise de múltiplas comparações 2 a 2. O teste que usamos aqui é o teste de Tukey:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{TukeyHSD}\NormalTok{(aj)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = tempo_amamentacao_meses ~ grupo_amamentacao, data = dados)
+## 
+## $grupo_amamentacao
+##                                 diff       lwr       upr     p adj
+## orientacao-acompanhamento -3.9696970 -5.852252 -2.087142 0.0000067
+## nada-acompanhamento       -4.6285714 -6.482852 -2.774291 0.0000001
+## nada-orientacao           -0.6588745 -2.554248  1.236499 0.6872588
+\end{verbatim}
+
+Pela análise de comparações múltiplas de Tukey, temos indícios de que o tempo médio de amamentação do grupo que recebeu acompanhamento de perto é maior e diferente dos demais grupos. Não há indícios de diferença no tempo médio entre os grupos de orientação e nenhuma orientação.
+
+\hypertarget{nparam}{%
+\chapter{Testes não paramétricos}\label{nparam}}
+
+Nesse capítulo, vamos discutir alguns testes de hipóteses não paramétricos.
+Usaremos aqui já as informações sobre testes de hipóteses apresentadas em \url{https://daslab-ufes.github.io/materiais/} no arquivo ``Inferência Estatística''.
+
+Os testes não paramétricos não fazem suposições a respeito da forma das distribuições e são baseados na ordem das observações. Os testes são construídos com base em seus postos na amostra.
+
+Considere os dados como exemplo: 8, 10, 2, 13, 4, 70. Para obter os postos, primeiro ordene os dados e atribua a cada observação a sua posição:
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{figures/exemplo_posto} \caption{Exemplo de posto}\label{fig:unnamed-chunk-186}
+\end{figure}
+
+Como consequência, os testes não levam em conta a distância entre os valores, apenas a ordem. E se há um valor muito discrepante dos demais isso não afeta o teste.
+
+Vamos discutir nesse capítulo três testes paramétricos para comprar dois grupos independentes (Mann-Whitney), dois grupos dependentes (Wilcoxon) e mais de dois grupos independentes (Kruskal-Wallis).
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-dois-grupos-independentes}{%
+\section{Teste para comparação de dois grupos independentes}\label{teste-para-comparauxe7uxe3o-de-dois-grupos-independentes}}
+
+Considere que queremos comparar dois grupos com relação a uma variável quantitativa ou qualitativa ordinal. Um teste não paramétrico para a comparação dos dois grupos é o \textbf{Mann-Whitney}.
+
+Como exemplo, considere que a obstetra do estudo sobre gemelares quer agora realizar uma análise apenas das gestações cuja gestante tenha até 21 anos. Vamos então carregar os pacotes que usaremos aqui, importar a base de dados e depois criar um novo objeto resultante da filtragem das gestantes mais novas.
+
+Primeiramente, vamos carregar os pacotes que usaremos aqui.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr) }\CommentTok{#leitor da base de dados csv}
+\KeywordTok{library}\NormalTok{(dplyr) }\CommentTok{#para manipulação de dados}
+\KeywordTok{library}\NormalTok{(tidyr) }\CommentTok{#para mudar formato da base de dados}
+\KeywordTok{library}\NormalTok{(summarytools) }\CommentTok{#para medidas descritivas}
+\end{Highlighting}
+\end{Shaded}
+
+Importamos agora a base de dados gemelares e depois filtrar só as gestantes com até 21 anos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dataset/dados_completos.csv"}\NormalTok{) }\CommentTok{#importando base de dados}
+
+\NormalTok{dados_adoles <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(dados,idade}\OperatorTok{<=}\DecValTok{21}\NormalTok{) }\CommentTok{#filtrando só as gestantes até 21 anos}
+\KeywordTok{str}\NormalTok{(dados_adoles) }\CommentTok{#ver as descrições das variáveis}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## tibble [21 x 31] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ id                     : num [1:21] 14 20 22 23 26 27 30 35 42 51 ...
+##  $ grupo                  : chr [1:21] "placebo" "placebo" "progest" "progest" ...
+##  $ corion                 : chr [1:21] "mono" "di" "di" "di" ...
+##  $ data_aval              : Date[1:21], format: "2016-03-21" "2017-12-14" ...
+##  $ data_nascimento        : Date[1:21], format: "1998-03-26" "1998-12-19" ...
+##  $ cor_branco             : chr [1:21] "branca" "nbranca" "nbranca" "branca" ...
+##  $ peso_pre               : num [1:21] 48 61 100 61 71 58 94 47 107 65 ...
+##  $ alt                    : num [1:21] 1.56 1.64 1.59 1.64 1.71 1.63 1.52 1.43 1.7 1.63 ...
+##  $ gesta                  : num [1:21] 1 1 2 1 1 1 1 1 1 1 ...
+##  $ para                   : num [1:21] 0 0 1 0 0 0 0 0 0 0 ...
+##  $ aborto                 : num [1:21] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ ind_ap                 : chr [1:21] "nao" "nao" "sim" "sim" ...
+##  $ tabagismo              : chr [1:21] "nao" "nao" "nao" "nao" ...
+##  $ alcool                 : chr [1:21] "nao" "nao" "sim" "nao" ...
+##  $ drogas                 : chr [1:21] "nao" "nao" "nao" "nao" ...
+##  $ ig_aval                : num [1:21] 28.3 33.7 33.7 27.3 34.9 ...
+##  $ medida_colo            : num [1:21] 20.7 7 12.1 37 16 28.6 11 10 34 18.3 ...
+##  $ num_contra_ctg         : num [1:21] 1 10 3 2 10 2 6 5 8 9 ...
+##  $ igp_semana             : num [1:21] 34 35 37 34 37 30 35 36 35 33 ...
+##  $ igp_dia                : num [1:21] 6 3 6 1 3 2 1 2 3 5 ...
+##  $ imc                    : num [1:21] 19.7 22.7 39.6 22.7 24.3 ...
+##  $ igp                    : num [1:21] 34.9 35.4 37.9 34.1 37.4 ...
+##  $ primigesta             : chr [1:21] "sim" "sim" "nao" "sim" ...
+##  $ prematuridade          : chr [1:21] "sim" "sim" "nao" "sim" ...
+##  $ idade                  : num [1:21] 17 18 20 18 17 18 21 18 18 20 ...
+##  $ epds_antes             : num [1:21] 10 10 3 6 13 11 7 20 10 7 ...
+##  $ epds_depois            : num [1:21] 9 8 4 8 16 11 15 29 10 5 ...
+##  $ edps_antes_sn          : chr [1:21] "nao" "nao" "nao" "nao" ...
+##  $ edps_depois_sn         : chr [1:21] "nao" "nao" "nao" "nao" ...
+##  $ grupo_amamentacao      : chr [1:21] "acompanhamento" "orientacao" "orientacao" "acompanhamento" ...
+##  $ tempo_amamentacao_meses: num [1:21] 16 15 8 17 10 2 8 16 9 15 ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   id = col_double(),
+##   ..   grupo = col_character(),
+##   ..   corion = col_character(),
+##   ..   data_aval = col_date(format = ""),
+##   ..   data_nascimento = col_date(format = ""),
+##   ..   cor_branco = col_character(),
+##   ..   peso_pre = col_double(),
+##   ..   alt = col_double(),
+##   ..   gesta = col_double(),
+##   ..   para = col_double(),
+##   ..   aborto = col_double(),
+##   ..   ind_ap = col_character(),
+##   ..   tabagismo = col_character(),
+##   ..   alcool = col_character(),
+##   ..   drogas = col_character(),
+##   ..   ig_aval = col_double(),
+##   ..   medida_colo = col_double(),
+##   ..   num_contra_ctg = col_double(),
+##   ..   igp_semana = col_double(),
+##   ..   igp_dia = col_double(),
+##   ..   imc = col_double(),
+##   ..   igp = col_double(),
+##   ..   primigesta = col_character(),
+##   ..   prematuridade = col_character(),
+##   ..   idade = col_double(),
+##   ..   epds_antes = col_double(),
+##   ..   epds_depois = col_double(),
+##   ..   edps_antes_sn = col_character(),
+##   ..   edps_depois_sn = col_character(),
+##   ..   grupo_amamentacao = col_character(),
+##   ..   tempo_amamentacao_meses = col_double()
+##   .. )
+\end{verbatim}
+
+Observamos que há \(n=21\) observações na base de dados ``dados\_adoles''.
+
+Agora, queremos comparar os grupos de progesterona e placebo com relação ao número de contrações. Ao observar a tabela de frequências do grupo, observamos que há apenas 9 observações no grupo placebo e 12 no grupo progesterona.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{freq}\NormalTok{(dados_adoles}\OperatorTok{$}\NormalTok{grupo,}\DataTypeTok{cumul=}\OtherTok{FALSE}\NormalTok{,}\DataTypeTok{report.nas=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Frequencies  
+## 
+##                 Freq        %
+## ------------- ------ --------
+##       placebo      9    42.86
+##       progest     12    57.14
+##         Total     21   100.00
+\end{verbatim}
+
+Vamos realizar o teste de Mann-Whitney. Para isso, a função que utilizamos é \texttt{wilcox.test} (não precisa instalar pacote). Essa função também será utilizada para comparação de grupos pareados e por isso precisamos informar ao R que, nesse caso, os grupos não são pareados ao colocar \texttt{paired=FALSE}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{wilcox.test}\NormalTok{(num_contra_ctg}\OperatorTok{~}\NormalTok{grupo,}\DataTypeTok{data=}\NormalTok{dados_adoles,}\DataTypeTok{paired=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Wilcoxon rank sum test with continuity correction
+## 
+## data:  num_contra_ctg by grupo
+## W = 59.5, p-value = 0.721
+## alternative hypothesis: true location shift is not equal to 0
+\end{verbatim}
+
+Como podemos observar, o valor p é grande e não há indícios para rejeição da hipótese nula de igualdade da distribuição do número de contrações nos dois grupos.
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-dois-grupos-dependentes}{%
+\section{Teste para comparação de dois grupos dependentes}\label{teste-para-comparauxe7uxe3o-de-dois-grupos-dependentes}}
+
+Considere agora que temos dois grupos dependentes e queremos compará-los com relação a uma variável quantitativa ou qualitativa ordinal. A dependência entre os grupos pode ser devido a avaliar os mesmos indivíduos em dois momentos: antes e depois de uma intervenção.
+
+Como exemplo, queremos comparar o escore médio de EPDS (depressão) antes e depois do parto das gestantes mais novas (até 21 anos). O teste de hipóteses para a comparação de dois grupos dependentes é conhecido como \textbf{teste de Wilcoxon}.
+
+A função no R é a mesma que utilizamos no teste anterior, mas agora informamos ao R que os grupos são pareados ao utilizar o argumento \texttt{paired=TRUE}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{wilcox.test}\NormalTok{(dados_adoles}\OperatorTok{$}\NormalTok{epds_depois,dados_adoles}\OperatorTok{$}\NormalTok{epds_antes,}\DataTypeTok{paired=}\OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Wilcoxon signed rank test with continuity correction
+## 
+## data:  dados_adoles$epds_depois and dados_adoles$epds_antes
+## V = 139.5, p-value = 0.01952
+## alternative hypothesis: true location shift is not equal to 0
+\end{verbatim}
+
+Ao considerar o valor p do teste de Wilcoxon (0.01952), há indícios de diferença entre os dois momentos de avaliação do EPDS a um nível de significância de 5\%.
+
+\hypertarget{teste-para-comparauxe7uxe3o-de-mais-de-dois-grupos-independentes}{%
+\section{Teste para comparação de mais de dois grupos independentes}\label{teste-para-comparauxe7uxe3o-de-mais-de-dois-grupos-independentes}}
+
+Em um cenário que queremos comparar uma variável quantitativa ou qualitativa ordinal de três ou mais grupos independentes, o teste não paramétrico é o teste de \textbf{Kruskal-Wallis}.
+
+Agora apenas para as gestantes mais novas (dados\_adoles), vamos comparar os três grupos de orientação sobre amamentação no pré-natal (acompanhamento, só orientação e nenhuma orientação) em relação ao tempo de amamentação. A função do R é a \texttt{kruskal.test}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{kruskal.test}\NormalTok{(tempo_amamentacao_meses}\OperatorTok{~}\NormalTok{grupo_amamentacao,}\DataTypeTok{data=}\NormalTok{dados_adoles)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Kruskal-Wallis rank sum test
+## 
+## data:  tempo_amamentacao_meses by grupo_amamentacao
+## Kruskal-Wallis chi-squared = 2.5632, df = 2, p-value = 0.2776
+\end{verbatim}
+
+Como o valor p obtido é de 0.2776, não há indícios para rejeitar a hipótese de igualdade da distribuição do tempo de amamentação entre os três grupos.
+
+Em um cenário que a hipótese nula do teste de Kruskal-Wallis é rejeitada, precisaríamos encontrar onde está essa diferença indicada na hipótese alternativa de Kruskal-Wallis. Para isso, realizaria uma análise de múltiplas comparações 2 a 2 grupos. No R, essa análise pode ser feita por meio da função \texttt{pairwise.wilcox.test} (não precisa instalar pacote).
+
+\hypertarget{qualis}{%
+\chapter{Associação entre variáveis qualitativas}\label{qualis}}
+
+Nesse capítulo, vamos discutir alguns testes para duas variáveis qualitativas.
+Usaremos aqui já as informações sobre testes de hipóteses apresentadas em \url{https://daslab-ufes.github.io/materiais/} no arquivo ``Inferência Estatística''.
+
+\hypertarget{testes-de-associauxe7uxe3o-entre-duas-variuxe1veis-qualitativas}{%
+\section{Testes de associação entre duas variáveis qualitativas}\label{testes-de-associauxe7uxe3o-entre-duas-variuxe1veis-qualitativas}}
+
+Considere que a obstetra tenha o interesse em verificar se há associação entre ser primigesta (sim ou não) com antecedente de doença materna (sim ou não). Para fazer essa análise no R, antes de tudo precisamos carregar os seguintes pacotes (já instalados em minha máquina):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr) }\CommentTok{#leitor da base de dados}
+\KeywordTok{library}\NormalTok{(forcats) }\CommentTok{#para lidar com variáveis categóricas}
+\KeywordTok{library}\NormalTok{(summarytools) }\CommentTok{#para medidas descritivas e testes para vars qualitativas}
+\end{Highlighting}
+\end{Shaded}
+
+Agora vamos importar a base de dados gemelares:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dataset/dados_completos.csv"}\NormalTok{) }\CommentTok{#importando base de dados}
+\end{Highlighting}
+\end{Shaded}
+
+Como primeira análise, podemos fazer uma tabela cruzada entre as variáveis qualitativas ``primigesta'' e ``ind\_ap'' (antecedente de doença materna) por meio da função \texttt{ctable} do pacote \texttt{summarytools}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{primigesta,dados}\OperatorTok{$}\NormalTok{ind_ap,}\DataTypeTok{prop=}\StringTok{"t"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Total Proportions  
+## dados$primigesta * dados$ind_ap  
+## 
+## ------------------ -------------- ------------ ------------ --------------
+##                      dados$ind_ap          nao          sim          Total
+##   dados$primigesta                                                        
+##                nao                  50 (48.1%)   19 (18.3%)    69 ( 66.3%)
+##                sim                  25 (24.0%)   10 ( 9.6%)    35 ( 33.7%)
+##              Total                  75 (72.1%)   29 (27.9%)   104 (100.0%)
+## ------------------ -------------- ------------ ------------ --------------
+\end{verbatim}
+
+Já usamos essa função anteriormente, em \ref{tabelas}. Volte lá para alguns detalhes da função.
+
+Podemos observar, por exemplo, que 48,1\% das gestantes são primigestas e não tem antecedente de doença materna. Para testar se há associação entre duas variáveis qualitativas, podemos usar o \textbf{teste qui-quadrado para independência}. Nesse teste,
+são as hipóteses: \(H_0\): As duas variáveis são independentes e \(H_1\): As duas variáveis não são independentes, ou seja, há associação entre as duas variáveis.
+
+De uma maneira bastante resumida, o teste qui-quadrado compara as frequências observadas das caselas (combinações das categorias das duas variáveis) com as frequências esperadas em um cenário de independência. A frequência esperada é dada por: frequência de uma categoria vezes frequência da outra categoria dividido pelo total de observações.
+
+Como exemplo, considere a casela de sim para primigesta e sim para ind\_ap. A frequência observada é 10 e a esperada é \((35 \times 29)/104= 9.75\), em que 35 é o total de casos primigesta=sim e 29 é o total de casos ind\_ap=sim, como podemos ver na tabela acima.
+
+Assim, fica intuitivo pensar que se as distâncias entre o valor observado e o esperado sob \(H_0\) de todas as caselas da tabela (combinação das categorias das duas variáveis) forem pequenas, indica que \(H_0\) é verdade. Caso as distâncias sejam grandes, indica que temos indícios para rejeitar \(H_0\).
+
+Um observação bastante importante: o teste qui-quadrado é um teste assintótico (requer tamanho de amostra e frequências nas caselas grandes) e, por isso, requer alguns pré-requisitos para a utilização:
+
+\begin{itemize}
+\tightlist
+\item
+  Tamanho da amostra grande;
+\item
+  Pelo menos 5 observações em cada casela;
+\item
+  Valor esperado em cada casela não deve ser inferior a 5.
+\end{itemize}
+
+Podemos realizar o teste qui-quadrado para independência no R de algumas formas. Aqui apresentamos duas delas.
+
+A primeira é usando o argumento \texttt{chisq=TRUE} na função \texttt{ctable}. No nosso exemplo, fica:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{primigesta,dados}\OperatorTok{$}\NormalTok{ind_ap,}\DataTypeTok{prop=}\StringTok{"t"}\NormalTok{,}\DataTypeTok{chisq=}\OtherTok{TRUE}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Total Proportions  
+## dados$primigesta * dados$ind_ap  
+## 
+## 
+## ------------------ -------------- ------------ ------------ --------------
+##                      dados$ind_ap          nao          sim          Total
+##   dados$primigesta                                                        
+##                nao                  50 (48.1%)   19 (18.3%)    69 ( 66.3%)
+##                sim                  25 (24.0%)   10 ( 9.6%)    35 ( 33.7%)
+##              Total                  75 (72.1%)   29 (27.9%)   104 (100.0%)
+## ------------------ -------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##       0        1       1    
+## ----------------------------
+\end{verbatim}
+
+Veja que a estatística qui-quadrado (saída \emph{Chi.squared}), que leva em conta as distâncias entre o observado e o esperado sob \(H_0\), é bem pequena, perto de 0 (por isso que na saída só está 0 por aproximação). Assim, o valor p é bem grande, próximo de 1 (por isso que a saída já arredonda para 1), e não há indícios para rejeitar a hipótese nula de independência entre as duas variáveis.
+
+Outra função é a \texttt{chisq.test} (não precisa instalar pacote), que retorna o mesmo teste da saída anterior:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{chisq.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{primigesta,dados}\OperatorTok{$}\NormalTok{ind_ap)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Pearson's Chi-squared test with Yates' continuity correction
+## 
+## data:  dados$primigesta and dados$ind_ap
+## X-squared = 1.4794e-30, df = 1, p-value = 1
+\end{verbatim}
+
+Veja que as suposições para a utilização do teste qui-quadrado foram satisfeitas: n grande, frequências das caselas observadas maior que 5 (a menor é 10) e frequências esperadas maior que 5 (verifique).
+
+Vamos agora para outro exemplo. A obstetra também quer saber se há associação entre tabagismo (sim ou não) e alcool (sim ou não).
+
+Vamos então obter a tabela cruzada e realizar o teste qui-quadrado no R:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{tabagismo,dados}\OperatorTok{$}\NormalTok{alcool,}\DataTypeTok{prop=}\StringTok{"t"}\NormalTok{,}\DataTypeTok{chisq=}\OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in chisq.test(freq_table_min): Chi-squared approximation may be
+## incorrect
+\end{verbatim}
+
+\begin{verbatim}
+## Cross-Tabulation, Total Proportions  
+## dados$tabagismo * dados$alcool  
+## 
+## 
+## ----------------- -------------- ------------ ------------ --------------
+##                     dados$alcool          nao          sim          Total
+##   dados$tabagismo                                                        
+##               nao                  79 (76.0%)    7 ( 6.7%)    86 ( 82.7%)
+##               sim                  10 ( 9.6%)    8 ( 7.7%)    18 ( 17.3%)
+##             Total                  89 (85.6%)   15 (14.4%)   104 (100.0%)
+## ----------------- -------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##     13.09      1     3e-04  
+## ----------------------------
+\end{verbatim}
+
+Veja que o R dá um aviso ( \emph{warning} ) dizendo que o teste qui-quadrado pode estar errado. Ao pensar nos pré-requisitos do teste, vemos que o n é grande e não há nenhuma frequência observada menor que 5 (a menor é 7). No entanto, a frequência esperada da casela tagabismo=sim e alcool=sim é 2.59 (\(18\times 15 /140=2.59\)), menor que 5. Logo, o teste qui-quadrado não é adequado. Uma alternativa é considerar o \textbf{teste exato de Fisher} que não faz suposições assintóticas. As hipóteses desse teste são as mesmas do teste qui-quadrado e para realizá-lo no R, usamos a função \texttt{fisher.test}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{fisher.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{tabagismo,dados}\OperatorTok{$}\NormalTok{alcool)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	Fisher's Exact Test for Count Data
+## 
+## data:  dados$tabagismo and dados$alcool
+## p-value = 0.0005441
+## alternative hypothesis: true odds ratio is not equal to 1
+## 95 percent confidence interval:
+##   2.250842 35.676583
+## sample estimates:
+## odds ratio 
+##   8.730027
+\end{verbatim}
+
+O valor p é bem pequeno (\(0.0005441\)), indicando indícios para dizer que há associação entre tabagismo e alcool.
+
+Considere agora que a psicóloga que faz parte do projeto deseja sabe se houve mudança no status de depressão (sim e não) antes e depois do parto. Abaixo está a tabela cruzada da variável de depressão avaliada nos dois momentos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{edps_antes_sn,dados}\OperatorTok{$}\NormalTok{edps_depois_sn,}\DataTypeTok{prop=}\StringTok{"t"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Total Proportions  
+## dados$edps_antes_sn * dados$edps_depois_sn  
+## 
+## --------------------- ---------------------- ------------ ------------ --------------
+##                         dados$edps_depois_sn          nao          sim          Total
+##   dados$edps_antes_sn                                                                
+##                   nao                          45 (43.3%)   35 (33.7%)    80 ( 76.9%)
+##                   sim                           9 ( 8.7%)   15 (14.4%)    24 ( 23.1%)
+##                 Total                          54 (51.9%)   50 (48.1%)   104 (100.0%)
+## --------------------- ---------------------- ------------ ------------ --------------
+\end{verbatim}
+
+Podemos observar que 43.3\% dos casos foram classificados como não depressivas antes e depois do parto, 14.4\% eram depressivas e continuaram depois do parto e agora temos as mudanças: 8.7\% eram depressivas e depois ficaram não depressivas depois do parto e 33.7\% não eram antes e ficaram depois do parto.
+
+Para verificar se houve mudança no status de depressão das gestantes antes e depois parto, não é indicado usar nenhum dos testes anteriormente citados, uma vez que as frequências aqui são correlacionadas. Um teste candidato nesse caso é o \textbf{teste de McNemar}. As hipóteses desse teste são: \(H_0\): o parto não alternou o status de depressão e \(H_1\): o parto alternou o status de depressão. No R, a função para o teste de McNemar é:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mcnemar.test}\NormalTok{(dados}\OperatorTok{$}\NormalTok{edps_antes_sn,dados}\OperatorTok{$}\NormalTok{edps_depois_sn)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 	McNemar's Chi-squared test with continuity correction
+## 
+## data:  dados$edps_antes_sn and dados$edps_depois_sn
+## McNemar's chi-squared = 14.205, df = 1, p-value = 0.000164
+\end{verbatim}
+
+Podemos observar pela saída acima que há indícios para dizer que houve mudança no status de depressão das mulheres após o parto (valor p =0.000164).
+
+\hypertarget{medidas-de-associauxe7uxe3o}{%
+\section{Medidas de associação}\label{medidas-de-associauxe7uxe3o}}
+
+A pergunta principal do estudo dos gemelares é se a progesterona diminui o risco de prematuridade (idade gestacional menor que 37 semanas). Na tabela abaixo temos as porcentagens de prematuridade em cada grupo (progesterona e placebo).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{grupo,dados}\OperatorTok{$}\NormalTok{prematuridade,}\DataTypeTok{prop=}\StringTok{"r"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Row Proportions  
+## dados$grupo * dados$prematuridade  
+## 
+## ------------- --------------------- ------------ ------------ --------------
+##                 dados$prematuridade          nao          sim          Total
+##   dados$grupo                                                               
+##       placebo                         19 (36.5%)   33 (63.5%)    52 (100.0%)
+##       progest                         25 (48.1%)   27 (51.9%)    52 (100.0%)
+##         Total                         44 (42.3%)   60 (57.7%)   104 (100.0%)
+## ------------- --------------------- ------------ ------------ --------------
+\end{verbatim}
+
+Podemos observar que a porcentagem de prematuridade no grupo placebo é de 63.5\%, enquanto que no grupo progesterona é de 51.9\%. Esses são resultados obtidos nessa amostra e queremos inferir para a população.
+
+Queremos saber se os grupos são homogêneos com relação à prematuridade, ou seja, queremos saber se o risco de prematuridade é diferente entre os grupos. Para isso, seja \(p_1\) a probabilidade de prematuridade do grupo progesterona e \(p_2\) a probabilidade de prematuridade do grupo placebo. Um teste para comparar os grupos com relação às probabilidades de um evento de interesse é o \textbf{teste qui-quadrado de homogeneidade}. São as hipóteses do teste: \(H_0: p_1=p_2\) e \(H_1: p_1\neq p_2\).
+
+Tanto a estatística quanto a distribuição de referência do teste para homogeneidade são as mesmas do teste de independência. Assim, a função no R é a mesma que usamos anteriormente:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{grupo,dados}\OperatorTok{$}\NormalTok{prematuridade,}\DataTypeTok{prop=}\StringTok{"r"}\NormalTok{,}\DataTypeTok{chisq=}\OtherTok{TRUE}\NormalTok{) }\CommentTok{##ou chisq.test(dados$grupo,dados$prematuridade)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Row Proportions  
+## dados$grupo * dados$prematuridade  
+## 
+## 
+## ------------- --------------------- ------------ ------------ --------------
+##                 dados$prematuridade          nao          sim          Total
+##   dados$grupo                                                               
+##       placebo                         19 (36.5%)   33 (63.5%)    52 (100.0%)
+##       progest                         25 (48.1%)   27 (51.9%)    52 (100.0%)
+##         Total                         44 (42.3%)   60 (57.7%)   104 (100.0%)
+## ------------- --------------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##    0.9848      1     0.321  
+## ----------------------------
+\end{verbatim}
+
+Podemos observar que não há indícios para dizer que a progesterona diminui o risco de prematuridade. Há outra forma de comparar os dois grupos com relação à prematuridade: pelo \textbf{risco relativo}.
+
+O risco relativo é dado pela razão das probabilidades (riscos) de prematuridade. Assim, temos que
+\[
+RR=\frac{0.519}{0.635}=0.8173. 
+\]
+Antes de interpretar o risco relativo de prematuridade acima, vamos discutir os possíveis valores de RR:
+
+\begin{itemize}
+\item
+  \(RR>1\): indica que a categoria do numerador \textbf{aumenta} o risco do evento.
+\item
+  \(RR<1\): indica que a categoria do numerador \textbf{diminui} o risco do evento.
+\item
+  \(RR=1\): indica que os riscos são iguais.
+\end{itemize}
+
+Vamos obter o risco relativo no R por meio da função \texttt{ctable} ao inserir o argumento \texttt{RR=TRUE}. Mas vale uma observação: a função calcula o risco ao considerar como evento a primeira categoria da coluna e no numerador da razão é a primeira categoria da variável que está na linha. Como queremos o risco de prematuridade (sim) com o grupo progesterona no numerador, precisamos mudar a ordem das categorias das duas variáveis:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Para isso, usamos a função factor e informar a ordem de }
+\CommentTok{#suas categorias (levels)}
+\NormalTok{dados}\OperatorTok{$}\NormalTok{grupo <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dados}\OperatorTok{$}\NormalTok{grupo,}\DataTypeTok{levels=}\KeywordTok{c}\NormalTok{(}\StringTok{"progest"}\NormalTok{,}\StringTok{"placebo"}\NormalTok{))}
+\NormalTok{dados}\OperatorTok{$}\NormalTok{prematuridade <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dados}\OperatorTok{$}\NormalTok{prematuridade,}\DataTypeTok{levels=}\KeywordTok{c}\NormalTok{(}\StringTok{"sim"}\NormalTok{,}\StringTok{"nao"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Agora sim:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados}\OperatorTok{$}\NormalTok{grupo,dados}\OperatorTok{$}\NormalTok{prematuridade,}\DataTypeTok{prop=}\StringTok{"r"}\NormalTok{,}\DataTypeTok{chisq=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{RR=}\OtherTok{TRUE}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Row Proportions  
+## dados$grupo * dados$prematuridade  
+## 
+## 
+## ------------- --------------------- ------------ ------------ --------------
+##                 dados$prematuridade          sim          nao          Total
+##   dados$grupo                                                               
+##       progest                         27 (51.9%)   25 (48.1%)    52 (100.0%)
+##       placebo                         33 (63.5%)   19 (36.5%)    52 (100.0%)
+##         Total                         60 (57.7%)   44 (42.3%)   104 (100.0%)
+## ------------- --------------------- ------------ ------------ --------------
+## 
+## ----------------------------
+##  Chi.squared   df   p.value 
+## ------------- ---- ---------
+##    0.9848      1     0.321  
+## ----------------------------
+## 
+## ----------------------------------
+##  Risk Ratio   Lo - 95%   Hi - 95% 
+## ------------ ---------- ----------
+##     0.82        0.59       1.14   
+## ----------------------------------
+\end{verbatim}
+
+Além da estimativa pontual do risco relativo já discutida anteriormente (\(RR=0.82\)), também está na saída acima o intervalo com 95\% de confiança (em Lo - 95\% e Hi - 95\%). Como o 1 está dentro do intervalo de confiança (0.59- 1.14), não há indícios que a progesterona muda o risco de prematuridade a um nível de 5\% de significância, como já havíamos visto anteriormente.
+
+Vamos agora considerar um outro problema não associado aos dados das gestações gemelares. Nesse estudo, o objetivo consiste em verificar se os casos com câncer de mama diferem significantemente dos controles (sem câncer de mama) em relação à exposição ao fumo passivo.
+
+Vamos primeiramente importar a base de dados e depois fazer uma tabele cruzada entre as duas variáveis:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados_mama <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dataset/dados_mama.csv"}\NormalTok{) }\CommentTok{#importando base de dados}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#arrumando os labels de exposicao}
+\NormalTok{dados_mama}\OperatorTok{$}\NormalTok{exposicao <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dados_mama}\OperatorTok{$}\NormalTok{exposicao,}\DataTypeTok{levels=}\KeywordTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{,}\StringTok{"2"}\NormalTok{),}\DataTypeTok{labels=}\KeywordTok{c}\NormalTok{(}\StringTok{"sim"}\NormalTok{,}\StringTok{"nao"}\NormalTok{))}
+
+\CommentTok{#arrumando os labels de cancer}
+\NormalTok{dados_mama}\OperatorTok{$}\NormalTok{cancer <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(dados_mama}\OperatorTok{$}\NormalTok{cancer,}\DataTypeTok{levels=}\KeywordTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{,}\StringTok{"2"}\NormalTok{),}\DataTypeTok{labels=}\KeywordTok{c}\NormalTok{(}\StringTok{"sim"}\NormalTok{,}\StringTok{"nao"}\NormalTok{))}
+
+\CommentTok{##tabela cruzada }
+\KeywordTok{ctable}\NormalTok{(dados_mama}\OperatorTok{$}\NormalTok{exposicao,dados_mama}\OperatorTok{$}\NormalTok{cancer,}\DataTypeTok{prop=}\StringTok{"c"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Column Proportions  
+## dados_mama$exposicao * dados_mama$cancer  
+## 
+## ---------------------- ------------------- ------------- ------------- --------------
+##                          dados_mama$cancer           sim           nao          Total
+##   dados_mama$exposicao                                                               
+##                    sim                       50 ( 78.1%)   43 ( 55.1%)    93 ( 65.5%)
+##                    nao                       14 ( 21.9%)   35 ( 44.9%)    49 ( 34.5%)
+##                  Total                       64 (100.0%)   78 (100.0%)   142 (100.0%)
+## ---------------------- ------------------- ------------- ------------- --------------
+\end{verbatim}
+
+Foi realizado um estudo de caso-controle (veja os slides ``Tipos de estudos'' disponível em \url{https://daslab-ufes.github.io/materiais/}) e, nesses estudos, não podemos calcular o risco de câncer de mama uma vez que partimos dos casos e controles e não seria possível estimar a incidência da doença. Uma medida de associação que pode ser usada nesses casos é a \textbf{razão de chances}.
+
+A chance de um evento é a probabilidade de apresentar o evento de interesse dividida pela probabilidade de não apresentar o evento de interesse. Se \(p\) é a probabilidade de um evento, a chance é dada por: \(C=p/(1-p)\).
+
+A chance estimada de câncer entre os expostos ao fumo passivo é
+\[
+C_E=\frac{50/93}{43/93}=\frac{50}{43}=1.163.
+\]
+Já a chance estimada de câncer entre os não expostos ao fumo passivo é
+
+\[
+C_N=\frac{14/49}{35/49}=\frac{14}{35}=0.40.
+\]
+
+Assim, a razão das chances (OR - \emph{odds ratio}) é dada por:
+\[
+OR=\frac{C_E}{C_N}=\frac{1.163}{0.400}=2.91.
+\]
+De maneira similar ao que conversamos sobre o risco relativo, para a razão de chances, temos que:
+
+\begin{itemize}
+\item
+  \(OR>1\): indica que a categoria do numerador \textbf{aumenta} a chance do evento.
+\item
+  \(OR<1\): indica que a categoria do numerador \textbf{diminui} a chance do evento.
+\item
+  \(OR=1\): indica que as chances são iguais.
+\end{itemize}
+
+Para obter estimativas pontuais e intervalares para a OR no R, inserimos o argumento \texttt{OR=TRUE} na função \texttt{ctable}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ctable}\NormalTok{(dados_mama}\OperatorTok{$}\NormalTok{exposicao,dados_mama}\OperatorTok{$}\NormalTok{cancer,}\DataTypeTok{prop=}\StringTok{"c"}\NormalTok{,}\DataTypeTok{OR=}\OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Cross-Tabulation, Column Proportions  
+## dados_mama$exposicao * dados_mama$cancer  
+## 
+## 
+## ---------------------- ------------------- ------------- ------------- --------------
+##                          dados_mama$cancer           sim           nao          Total
+##   dados_mama$exposicao                                                               
+##                    sim                       50 ( 78.1%)   43 ( 55.1%)    93 ( 65.5%)
+##                    nao                       14 ( 21.9%)   35 ( 44.9%)    49 ( 34.5%)
+##                  Total                       64 (100.0%)   78 (100.0%)   142 (100.0%)
+## ---------------------- ------------------- ------------- ------------- --------------
+## 
+## ----------------------------------
+##  Odds Ratio   Lo - 95%   Hi - 95% 
+## ------------ ---------- ----------
+##     2.91        1.38       6.10   
+## ----------------------------------
+## 
+## --------------------------------
+##  Risk Ratio   Lo - 0%   Hi - 0% 
+## ------------ --------- ---------
+##     1.88       1.88      1.88   
+## --------------------------------
+\end{verbatim}
+
+Pelas saídas, observamos que um intervalo com 95\% de confiança para a razão de chances é (1.38, 6.10) e o 1 não está no intervalo. Com isso, temos que a chance de câncer de mama do grupo exposto ao fumo passivo é 2.91 vezes a chance do grupo não exposto.
+
+\hypertarget{correlauxe7uxe3o-entre-variuxe1veis-quantitativas}{%
+\chapter{Correlação entre variáveis quantitativas}\label{correlauxe7uxe3o-entre-variuxe1veis-quantitativas}}
+
+Nos Capítulos \ref{param} e \ref{nparam} vimos como comparar grupos com relação a variáveis quantitativas e no Capítulo \ref{qualis} vimos como avaliar a associação entre duas variáveis qualitativas. Agora, vamos abordar nesse capítulo medidas que quantificam a correlação linear entre duas variáveis quantitativas: coeficiente de correlação linear de Pearson e coeficiente de Spearman.
+
+Considermos novamente a base de dados das gestações gemelares. Antes de importar a base de dados, vamos carregar os pacotes que usaremos aqui.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr) }\CommentTok{#leitor da base de dados}
+\KeywordTok{library}\NormalTok{(dplyr) }\CommentTok{#para manipulação dos dados}
+\KeywordTok{library}\NormalTok{(Hmisc)  }\CommentTok{#para matriz de correlação com valor p}
+\KeywordTok{library}\NormalTok{(corrplot) }\CommentTok{#para fazer o gráfico correlograma}
+\end{Highlighting}
+\end{Shaded}
+
+Agora vamos importar a base de dados gemelares:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\DataTypeTok{file =} \StringTok{"dataset/dados_completos.csv"}\NormalTok{) }\CommentTok{#importando base de dados}
+\end{Highlighting}
+\end{Shaded}
+
+O coeficiente de correlação de Pearson é uma medida do grau correlação linear entre duas variáveis quantitativas. Mede a proximidade dos dados a uma reta.
+
+Dados os valores observados \((x_1,y_1), (x_2, y_2),\cdots, (x_n,y_n)\), o coeficiente de correlação linear de Pearson é
+
+\[\rho=\frac{1}{n}\sum\limits_{i=1}^n\left(\frac{x_i-\bar{x}}{s_x}\right)\left(\frac{y_i-\bar{y}}{s_y}\right)\]
+
+em que:
+
+\begin{itemize}
+\item
+  \(\bar{x}\) e \(\bar{y}\) são as médias das observações das variaveis \(X\) e \(Y\).
+\item
+  \(s_{x}\) e \(s_{y}\) são os devios padrão das variáveis \(X\) e \(Y\).
+\end{itemize}
+
+O coeficiente de correlação de Peason assume valor no intervalo {[}-1,1{]}, em que:
+
+\begin{itemize}
+\item
+  \(\rho\) próximo de -1, indícios de que há uma correlação linear \textbf{negativa} entre as variáveis;
+\item
+  \(\rho\) próximo de 0, não há indícios de correlação entre as variáveis;
+\item
+  \(\rho\) próximo de 1, indícios de que há uma correlação linear \textbf{positiva} entre as variáveis.
+\end{itemize}
+
+Para calcular o coeficiente de correlação linear de Pearson no R, vamos primeiro selecionar as variáveis quantitativas da base de dados gemelares. Vamos usar a função \texttt{select} do pacote \texttt{dplyr}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados_select <-}\StringTok{ }\KeywordTok{select}\NormalTok{(dados,imc,}\DataTypeTok{colo=}\NormalTok{medida_colo,}\DataTypeTok{contra=}\NormalTok{num_contra_ctg,idade,igp,}\DataTypeTok{epds_a=}\NormalTok{epds_antes,}\DataTypeTok{epds_d=}\NormalTok{epds_depois,}\DataTypeTok{amament=}\NormalTok{tempo_amamentacao_meses)}
+\CommentTok{#renomeamos algumas variaveis para não aparecer nomes muito grandes}
+\end{Highlighting}
+\end{Shaded}
+
+Vamos usar a função \texttt{rcorr} do pacote \texttt{Hmisc} para calcular o coeficiente de correlação de Pearson e também apresentar o valor p do teste que apresenta as seguintes hipóteses: \(H_0: \rho=0\) e \(H_1:\rho\neq 0\). Vale ressaltar que esse teste avalia se a correlação é nula, mas nada diz sobre a sua intensidade.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rcorr}\NormalTok{(}\KeywordTok{as.matrix}\NormalTok{(dados_select),}\DataTypeTok{type=}\StringTok{"pearson"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           imc  colo contra idade   igp epds_a epds_d amament
+## imc      1.00  0.07   0.11  0.07  0.05   0.02  -0.12   -0.18
+## colo     0.07  1.00  -0.03  0.03 -0.04  -0.18  -0.03   -0.21
+## contra   0.11 -0.03   1.00 -0.15 -0.03   0.16   0.23   -0.04
+## idade    0.07  0.03  -0.15  1.00  0.09   0.01  -0.05   -0.12
+## igp      0.05 -0.04  -0.03  0.09  1.00  -0.05  -0.11    0.05
+## epds_a   0.02 -0.18   0.16  0.01 -0.05   1.00   0.37    0.18
+## epds_d  -0.12 -0.03   0.23 -0.05 -0.11   0.37   1.00   -0.01
+## amament -0.18 -0.21  -0.04 -0.12  0.05   0.18  -0.01    1.00
+## 
+## n
+##         imc colo contra idade igp epds_a epds_d amament
+## imc     101  101    101   101 101    101    101     101
+## colo    101  104    104   104 104    104    104     104
+## contra  101  104    104   104 104    104    104     104
+## idade   101  104    104   104 104    104    104     104
+## igp     101  104    104   104 104    104    104     104
+## epds_a  101  104    104   104 104    104    104     104
+## epds_d  101  104    104   104 104    104    104     104
+## amament 101  104    104   104 104    104    104     104
+## 
+## P
+##         imc    colo   contra idade  igp    epds_a epds_d amament
+## imc            0.5115 0.2571 0.5127 0.6107 0.8567 0.2336 0.0711 
+## colo    0.5115        0.7957 0.7702 0.6916 0.0731 0.7296 0.0363 
+## contra  0.2571 0.7957        0.1256 0.7313 0.1090 0.0176 0.6672 
+## idade   0.5127 0.7702 0.1256        0.3791 0.9528 0.5852 0.2259 
+## igp     0.6107 0.6916 0.7313 0.3791        0.6339 0.2512 0.6026 
+## epds_a  0.8567 0.0731 0.1090 0.9528 0.6339        0.0000 0.0724 
+## epds_d  0.2336 0.7296 0.0176 0.5852 0.2512 0.0000        0.9476 
+## amament 0.0711 0.0363 0.6672 0.2259 0.6026 0.0724 0.9476
+\end{verbatim}
+
+Se eu quiser apenas a matriz de correlação:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rcorr}\NormalTok{(}\KeywordTok{as.matrix}\NormalTok{(dados_select),}\DataTypeTok{type=}\StringTok{"pearson"}\NormalTok{)}\OperatorTok{$}\NormalTok{r}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                 imc        colo      contra        idade         igp
+## imc      1.00000000  0.06607835  0.11382295  0.065884942  0.05125493
+## colo     0.06607835  1.00000000 -0.02569084  0.028987512 -0.03936321
+## contra   0.11382295 -0.02569084  1.00000000 -0.151166111 -0.03407257
+## idade    0.06588494  0.02898751 -0.15116611  1.000000000  0.08713997
+## igp      0.05125493 -0.03936321 -0.03407257  0.087139969  1.00000000
+## epds_a   0.01819407 -0.17648916  0.15805936  0.005878708 -0.04724312
+## epds_d  -0.11958486 -0.03430514  0.23238785 -0.054129034 -0.11353009
+## amament -0.18033322 -0.20553417 -0.04265977 -0.119767500  0.05164852
+##               epds_a       epds_d      amament
+## imc      0.018194070 -0.119584864 -0.180333219
+## colo    -0.176489160 -0.034305144 -0.205534167
+## contra   0.158059356  0.232387848 -0.042659768
+## idade    0.005878708 -0.054129034 -0.119767500
+## igp     -0.047243121 -0.113530095  0.051648516
+## epds_a   1.000000000  0.373988240  0.176917131
+## epds_d   0.373988240  1.000000000 -0.006522458
+## amament  0.176917131 -0.006522458  1.000000000
+\end{verbatim}
+
+Em cenários que há pontos discrepantes (possível ver por meio de um gráfico de dispersão entre as duas variáveis) ou os dados não pertencem a uma escala de medida padrão, mas existe uma ordenação clara (por exemplo, escores numa escala de 1 a 10), o coeficiente de correlação de Spearman pode ser utilizado. É uma medida não paramétrica de correlação de postos. Tanto a interpretação do valor do coeficiente quanto o teste de hipóteses discutidos para Pearson são similares para Spearman.
+
+Para calcular o coeficiente de Spearman no R, precisamos mudar o argumento \texttt{type="spearman}, como segue:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rcorr}\NormalTok{(}\KeywordTok{as.matrix}\NormalTok{(dados_select),}\DataTypeTok{type=}\StringTok{"spearman"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           imc  colo contra idade   igp epds_a epds_d amament
+## imc      1.00  0.07   0.12  0.16  0.06   0.02  -0.08   -0.17
+## colo     0.07  1.00  -0.01  0.03  0.00  -0.19  -0.01   -0.18
+## contra   0.12 -0.01   1.00 -0.14  0.03   0.06   0.18   -0.02
+## idade    0.16  0.03  -0.14  1.00  0.10  -0.02  -0.03   -0.12
+## igp      0.06  0.00   0.03  0.10  1.00  -0.09  -0.11    0.11
+## epds_a   0.02 -0.19   0.06 -0.02 -0.09   1.00   0.35    0.15
+## epds_d  -0.08 -0.01   0.18 -0.03 -0.11   0.35   1.00    0.00
+## amament -0.17 -0.18  -0.02 -0.12  0.11   0.15   0.00    1.00
+## 
+## n
+##         imc colo contra idade igp epds_a epds_d amament
+## imc     101  101    101   101 101    101    101     101
+## colo    101  104    104   104 104    104    104     104
+## contra  101  104    104   104 104    104    104     104
+## idade   101  104    104   104 104    104    104     104
+## igp     101  104    104   104 104    104    104     104
+## epds_a  101  104    104   104 104    104    104     104
+## epds_d  101  104    104   104 104    104    104     104
+## amament 101  104    104   104 104    104    104     104
+## 
+## P
+##         imc    colo   contra idade  igp    epds_a epds_d amament
+## imc            0.5113 0.2502 0.1172 0.5777 0.8562 0.4216 0.0811 
+## colo    0.5113        0.9487 0.7560 0.9927 0.0529 0.9200 0.0694 
+## contra  0.2502 0.9487        0.1437 0.7335 0.5383 0.0632 0.8179 
+## idade   0.1172 0.7560 0.1437        0.3351 0.8152 0.7557 0.2415 
+## igp     0.5777 0.9927 0.7335 0.3351        0.3764 0.2878 0.2625 
+## epds_a  0.8562 0.0529 0.5383 0.8152 0.3764        0.0002 0.1297 
+## epds_d  0.4216 0.9200 0.0632 0.7557 0.2878 0.0002        0.9711 
+## amament 0.0811 0.0694 0.8179 0.2415 0.2625 0.1297 0.9711
+\end{verbatim}
+
+Podemos também fazer um correlograma com o auxílio do pacote \texttt{corrplot}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{corrplot.mixed}\NormalTok{(}\KeywordTok{cor}\NormalTok{(dados_select,}\DataTypeTok{use=}\StringTok{"pairwise"}\NormalTok{,}
+                   \DataTypeTok{method=}\StringTok{"pearson"}\NormalTok{)) }\CommentTok{#se quiser spearman, mudar method="spearman"}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{livro_R_Agatha_files/figure-latex/unnamed-chunk-215-1.pdf}
 
   \bibliography{book.bib,packages.bib}
 

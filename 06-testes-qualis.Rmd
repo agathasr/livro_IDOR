@@ -1,0 +1,196 @@
+# Associação entre variáveis qualitativas {#qualis}
+
+Nesse capítulo, vamos discutir alguns testes para duas variáveis qualitativas. 
+Usaremos aqui já as informações sobre testes de hipóteses apresentadas em https://daslab-ufes.github.io/materiais/ no arquivo "Inferência Estatística". 
+
+
+## Testes de associação entre duas variáveis qualitativas
+
+Considere que a obstetra tenha o interesse em verificar se há associação entre ser primigesta (sim ou não) com antecedente de doença materna (sim ou não). Para fazer essa análise no R, antes de tudo precisamos carregar os seguintes pacotes (já instalados em minha máquina):
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+library(readr) #leitor da base de dados
+library(forcats) #para lidar com variáveis categóricas
+library(summarytools) #para medidas descritivas e testes para vars qualitativas
+```
+
+Agora vamos importar a base de dados gemelares:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+dados <- read_csv(file = "dataset/dados_completos.csv") #importando base de dados
+```
+
+Como primeira análise, podemos fazer uma tabela cruzada entre as variáveis qualitativas "primigesta" e "ind_ap" (antecedente de doença materna) por meio da função `ctable` do pacote `summarytools`. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$primigesta,dados$ind_ap,prop="t") 
+```
+Já usamos essa função anteriormente, em \@ref(tabelas). Volte lá para alguns detalhes da função. 
+
+Podemos observar, por exemplo, que 48,1\% das gestantes são primigestas e não tem antecedente de doença materna.  Para testar se há associação entre duas variáveis qualitativas, podemos usar o **teste qui-quadrado para independência**. Nesse teste, 
+são as hipóteses: $H_0$: As duas variáveis são independentes e $H_1$: As duas variáveis não são independentes, ou seja, há associação entre as duas variáveis. 
+
+De uma maneira bastante resumida, o teste qui-quadrado compara as frequências  observadas das caselas (combinações das categorias das duas variáveis) com as frequências esperadas em um cenário de independência. A frequência esperada é dada por: frequência de uma categoria vezes frequência da outra categoria dividido pelo total de observações. 
+
+Como exemplo, considere a casela de sim para primigesta e sim para ind_ap. A frequência observada é 10 e a esperada é $(35 \times 29)/104= 9.75$, em que 35 é o total de casos primigesta=sim e 29 é o total de casos ind_ap=sim, como podemos ver na tabela acima. 
+
+Assim, fica intuitivo pensar que se as distâncias entre o valor observado e o esperado sob $H_0$ de todas as caselas da tabela (combinação das categorias das duas variáveis) forem pequenas, indica que $H_0$ é verdade. Caso as distâncias sejam grandes, indica que temos indícios para rejeitar $H_0$.  
+
+Um observação bastante importante: o teste qui-quadrado é um teste assintótico (requer tamanho de amostra e frequências nas caselas grandes) e, por isso, requer alguns pré-requisitos para a utilização:
+
+ - Tamanho da amostra grande;
+ - Pelo menos 5 observações em cada casela;
+ - Valor esperado em cada casela não deve ser inferior a 5.
+
+Podemos realizar o teste qui-quadrado para independência no R de algumas formas. Aqui apresentamos duas delas. 
+
+A primeira é usando o argumento `chisq=TRUE` na função `ctable`. No nosso exemplo, fica:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$primigesta,dados$ind_ap,prop="t",chisq=TRUE) 
+```
+Veja que a estatística qui-quadrado (saída _Chi.squared_), que leva em conta as distâncias entre o observado e o esperado sob $H_0$, é bem pequena, perto de 0 (por isso que na saída só está 0 por aproximação). Assim, o valor p é bem grande, próximo de 1 (por isso que a saída já arredonda para 1), e não há indícios para rejeitar a hipótese nula de independência entre as duas variáveis. 
+
+Outra função é a `chisq.test` (não precisa instalar pacote), que retorna o mesmo teste da saída anterior:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+chisq.test(dados$primigesta,dados$ind_ap)
+```
+Veja que as suposições para a utilização do teste qui-quadrado foram satisfeitas: n grande, frequências das caselas observadas maior que 5 (a menor é 10) e frequências esperadas maior que 5 (verifique). 
+
+Vamos agora para outro exemplo. A obstetra também quer saber se há associação entre tabagismo (sim ou não) e alcool (sim ou não). 
+
+Vamos então obter a tabela cruzada e realizar o teste qui-quadrado no R: 
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$tabagismo,dados$alcool,prop="t",chisq=TRUE)
+```
+
+Veja que o R dá um aviso ( _warning_ ) dizendo que o teste qui-quadrado pode estar errado. Ao pensar nos pré-requisitos do teste, vemos que o n é grande e não há nenhuma frequência observada menor que 5 (a menor é 7). No entanto, a frequência esperada da casela tagabismo=sim e alcool=sim é 2.59 ($18\times 15 /140=2.59$), menor que 5. Logo, o teste qui-quadrado não é adequado. Uma alternativa é considerar o **teste exato de Fisher** que não faz suposições assintóticas. As hipóteses desse teste são as mesmas do teste qui-quadrado e para realizá-lo no R, usamos a função `fisher.test`:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+fisher.test(dados$tabagismo,dados$alcool)
+```
+
+O valor p é bem pequeno ($0.0005441$), indicando indícios para dizer que há associação entre tabagismo e alcool. 
+
+Considere agora que a psicóloga que faz parte do projeto deseja sabe se houve mudança no status de depressão (sim e não) antes e depois do parto. Abaixo está a tabela cruzada da variável de depressão avaliada nos dois momentos. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$edps_antes_sn,dados$edps_depois_sn,prop="t")
+```
+Podemos observar que 43.3\% dos casos foram classificados como não depressivas antes e depois do parto, 14.4\% eram depressivas e continuaram depois do parto e agora temos as mudanças: 8.7\% eram depressivas e depois ficaram não depressivas depois do parto e 33.7\% não eram antes e ficaram depois do parto.
+
+Para verificar se houve mudança no status de depressão das gestantes antes e depois parto, não é indicado usar nenhum dos testes anteriormente citados, uma vez que as frequências aqui são correlacionadas. Um teste candidato nesse caso é o **teste de McNemar**. As hipóteses desse teste são: $H_0$: o parto não alternou o status de depressão e $H_1$: o parto alternou o status de depressão. No R, a função para o teste de McNemar é:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+mcnemar.test(dados$edps_antes_sn,dados$edps_depois_sn)
+```
+Podemos observar pela saída acima que há indícios para dizer que houve mudança no status de depressão das mulheres após o parto (valor p =0.000164).
+
+
+
+
+## Medidas de associação
+
+A pergunta principal do estudo dos gemelares é se a progesterona diminui o risco de prematuridade (idade gestacional menor que 37 semanas). Na tabela abaixo temos as porcentagens de prematuridade em cada grupo (progesterona e placebo). 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$grupo,dados$prematuridade,prop="r")
+```
+
+Podemos observar que a porcentagem de prematuridade no grupo placebo é de 63.5\%, enquanto que no grupo progesterona é de 51.9\%. Esses são resultados obtidos nessa amostra e queremos inferir para a população. 
+
+Queremos saber se os grupos são homogêneos com relação à prematuridade, ou seja, queremos saber se o risco de prematuridade é diferente entre os grupos.  Para isso, seja $p_1$ a probabilidade de prematuridade do grupo progesterona e $p_2$ a probabilidade de prematuridade do grupo placebo. Um teste para comparar os grupos com relação às probabilidades de um evento de interesse é o **teste qui-quadrado de homogeneidade**. São as hipóteses do teste: $H_0: p_1=p_2$ e $H_1: p_1\neq p_2$. 
+
+Tanto a estatística quanto a distribuição de referência do teste para homogeneidade são as mesmas do teste de independência. Assim, a função no R é a mesma que usamos anteriormente:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$grupo,dados$prematuridade,prop="r",chisq=TRUE) ##ou chisq.test(dados$grupo,dados$prematuridade)
+```
+
+Podemos observar que não há indícios para dizer que a progesterona diminui o risco de prematuridade. Há outra forma de comparar os dois grupos com relação à prematuridade: pelo **risco relativo**. 
+
+O risco relativo é dado pela razão das probabilidades (riscos) de prematuridade. Assim, temos que 
+$$
+RR=\frac{0.519}{0.635}=0.8173. 
+$$
+Antes de interpretar o risco relativo de prematuridade acima, vamos discutir os possíveis valores de RR:
+
+ - $RR>1$: indica que a categoria do numerador  **aumenta** o risco do evento.
+
+ - $RR<1$: indica que a categoria do numerador **diminui** o risco do evento.
+    
+ - $RR=1$: indica que os riscos são iguais. 
+
+
+Vamos obter o risco relativo no R por meio da função `ctable` ao inserir o argumento `RR=TRUE`.  Mas vale uma observação: a função calcula o risco ao considerar como evento a primeira categoria da coluna e no numerador da razão é a primeira categoria da variável que está na linha. Como queremos o risco de prematuridade (sim) com o grupo progesterona no numerador, precisamos mudar a ordem das categorias das duas variáveis:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+#Para isso, usamos a função factor e informar a ordem de 
+#suas categorias (levels)
+dados$grupo <- factor(dados$grupo,levels=c("progest","placebo"))
+dados$prematuridade <- factor(dados$prematuridade,levels=c("sim","nao"))
+```
+Agora sim:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados$grupo,dados$prematuridade,prop="r",chisq=TRUE,RR=TRUE) 
+```
+
+Além da estimativa pontual do risco relativo já discutida anteriormente ($RR=0.82$), também está na saída acima o intervalo com 95\% de confiança (em Lo - 95\%  e Hi - 95\%). Como o 1 está dentro do intervalo de confiança (0.59-    1.14), não há indícios que a progesterona muda o risco de prematuridade a um nível de 5\% de significância, como já havíamos visto anteriormente.
+
+
+
+
+Vamos agora considerar um outro problema não associado aos dados das gestações gemelares. Nesse estudo, o objetivo consiste em verificar se os casos com câncer de mama diferem significantemente dos controles  (sem câncer de mama) em relação à exposição ao fumo passivo. 
+
+Vamos primeiramente importar a base de dados e depois fazer uma tabele cruzada entre as duas variáveis:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+dados_mama <- read_csv(file = "dataset/dados_mama.csv") #importando base de dados
+```
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+#arrumando os labels de exposicao
+dados_mama$exposicao <- factor(dados_mama$exposicao,levels=c("1","2"),labels=c("sim","nao"))
+
+#arrumando os labels de cancer
+dados_mama$cancer <- factor(dados_mama$cancer,levels=c("1","2"),labels=c("sim","nao"))
+
+##tabela cruzada 
+ctable(dados_mama$exposicao,dados_mama$cancer,prop="c")
+```
+
+Foi realizado um estudo de caso-controle (veja os slides "Tipos de estudos" disponível em https://daslab-ufes.github.io/materiais/) e, nesses estudos, não podemos calcular o risco de câncer de mama uma vez que partimos dos casos e controles e não seria possível estimar a incidência da doença. Uma medida de associação que pode ser usada nesses casos é a **razão de chances**.
+
+A chance de um evento é a probabilidade de apresentar o evento de interesse dividida pela probabilidade de não apresentar o evento de interesse. Se $p$ é a probabilidade de um evento, a chance é dada por: $C=p/(1-p)$.  
+
+A chance estimada de câncer entre os expostos ao fumo passivo é
+$$
+C_E=\frac{50/93}{43/93}=\frac{50}{43}=1.163.
+$$
+Já a chance estimada de câncer entre os não expostos ao fumo passivo é
+
+$$
+C_N=\frac{14/49}{35/49}=\frac{14}{35}=0.40.
+$$
+
+Assim, a razão das chances (OR - _odds ratio_) é dada por:
+$$
+OR=\frac{C_E}{C_N}=\frac{1.163}{0.400}=2.91.
+$$
+De maneira similar ao que conversamos sobre o risco relativo, para a razão de chances, temos que:
+
+ - $OR>1$: indica que a categoria do numerador  **aumenta** a chance do evento.
+
+ - $OR<1$: indica que a categoria do numerador **diminui** a chance do evento.
+    
+ - $OR=1$: indica que as chances são iguais. 
+ 
+ 
+Para obter estimativas pontuais e intervalares para a OR no R, inserimos o argumento `OR=TRUE` na função `ctable`:
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE,message=FALSE}
+ctable(dados_mama$exposicao,dados_mama$cancer,prop="c",OR=TRUE)
+```
+Pelas saídas, observamos que um intervalo com 95\% de confiança para a razão de chances é (1.38, 6.10) e o 1 não está no intervalo. Com isso, temos que a chance de câncer de mama do grupo exposto ao fumo passivo é 2.91 vezes a chance do grupo não exposto. 
+
+
+
+
+

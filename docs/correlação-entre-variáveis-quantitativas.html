@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo8 Correlação entre variáveis quantitativas | Estatística Aplicada à Pesquisa</title>
+  <meta name="description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo8 Correlação entre variáveis quantitativas | Estatística Aplicada à Pesquisa" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo8 Correlação entre variáveis quantitativas | Estatística Aplicada à Pesquisa" />
+  
+  <meta name="twitter:description" content="Esse é um material auxiliar para o curso de Ciências de Dados aplicada à Saúde." />
+  
+
+<meta name="author" content="Agatha Rodrigues" />
+
+
+<meta name="date" content="2020-11-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="qualis.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Estatística Aplicada à Pesquisa </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre esse livro</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sobre-mim"><i class="fa fa-check"></i><b>1.1</b> Sobre mim</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introdução</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#bases-de-dados"><i class="fa fa-check"></i><b>2.1</b> Bases de dados</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#dados_gemelares"><i class="fa fa-check"></i><b>2.1.1</b> Gestações gemelares</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#gestações-gemelares---depressão-e-amamentação"><i class="fa fa-check"></i><b>2.1.2</b> Gestações gemelares - depressão e amamentação</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#sobre-o-software-r"><i class="fa fa-check"></i><b>2.2</b> Sobre o software R</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#instalação-r-e-rstudio"><i class="fa fa-check"></i><b>2.3</b> Instalação R e RStudio</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#instalação-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalação R</a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#instalação-rstudio"><i class="fa fa-check"></i><b>2.3.2</b> Instalação RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#primeiros-passos-com-r-e-rstudio."><i class="fa fa-check"></i><b>2.4</b> Primeiros passos com R e RStudio.</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="intro.html"><a href="intro.html#primeiros-contatos-com-rstudio"><i class="fa fa-check"></i><b>2.4.1</b> Primeiros contatos com RStudio</a></li>
+<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#primeiros-passos-no-r"><i class="fa fa-check"></i><b>2.4.2</b> Primeiros passos no R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#como-obter-ajuda-no-r"><i class="fa fa-check"></i><b>2.5</b> Como obter ajuda no R</a></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#pacotes"><i class="fa fa-check"></i><b>2.6</b> Pacotes</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="intro.html"><a href="intro.html#instalação"><i class="fa fa-check"></i><b>2.6.1</b> Instalação</a></li>
+<li class="chapter" data-level="2.6.2" data-path="intro.html"><a href="intro.html#carregar-pacotes"><i class="fa fa-check"></i><b>2.6.2</b> Carregar pacotes:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#materiais-complementares"><i class="fa fa-check"></i><b>2.7</b> Materiais complementares</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="conceitos.html"><a href="conceitos.html"><i class="fa fa-check"></i><b>3</b> Conceitos iniciais</a><ul>
+<li class="chapter" data-level="3.1" data-path="conceitos.html"><a href="conceitos.html#população"><i class="fa fa-check"></i><b>3.1</b> População</a></li>
+<li class="chapter" data-level="3.2" data-path="conceitos.html"><a href="conceitos.html#amostra"><i class="fa fa-check"></i><b>3.2</b> Amostra</a></li>
+<li class="chapter" data-level="3.3" data-path="conceitos.html"><a href="conceitos.html#variaveis"><i class="fa fa-check"></i><b>3.3</b> Variáveis</a></li>
+<li class="chapter" data-level="3.4" data-path="conceitos.html"><a href="conceitos.html#tabulação-de-dados"><i class="fa fa-check"></i><b>3.4</b> Tabulação de dados</a></li>
+<li class="chapter" data-level="3.5" data-path="conceitos.html"><a href="conceitos.html#importação-de-dados-no-r"><i class="fa fa-check"></i><b>3.5</b> Importação de dados no R</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="conceitos.html"><a href="conceitos.html#extensão-.txt-ou-.csv"><i class="fa fa-check"></i><b>3.5.1</b> Extensão .txt ou .csv</a></li>
+<li class="chapter" data-level="3.5.2" data-path="conceitos.html"><a href="conceitos.html#arquivos-em-excel"><i class="fa fa-check"></i><b>3.5.2</b> Arquivos em Excel</a></li>
+<li class="chapter" data-level="3.5.3" data-path="conceitos.html"><a href="conceitos.html#arquivos-de-outros-softwares"><i class="fa fa-check"></i><b>3.5.3</b> Arquivos de outros softwares</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="conceitos.html"><a href="conceitos.html#consistencia"><i class="fa fa-check"></i><b>3.6</b> Análise de consistência e tratamento dos dados</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="conceitos.html"><a href="conceitos.html#importação-dos-dados"><i class="fa fa-check"></i><b>3.6.1</b> Importação dos dados</a></li>
+<li class="chapter" data-level="3.6.2" data-path="conceitos.html"><a href="conceitos.html#arrumação-da-base-de-dados"><i class="fa fa-check"></i><b>3.6.2</b> Arrumação da base de dados</a></li>
+<li class="chapter" data-level="3.6.3" data-path="conceitos.html"><a href="conceitos.html#identificação-de-casos-duplicados"><i class="fa fa-check"></i><b>3.6.3</b> Identificação de casos duplicados</a></li>
+<li class="chapter" data-level="3.6.4" data-path="conceitos.html"><a href="conceitos.html#identificar-problemas-nas-variáveis-da-base-de-dados"><i class="fa fa-check"></i><b>3.6.4</b> Identificar problemas nas variáveis da base de dados</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="conceitos.html"><a href="conceitos.html#transformação-dos-dados"><i class="fa fa-check"></i><b>3.7</b> Transformação dos dados</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="conceitos.html"><a href="conceitos.html#transformação-de-variáveis-quantitativas"><i class="fa fa-check"></i><b>3.7.1</b> Transformação de variáveis quantitativas</a></li>
+<li class="chapter" data-level="3.7.2" data-path="conceitos.html"><a href="conceitos.html#transformação-de-variáveis-qualitativas"><i class="fa fa-check"></i><b>3.7.2</b> Transformação de variáveis qualitativas</a></li>
+<li class="chapter" data-level="3.7.3" data-path="conceitos.html"><a href="conceitos.html#manipulação-de-datas"><i class="fa fa-check"></i><b>3.7.3</b> Manipulação de datas</a></li>
+<li class="chapter" data-level="3.7.4" data-path="conceitos.html"><a href="conceitos.html#filtragem-de-observações"><i class="fa fa-check"></i><b>3.7.4</b> Filtragem de observações</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="conceitos.html"><a href="conceitos.html#manipulando-os-formatos-das-bases-de-dados"><i class="fa fa-check"></i><b>3.8</b> Manipulando os formatos das bases de dados</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="conceitos.html"><a href="conceitos.html#combinando-bases-de-dados"><i class="fa fa-check"></i><b>3.8.1</b> Combinando bases de dados</a></li>
+<li class="chapter" data-level="3.8.2" data-path="conceitos.html"><a href="conceitos.html#formato"><i class="fa fa-check"></i><b>3.8.2</b> Mudando formato da base de dado</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="conceitos.html"><a href="conceitos.html#exercícios"><i class="fa fa-check"></i><b>3.9</b> Exercícios</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="conceitos.html"><a href="conceitos.html#teóricos"><i class="fa fa-check"></i><b>3.9.1</b> Teóricos</a></li>
+<li class="chapter" data-level="3.9.2" data-path="conceitos.html"><a href="conceitos.html#práticos-no-r"><i class="fa fa-check"></i><b>3.9.2</b> Práticos no R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html"><i class="fa fa-check"></i><b>4</b> Análise exploratória dos dados</a><ul>
+<li class="chapter" data-level="4.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#tabelas-de-frequências"><i class="fa fa-check"></i><b>4.1</b> Tabelas de frequências</a></li>
+<li class="chapter" data-level="4.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-resumo"><i class="fa fa-check"></i><b>4.2</b> Medidas resumo</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-de-posição"><i class="fa fa-check"></i><b>4.2.1</b> Medidas de posição</a></li>
+<li class="chapter" data-level="4.2.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#medidas-de-dispersão"><i class="fa fa-check"></i><b>4.2.2</b> Medidas de dispersão</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#tabelas"><i class="fa fa-check"></i><b>4.3</b> Tabelas cruzadas - duas variáveis qualitativas</a></li>
+<li class="chapter" data-level="4.4" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#gráficos"><i class="fa fa-check"></i><b>4.4</b> Gráficos</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#pacote-ggplot2"><i class="fa fa-check"></i><b>4.4.1</b> Pacote ggplot2</a></li>
+<li class="chapter" data-level="4.4.2" data-path="análise-exploratória-dos-dados.html"><a href="análise-exploratória-dos-dados.html#pacote-esquisse"><i class="fa fa-check"></i><b>4.4.2</b> Pacote esquisse</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="intro.html"><a href="intro.html#materiais-complementares"><i class="fa fa-check"></i><b>4.5</b> Materiais complementares</a></li>
+<li class="chapter" data-level="4.6" data-path="conceitos.html"><a href="conceitos.html#exercícios"><i class="fa fa-check"></i><b>4.6</b> Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="param.html"><a href="param.html"><i class="fa fa-check"></i><b>5</b> Testes paramétricos para média</a><ul>
+<li class="chapter" data-level="5.1" data-path="param.html"><a href="param.html#teste-para-média-de-população-única"><i class="fa fa-check"></i><b>5.1</b> Teste para média de população única</a></li>
+<li class="chapter" data-level="5.2" data-path="param.html"><a href="param.html#teste-para-comparação-de-médias-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>5.2</b> Teste para comparação de médias de dois grupos independentes</a></li>
+<li class="chapter" data-level="5.3" data-path="param.html"><a href="param.html#teste-para-comparação-de-médias-de-dois-grupos-dependentes"><i class="fa fa-check"></i><b>5.3</b> Teste para comparação de médias de dois grupos dependentes</a></li>
+<li class="chapter" data-level="5.4" data-path="param.html"><a href="param.html#teste-para-comparação-de-mais-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>5.4</b> Teste para comparação de mais de dois grupos independentes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="nparam.html"><a href="nparam.html"><i class="fa fa-check"></i><b>6</b> Testes não paramétricos</a><ul>
+<li class="chapter" data-level="6.1" data-path="nparam.html"><a href="nparam.html#teste-para-comparação-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>6.1</b> Teste para comparação de dois grupos independentes</a></li>
+<li class="chapter" data-level="6.2" data-path="nparam.html"><a href="nparam.html#teste-para-comparação-de-dois-grupos-dependentes"><i class="fa fa-check"></i><b>6.2</b> Teste para comparação de dois grupos dependentes</a></li>
+<li class="chapter" data-level="6.3" data-path="param.html"><a href="param.html#teste-para-comparação-de-mais-de-dois-grupos-independentes"><i class="fa fa-check"></i><b>6.3</b> Teste para comparação de mais de dois grupos independentes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="qualis.html"><a href="qualis.html"><i class="fa fa-check"></i><b>7</b> Associação entre variáveis qualitativas</a><ul>
+<li class="chapter" data-level="7.1" data-path="qualis.html"><a href="qualis.html#testes-de-associação-entre-duas-variáveis-qualitativas"><i class="fa fa-check"></i><b>7.1</b> Testes de associação entre duas variáveis qualitativas</a></li>
+<li class="chapter" data-level="7.2" data-path="qualis.html"><a href="qualis.html#medidas-de-associação"><i class="fa fa-check"></i><b>7.2</b> Medidas de associação</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="correlação-entre-variáveis-quantitativas.html"><a href="correlação-entre-variáveis-quantitativas.html"><i class="fa fa-check"></i><b>8</b> Correlação entre variáveis quantitativas</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Estatística Aplicada à Pesquisa</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="correlação-entre-variáveis-quantitativas" class="section level1">
+<h1><span class="header-section-number">Capítulo8</span> Correlação entre variáveis quantitativas</h1>
+<p>Nos Capítulos <a href="param.html#param">5</a> e <a href="nparam.html#nparam">6</a> vimos como comparar grupos com relação a variáveis quantitativas e no Capítulo <a href="qualis.html#qualis">7</a> vimos como avaliar a associação entre duas variáveis qualitativas. Agora, vamos abordar nesse capítulo medidas que quantificam a correlação linear entre duas variáveis quantitativas: coeficiente de correlação linear de Pearson e coeficiente de Spearman.</p>
+<p>Considermos novamente a base de dados das gestações gemelares. Antes de importar a base de dados, vamos carregar os pacotes que usaremos aqui.</p>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="correlação-entre-variáveis-quantitativas.html#cb352-1"></a><span class="kw">library</span>(readr) <span class="co">#leitor da base de dados</span></span>
+<span id="cb352-2"><a href="correlação-entre-variáveis-quantitativas.html#cb352-2"></a><span class="kw">library</span>(dplyr) <span class="co">#para manipulação dos dados</span></span>
+<span id="cb352-3"><a href="correlação-entre-variáveis-quantitativas.html#cb352-3"></a><span class="kw">library</span>(Hmisc)  <span class="co">#para matriz de correlação com valor p</span></span>
+<span id="cb352-4"><a href="correlação-entre-variáveis-quantitativas.html#cb352-4"></a><span class="kw">library</span>(corrplot) <span class="co">#para fazer o gráfico correlograma</span></span></code></pre></div>
+<p>Agora vamos importar a base de dados gemelares:</p>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="correlação-entre-variáveis-quantitativas.html#cb353-1"></a>dados &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="dt">file =</span> <span class="st">&quot;dataset/dados_completos.csv&quot;</span>) <span class="co">#importando base de dados</span></span></code></pre></div>
+<p>O coeficiente de correlação de Pearson é uma medida do grau correlação linear entre duas variáveis quantitativas. Mede a proximidade dos dados a uma reta.</p>
+<p>Dados os valores observados <span class="math inline">\((x_1,y_1), (x_2, y_2),\cdots, (x_n,y_n)\)</span>, o coeficiente de correlação linear de Pearson é</p>
+<p><span class="math display">\[\rho=\frac{1}{n}\sum\limits_{i=1}^n\left(\frac{x_i-\bar{x}}{s_x}\right)\left(\frac{y_i-\bar{y}}{s_y}\right)\]</span></p>
+<p>em que:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{x}\)</span> e <span class="math inline">\(\bar{y}\)</span> são as médias das observações das variaveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</p></li>
+<li><p><span class="math inline">\(s_{x}\)</span> e <span class="math inline">\(s_{y}\)</span> são os devios padrão das variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</p></li>
+</ul>
+<p>O coeficiente de correlação de Peason assume valor no intervalo [-1,1], em que:</p>
+<ul>
+<li><p><span class="math inline">\(\rho\)</span> próximo de -1, indícios de que há uma correlação linear <strong>negativa</strong> entre as variáveis;</p></li>
+<li><p><span class="math inline">\(\rho\)</span> próximo de 0, não há indícios de correlação entre as variáveis;</p></li>
+<li><p><span class="math inline">\(\rho\)</span> próximo de 1, indícios de que há uma correlação linear <strong>positiva</strong> entre as variáveis.</p></li>
+</ul>
+<p>Para calcular o coeficiente de correlação linear de Pearson no R, vamos primeiro selecionar as variáveis quantitativas da base de dados gemelares. Vamos usar a função <code>select</code> do pacote <code>dplyr</code>.</p>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="correlação-entre-variáveis-quantitativas.html#cb354-1"></a>dados_select &lt;-<span class="st"> </span><span class="kw">select</span>(dados,imc,<span class="dt">colo=</span>medida_colo,<span class="dt">contra=</span>num_contra_ctg,idade,igp,<span class="dt">epds_a=</span>epds_antes,<span class="dt">epds_d=</span>epds_depois,<span class="dt">amament=</span>tempo_amamentacao_meses)</span>
+<span id="cb354-2"><a href="correlação-entre-variáveis-quantitativas.html#cb354-2"></a><span class="co">#renomeamos algumas variaveis para não aparecer nomes muito grandes</span></span></code></pre></div>
+<p>Vamos usar a função <code>rcorr</code> do pacote <code>Hmisc</code> para calcular o coeficiente de correlação de Pearson e também apresentar o valor p do teste que apresenta as seguintes hipóteses: <span class="math inline">\(H_0: \rho=0\)</span> e <span class="math inline">\(H_1:\rho\neq 0\)</span>. Vale ressaltar que esse teste avalia se a correlação é nula, mas nada diz sobre a sua intensidade.</p>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="correlação-entre-variáveis-quantitativas.html#cb355-1"></a><span class="kw">rcorr</span>(<span class="kw">as.matrix</span>(dados_select),<span class="dt">type=</span><span class="st">&quot;pearson&quot;</span>)</span></code></pre></div>
+<pre><code>##           imc  colo contra idade   igp epds_a epds_d amament
+## imc      1.00  0.07   0.11  0.07  0.05   0.02  -0.12   -0.18
+## colo     0.07  1.00  -0.03  0.03 -0.04  -0.18  -0.03   -0.21
+## contra   0.11 -0.03   1.00 -0.15 -0.03   0.16   0.23   -0.04
+## idade    0.07  0.03  -0.15  1.00  0.09   0.01  -0.05   -0.12
+## igp      0.05 -0.04  -0.03  0.09  1.00  -0.05  -0.11    0.05
+## epds_a   0.02 -0.18   0.16  0.01 -0.05   1.00   0.37    0.18
+## epds_d  -0.12 -0.03   0.23 -0.05 -0.11   0.37   1.00   -0.01
+## amament -0.18 -0.21  -0.04 -0.12  0.05   0.18  -0.01    1.00
+## 
+## n
+##         imc colo contra idade igp epds_a epds_d amament
+## imc     101  101    101   101 101    101    101     101
+## colo    101  104    104   104 104    104    104     104
+## contra  101  104    104   104 104    104    104     104
+## idade   101  104    104   104 104    104    104     104
+## igp     101  104    104   104 104    104    104     104
+## epds_a  101  104    104   104 104    104    104     104
+## epds_d  101  104    104   104 104    104    104     104
+## amament 101  104    104   104 104    104    104     104
+## 
+## P
+##         imc    colo   contra idade  igp    epds_a epds_d amament
+## imc            0.5115 0.2571 0.5127 0.6107 0.8567 0.2336 0.0711 
+## colo    0.5115        0.7957 0.7702 0.6916 0.0731 0.7296 0.0363 
+## contra  0.2571 0.7957        0.1256 0.7313 0.1090 0.0176 0.6672 
+## idade   0.5127 0.7702 0.1256        0.3791 0.9528 0.5852 0.2259 
+## igp     0.6107 0.6916 0.7313 0.3791        0.6339 0.2512 0.6026 
+## epds_a  0.8567 0.0731 0.1090 0.9528 0.6339        0.0000 0.0724 
+## epds_d  0.2336 0.7296 0.0176 0.5852 0.2512 0.0000        0.9476 
+## amament 0.0711 0.0363 0.6672 0.2259 0.6026 0.0724 0.9476</code></pre>
+<p>Se eu quiser apenas a matriz de correlação:</p>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="correlação-entre-variáveis-quantitativas.html#cb357-1"></a><span class="kw">rcorr</span>(<span class="kw">as.matrix</span>(dados_select),<span class="dt">type=</span><span class="st">&quot;pearson&quot;</span>)<span class="op">$</span>r</span></code></pre></div>
+<pre><code>##                 imc        colo      contra        idade         igp
+## imc      1.00000000  0.06607835  0.11382295  0.065884942  0.05125493
+## colo     0.06607835  1.00000000 -0.02569084  0.028987512 -0.03936321
+## contra   0.11382295 -0.02569084  1.00000000 -0.151166111 -0.03407257
+## idade    0.06588494  0.02898751 -0.15116611  1.000000000  0.08713997
+## igp      0.05125493 -0.03936321 -0.03407257  0.087139969  1.00000000
+## epds_a   0.01819407 -0.17648916  0.15805936  0.005878708 -0.04724312
+## epds_d  -0.11958486 -0.03430514  0.23238785 -0.054129034 -0.11353009
+## amament -0.18033322 -0.20553417 -0.04265977 -0.119767500  0.05164852
+##               epds_a       epds_d      amament
+## imc      0.018194070 -0.119584864 -0.180333219
+## colo    -0.176489160 -0.034305144 -0.205534167
+## contra   0.158059356  0.232387848 -0.042659768
+## idade    0.005878708 -0.054129034 -0.119767500
+## igp     -0.047243121 -0.113530095  0.051648516
+## epds_a   1.000000000  0.373988240  0.176917131
+## epds_d   0.373988240  1.000000000 -0.006522458
+## amament  0.176917131 -0.006522458  1.000000000</code></pre>
+<p>Em cenários que há pontos discrepantes (possível ver por meio de um gráfico de dispersão entre as duas variáveis) ou os dados não pertencem a uma escala de medida padrão, mas existe uma ordenação clara (por exemplo, escores numa escala de 1 a 10), o coeficiente de correlação de Spearman pode ser utilizado. É uma medida não paramétrica de correlação de postos. Tanto a interpretação do valor do coeficiente quanto o teste de hipóteses discutidos para Pearson são similares para Spearman.</p>
+<p>Para calcular o coeficiente de Spearman no R, precisamos mudar o argumento <code>type="spearman</code>, como segue:</p>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="correlação-entre-variáveis-quantitativas.html#cb359-1"></a><span class="kw">rcorr</span>(<span class="kw">as.matrix</span>(dados_select),<span class="dt">type=</span><span class="st">&quot;spearman&quot;</span>)</span></code></pre></div>
+<pre><code>##           imc  colo contra idade   igp epds_a epds_d amament
+## imc      1.00  0.07   0.12  0.16  0.06   0.02  -0.08   -0.17
+## colo     0.07  1.00  -0.01  0.03  0.00  -0.19  -0.01   -0.18
+## contra   0.12 -0.01   1.00 -0.14  0.03   0.06   0.18   -0.02
+## idade    0.16  0.03  -0.14  1.00  0.10  -0.02  -0.03   -0.12
+## igp      0.06  0.00   0.03  0.10  1.00  -0.09  -0.11    0.11
+## epds_a   0.02 -0.19   0.06 -0.02 -0.09   1.00   0.35    0.15
+## epds_d  -0.08 -0.01   0.18 -0.03 -0.11   0.35   1.00    0.00
+## amament -0.17 -0.18  -0.02 -0.12  0.11   0.15   0.00    1.00
+## 
+## n
+##         imc colo contra idade igp epds_a epds_d amament
+## imc     101  101    101   101 101    101    101     101
+## colo    101  104    104   104 104    104    104     104
+## contra  101  104    104   104 104    104    104     104
+## idade   101  104    104   104 104    104    104     104
+## igp     101  104    104   104 104    104    104     104
+## epds_a  101  104    104   104 104    104    104     104
+## epds_d  101  104    104   104 104    104    104     104
+## amament 101  104    104   104 104    104    104     104
+## 
+## P
+##         imc    colo   contra idade  igp    epds_a epds_d amament
+## imc            0.5113 0.2502 0.1172 0.5777 0.8562 0.4216 0.0811 
+## colo    0.5113        0.9487 0.7560 0.9927 0.0529 0.9200 0.0694 
+## contra  0.2502 0.9487        0.1437 0.7335 0.5383 0.0632 0.8179 
+## idade   0.1172 0.7560 0.1437        0.3351 0.8152 0.7557 0.2415 
+## igp     0.5777 0.9927 0.7335 0.3351        0.3764 0.2878 0.2625 
+## epds_a  0.8562 0.0529 0.5383 0.8152 0.3764        0.0002 0.1297 
+## epds_d  0.4216 0.9200 0.0632 0.7557 0.2878 0.0002        0.9711 
+## amament 0.0811 0.0694 0.8179 0.2415 0.2625 0.1297 0.9711</code></pre>
+<p>Podemos também fazer um correlograma com o auxílio do pacote <code>corrplot</code>:</p>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="correlação-entre-variáveis-quantitativas.html#cb361-1"></a><span class="kw">corrplot.mixed</span>(<span class="kw">cor</span>(dados_select,<span class="dt">use=</span><span class="st">&quot;pairwise&quot;</span>,</span>
+<span id="cb361-2"><a href="correlação-entre-variáveis-quantitativas.html#cb361-2"></a>                   <span class="dt">method=</span><span class="st">&quot;pearson&quot;</span>)) <span class="co">#se quiser spearman, mudar method=&quot;spearman&quot;</span></span></code></pre></div>
+<p><img src="livro_R_Agatha_files/figure-html/unnamed-chunk-215-1.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="qualis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["livro_R_Agatha.pdf", "livro_R_Agatha.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

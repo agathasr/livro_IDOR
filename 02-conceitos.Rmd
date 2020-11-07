@@ -1,4 +1,4 @@
-# Conceitos iniciais 
+# Conceitos iniciais {#conceitos}
 
 ## População
 
@@ -202,7 +202,7 @@ dados
 dados <- read_excel(path = "dataset/dados_gemelares.xlsx",na="NA")
 ```
 
-O default do missing é o espaço em branco. Acesse o help em ?read_excel e veja na = "".  
+O default do missing é o espaço em branco. Acesse o help em ?read_excel e veja `na = ""`.  
 
 ### Arrumação da base de dados
 
@@ -551,6 +551,79 @@ dados_decres <- dplyr::arrange(dados,desc(alt))
 ```
 No primeiro código acima, ordenamos a planilha em ordem crescente pela altura. Já no segundo código, ordenamos a planilha em ordem decrescente pela altura (a primeira observação na planilha dados_decres é aquela cuja gestante é a mais alta). 
 
+## Manipulando os formatos das bases de dados
+
+### Combinando bases de dados
+
+Vamos considerar que temos interesse em juntar as bases de dados "dados_gemelares" e "dados_gemelares_2". As duas bases apresentam os mesmos indivíduos (linhas), mas com variáveis (colunas) diferentes. 
+
+Vamos então ler a base de dados, atribuindo para o objeto "dados2". 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE}
+library(readxl)
+dados2 <- read_excel(path = "dataset/dados_gemelares_2.xlsx")
+
+dados2
+```
+
+Há algumas funções de combinação de duas bases de dados no pacote `dplyr`. Elas recebem três argumentos:  a primeira base a ser declarada `(x=)`, a segunda base a ser declarada `(y=)` e a variável de identificação informada no argumento `by=`. Aqui estão as funções mais úteis:
+
+* `left_join()` - retorna todas as linhas da base de dados no argumento `x` e todas as colunas das duas bases de dados. Linhas da base de dados de `x` sem correspondentes em `y` receberão `NA` na base de dados combinada.
+
+* `right_join()` - retorna todas as linhas da base de dados no argumento `y` e todas as colunas das duas bases de dados. Linhas da base de dados de `y` sem correspondentes em `x` receberão `NA` na base de dados combinada.
+
+* `full_join()` - retorna todas as linhas e todas as colunas de `x` e de `y`. As linhas sem correspondência entre as bases receberão `NA` na base de dados combinada.
+
+* `inner_join()` - filtra a base de dados no argumento `x` apenas onde tem valores correspondentes na base de dados no argumento `y` e todas as colunas das duas bases de dados. 
+
+* `semi_join()` - filtra a base de dados no argumento `x` apenas onde tem valores correspondentes na base de dados no argumento `y`, mantendo apenas as colunas da base de dados de `x`. 
+
+* `anti_join()` - filtra a base de dados no argumento `x` para incluir apenas valores que **não possuem** correspondências na base de dados no argumento `y`.
+
+Assim sendo, no nosso exemplo, tanto as funções `left_join()`, `right_join()`, `full_join()` e `inner_join()` retornarão a mesma combinação, pois "dados" e "dados2" possuem exatamente os mesmos indivíduos, ou seja, não há nenhuma linha que esteja em uma das bases de dados e que não está na outra. 
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE,cache=TRUE}
+dados_todos <- full_join(dados, dados2, by=c("id" = "ID")) 
+#faço c("id" = "ID") porque id está em dados e ID (maiúsculo) está em dados2.
+
+str(dados_todos)
+
+```
+
+### Mudando formato da base de dado {#formato}
+
+Considere a base de dados abaixo. Veja que ela está no formato _long_, em que as avaliações do mesmo indivíduo (variável de identificação de indivíduo é "registro") estão nas linhas.
+
+```{r, echo=FALSE, fig.cap="Variáveis da base de dados gestações gemelares.", out.width = '100%'}
+knitr::include_graphics("figures/dados_exemplo.png")
+```
+
+Primeiro vamos ler a base de dados e atribuí-la ao objeto "dadosa":
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE, warning=FALSE}
+dadosa <- read_excel(path = "dataset/dados_exemplo.xlsx")
+```
+
+Queremos que as avaliações fiquem nas colunas, com as três colunas: aval1, aval2, aval3, ou seja, queremos o formato _wide_. Um pacote do R que pode nos auxiliar a transformar formato _long_ em _wide_ e vice-versa é o `tidyr`.  A função que usaremos é `spread`, como segue:
+
+```{r, eval=TRUE,include=FALSE,echo=FALSE,error=FALSE, warning=FALSE}
+library(tidyr)
+```
+
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=FALSE, warning=FALSE}
+library(tidyr)
+dadosa1 <- spread(data=dadosa, key = avaliacao,value = peso_fetal)
+dadosa1
+```
+
+Agora, se o interesse for transformar o formato _wide_ para _long_, a função do `tidyr` é `gather`. Vamos ver como fica:
+```{r, eval=TRUE,include=TRUE,echo=TRUE,error=TRUE, warning=TRUE}
+dadosa2 <-  gather(data=dadosa1, key ="avaliacao", value = "peso_feto", aval1, aval2, aval3)
+dadosa2
+```
+
+
+
 ## Exercícios 
 
 ### Teóricos
@@ -595,5 +668,7 @@ invés de pensar apenas no cálculo do tamanho amostral?
 6. Considere agora a base de dados "dados_gemelares_2". Realize uma análise de consistência similar a que realizamos para a base de dados "dados_gemelares" na Seção  \@ref(consistencia). 
 
  
+
+
 
 

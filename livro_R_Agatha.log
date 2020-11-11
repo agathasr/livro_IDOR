@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  7 NOV 2020 07:25
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.10) (preloaded format=xelatex 2020.10.20)  11 NOV 2020 11:05
 entering extended mode
 **./livro_R_Agatha.tex
 (livro_R_Agatha.tex
@@ -3038,23 +3038,1499 @@ Overfull \hbox (1.5pt too wide) in paragraph at lines 5201--5201
 File: livro_R_Agatha_files/figure-latex/unnamed-chunk-215-1.pdf Graphic file (t
 ype pdf)
 <use livro_R_Agatha_files/figure-latex/unnamed-chunk-215-1.pdf>
-(livro_R_Agatha.bbl
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [130] [131] [132
 
-]) [133] (livro_R_Agatha.aux)
+]
+Chapter 9.
+File: figures/tabulacao_sobrev.png Graphic file (type bmp)
+<figures/tabulacao_sobrev.png>
+[133] [134]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ##     time n.risk n.event n.censor       surv    std.err    
+ upper      lower[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 1     11    138       3        0 0.97826087 0.01268978 1.0
+000000 0.95423012[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 2     12    135       1        0 0.97101449 0.01470747 0.9
+994124 0.94342350[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 3     13    134       2        0 0.95652174 0.01814885 0.9
+911586 0.92309525[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 4     15    132       1        0 0.94927536 0.01967768 0.9
+866017 0.91336116[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 5     26    131       1        0 0.94202899 0.02111708 0.9
+818365 0.90383547[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 6     30    130       1        0 0.93478261 0.02248469 0.9
+768989 0.89448204[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 7     31    129       1        0 0.92753623 0.02379334 0.9
+718155 0.88527450[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 8     53    128       2        0 0.91304348 0.02627035 0.9
+612864 0.86722163[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 9     54    126       1        0 0.90579710 0.02745220 0.9
+558688 0.85834834[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 10    59    125       1        0 0.89855072 0.02860313 0.9
+503632 0.84956295[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 11    60    124       1        0 0.89130435 0.02972717 0.9
+447781 0.84085714[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 12    65    123       2        0 0.87681159 0.03190746 0.9
+333961 0.82365740[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 13    71    121       1        0 0.86956522 0.03296902 0.9
+276100 0.81515252[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 14    81    120       1        0 0.86231884 0.03401448 0.9
+217668 0.80670491[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 15    88    119       2        0 0.84782609 0.03606427 0.9
+099232 0.78996675[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 16    92    117       1        0 0.84057971 0.03707173 0.9
+039292 0.78166991[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 17    93    116       1        0 0.83333333 0.03806935 0.8
+978906 0.77341763[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 18    95    115       1        0 0.82608696 0.03905833 0.8
+918099 0.76520757[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 19   105    114       1        0 0.81884058 0.04003974 0.8
+856890 0.75703763[] 
+ []
+
+[135]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 20   107    113       1        0 0.81159420 0.04101457 0.8
+795299 0.74890594[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 21   110    112       1        0 0.80434783 0.04198371 0.8
+733343 0.74081078[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 22   116    111       1        0 0.79710145 0.04294802 0.8
+671037 0.73275059[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 23   118    110       1        0 0.78985507 0.04390826 0.8
+608395 0.72472398[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 24   131    109       1        0 0.78260870 0.04486516 0.8
+545431 0.71672966[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 25   132    108       2        0 0.76811594 0.04677163 0.8
+418580 0.70083324[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 26   135    106       1        0 0.76086957 0.04772246 0.8
+354715 0.69292908[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 27   142    105       1        0 0.75362319 0.04867245 0.8
+290569 0.68505302[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 28   144    104       1        0 0.74637681 0.04962218 0.8
+226150 0.67720423[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 29   147    103       1        0 0.73913043 0.05057217 0.8
+161466 0.66938191[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 30   156    102       2        0 0.72463768 0.05247498 0.8
+031334 0.65381387[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 31   163    100       3        0 0.70289855 0.05534349 0.7
+834316 0.63064388[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 32   166     97       1        0 0.69565217 0.05630533 0.7
+768181 0.62296689[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 33   170     96       1        0 0.68840580 0.05727075 0.7
+701822 0.61531226[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 34   174     95       0        1 0.68840580 0.05727075 0.7
+701822 0.61531226[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 35   175     94       1        0 0.68108233 0.05826087 0.7
+634689 0.60758616[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 36   176     93       1        0 0.67375887 0.05925543 0.7
+567332 0.59988248[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 37   177     92       1        0 0.66643540 0.06025489 0.7
+499756 0.59220081[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 38   179     91       2        0 0.65178847 0.06227035 0.7
+363958 0.57690202[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 39   180     89       1        0 0.64446500 0.06328726 0.7
+295743 0.56928419[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 40   181     88       2        0 0.62981807 0.06534178 0.7
+158700 0.55411013[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 41   183     86       1        0 0.62249460 0.06638032 0.7
+089876 0.54655335[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 42   185     85       0        1 0.62249460 0.06638032 0.7
+089876 0.54655335[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 43   188     84       0        1 0.62249460 0.06638032 0.7
+089876 0.54655335[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 44   189     83       1        0 0.61499467 0.06747797 0.7
+019541 0.53880796[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 45   191     82       0        1 0.61499467 0.06747797 0.7
+019541 0.53880796[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 46   196     81       0        1 0.61499467 0.06747797 0.7
+019541 0.53880796[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 47   197     80       1        1 0.60730724 0.06864040 0.6
+947607 0.53086201[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 48   202     78       1        0 0.59952125 0.06984271 0.6
+874717 0.52282260[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 49   207     77       1        0 0.59173526 0.07105551 0.6
+801583 0.51480752[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 50   210     76       1        0 0.58394926 0.07227949 0.6
+728210 0.50681645[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 51   212     75       1        0 0.57616327 0.07351534 0.6
+654600 0.49884911[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 52   218     74       1        0 0.56837728 0.07476377 0.6
+580755 0.49090525[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 53   221     73       0        1 0.56837728 0.07476377 0.6
+580755 0.49090525[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 54   222     72       1        1 0.56048316 0.07606076 0.6
+505873 0.48285811[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 55   223     70       1        0 0.55247625 0.07740981 0.6
+429911 0.47470332[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 56   225     69       0        2 0.55247625 0.07740981 0.6
+429911 0.47470332[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 57   229     67       1        0 0.54423034 0.07885696 0.6
+351933 0.46629373[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 58   230     66       1        0 0.53598442 0.08032136 0.6
+273672 0.45791250[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 59   237     65       0        1 0.53598442 0.08032136 0.6
+273672 0.45791250[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 60   239     64       1        0 0.52760967 0.08185070 0.6
+194185 0.44940852[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 61   246     63       1        0 0.51923491 0.08339996 0.6
+114403 0.44093412[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 62   259     62       0        1 0.51923491 0.08339996 0.6
+114403 0.44093412[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 63   267     61       1        0 0.51072286 0.08502222 0.6
+033320 0.43232889[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 64   269     60       1        0 0.50221082 0.08666754 0.5
+951927 0.42375469[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 65   270     59       1        0 0.49369877 0.08833736 0.5
+870228 0.41521128[] 
+ []
+
+[136]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 66   279     58       0        1 0.49369877 0.08833736 0.5
+870228 0.41521128[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 67   283     57       1        0 0.48503739 0.09009314 0.5
+787122 0.40652551[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 68   284     56       1        1 0.47637600 0.09187736 0.5
+703691 0.39787232[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 69   285     54       1        0 0.46755423 0.09375956 0.5
+618757 0.38906638[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 70   286     53       1        0 0.45873245 0.09567497 0.5
+533477 0.38029515[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 71   288     52       1        0 0.44991067 0.09762568 0.5
+447854 0.37155847[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 72   291     51       1        0 0.44108889 0.09961390 0.5
+361887 0.36285625[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 73   292     50       0        1 0.44108889 0.09961390 0.5
+361887 0.36285625[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 74   300     49       0        1 0.44108889 0.09961390 0.5
+361887 0.36285625[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 75   301     48       1        1 0.43189954 0.10181450 0.5
+272874 0.35376762[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 76   303     46       1        1 0.42251042 0.10415990 0.5
+182013 0.34448979[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 77   306     44       1        0 0.41290791 0.10666689 0.5
+089185 0.33501032[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 78   310     43       1        0 0.40330540 0.10923157 0.4
+995881 0.32557868[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 79   320     42       1        0 0.39370289 0.11185819 0.4
+902103 0.31619481[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 80   329     41       1        0 0.38410038 0.11455135 0.4
+807851 0.30685871[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 81   337     40       1        0 0.37449787 0.11731597 0.4
+713124 0.29757046[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 82   353     39       2        0 0.35529285 0.12308143 0.4
+522240 0.27913826[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 83   363     37       1        0 0.34569034 0.12609437 0.4
+426077 0.26999488[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 84   364     36       1        0 0.33608783 0.12920310 0.4
+329429 0.26090050[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 85   371     35       1        0 0.32648533 0.13241517 0.4
+232292 0.25185563[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 86   387     34       1        0 0.31688282 0.13573887 0.4
+134660 0.24286087[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 87   390     33       1        0 0.30728031 0.13918337 0.4
+036527 0.23391691[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 88   394     32       1        0 0.29767780 0.14275880 0.3
+937884 0.22502456[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 89   404     31       0        1 0.29767780 0.14275880 0.3
+937884 0.22502456[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 90   413     30       0        1 0.29767780 0.14275880 0.3
+937884 0.22502456[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 91   428     29       1        0 0.28741304 0.14700885 0.3
+833899 0.21546281[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 92   429     28       1        0 0.27714829 0.15144093 0.3
+729228 0.20597071[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 93   442     27       1        0 0.26688354 0.15607324 0.3
+623861 0.19654953[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 94   444     26       0        1 0.26688354 0.15607324 0.3
+623861 0.19654953[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 95   455     25       1        0 0.25620820 0.16132428 0.3
+514896 0.18675556[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 96   457     24       1        0 0.24553286 0.16684459 0.3
+405085 0.17704809[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 97   458     23       0        1 0.24553286 0.16684459 0.3
+405085 0.17704809[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 98   460     22       1        0 0.23437227 0.17320975 0.3
+291112 0.16690518[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 99   477     21       1        0 0.22321169 0.17995158 0.3
+176084 0.15687071[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 100  519     20       1        0 0.21205110 0.18712068 0.3
+059976 0.14694781[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 101  524     19       1        0 0.20089052 0.19477712 0.2
+942754 0.13714023[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 102  533     18       1        0 0.18972994 0.20299286 0.2
+824384 0.12745240[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 103  558     17       1        0 0.17856935 0.21185507 0.2
+704819 0.11788962[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 104  567     16       1        0 0.16740877 0.22147063 0.2
+584011 0.10845812[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 105  574     15       1        0 0.15624818 0.23197229 0.2
+461899 0.09916532[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 106  583     14       1        0 0.14508760 0.24352751 0.2
+338413 0.09002006[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 107  613     13       1        0 0.13392701 0.25635114 0.2
+213475 0.08103296[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 108  624     12       1        0 0.12276643 0.27072433 0.2
+086991 0.07221687[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 109  643     11       1        0 0.11160584 0.28702364 0.1
+958853 0.06358753[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 110  655     10       1        0 0.10044526 0.30576737 0.1
+828939 0.05516451[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 111  689      9       1        0 0.08928468 0.32769280 0.1
+697108 0.04697257[] 
+ []
+
+[137]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 112  707      8       1        0 0.07812409 0.35389224 0.1
+563215 0.03904374[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 113  791      7       1        0 0.06696351 0.38606895 0.1
+427121 0.03142069[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 114  806      6       0        1 0.06696351 0.38606895 0.1
+427121 0.03142069[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 115  814      5       1        0 0.05357081 0.44614934 0.1
+284373 0.02234422[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 116  840      4       0        1 0.05357081 0.44614934 0.1
+284373 0.02234422[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 117  883      3       1        0 0.03571387 0.60474450 0.1
+168413 0.01091635[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 118 1010      2       0        1 0.03571387 0.60474450 0.1
+168413 0.01091635[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 119 1022      1       0        1 0.03571387 0.60474450 0.1
+168413 0.01091635[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 120    5     90       1        0 0.98888889 0.01117336 1.0
+000000 0.96746824[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 121   60     89       1        0 0.97777778 0.01589104 1.0
+000000 0.94779340[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 122   61     88       1        0 0.96666667 0.01957401 1.0
+000000 0.93028350[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 123   62     87       1        0 0.95555556 0.02273314 0.9
+990942 0.91391426[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 124   79     86       1        0 0.94444444 0.02556550 0.9
+929738 0.89828681[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 125   81     85       1        0 0.93333333 0.02817181 0.9
+863173 0.88319559[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 126   92     84       0        1 0.93333333 0.02817181 0.9
+863173 0.88319559[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 127   95     83       1        0 0.92208835 0.03066888 0.9
+792147 0.86829468[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 128  105     82       0        1 0.92208835 0.03066888 0.9
+792147 0.86829468[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 129  107     81       1        0 0.91070455 0.03308929 0.9
+717245 0.85351636[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 130  122     80       1        0 0.89932074 0.03539956 0.9
+639328 0.83903958[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 131  145     79       2        0 0.87655313 0.03977328 0.9
+476180 0.81081759[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 132  153     77       1        0 0.86516932 0.04186640 0.9
+391563 0.79701109[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 133  166     76       1        0 0.85378551 0.04391166 0.9
+305216 0.78337752[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 134  167     75       1        0 0.84240171 0.04591747 0.9
+217311 0.76989981[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 135  173     74       0        1 0.84240171 0.04591747 0.9
+217311 0.76989981[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 136  175     73       0        1 0.84240171 0.04591747 0.9
+217311 0.76989981[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 137  177     72       0        1 0.84240171 0.04591747 0.9
+217311 0.76989981[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 138  182     71       1        0 0.83053689 0.04805852 0.9
+125705 0.75587754[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 139  186     70       1        0 0.81867208 0.05016633 0.9
+032576 0.74200754[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 140  192     69       0        1 0.81867208 0.05016633 0.9
+032576 0.74200754[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 141  194     68       1        0 0.80663278 0.05230824 0.8
+937184 0.72803292[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 142  199     67       1        0 0.79459349 0.05442696 0.8
+840428 0.71419481[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 143  201     66       2        0 0.77051490 0.05861552 0.8
+643202 0.68689036[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 144  202     64       0        1 0.77051490 0.05861552 0.8
+643202 0.68689036[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 145  203     63       0        1 0.77051490 0.05861552 0.8
+643202 0.68689036[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 146  208     62       1        0 0.75808724 0.06082918 0.8
+540771 0.67288569[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 147  211     61       0        1 0.75808724 0.06082918 0.8
+540771 0.67288569[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 148  224     60       0        1 0.75808724 0.06082918 0.8
+540771 0.67288569[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 149  226     59       1        0 0.74523830 0.06318557 0.8
+434878 0.65843289[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 150  235     58       0        1 0.74523830 0.06318557 0.8
+434878 0.65843289[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 151  239     57       1        0 0.73216395 0.06561783 0.8
+326497 0.64380500[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 152  240     56       0        1 0.73216395 0.06561783 0.8
+326497 0.64380500[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 153  243     55       0        1 0.73216395 0.06561783 0.8
+326497 0.64380500[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 154  245     54       1        0 0.71860536 0.06822833 0.8
+214223 0.62865792[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 155  252     53       0        1 0.71860536 0.06822833 0.8
+214223 0.62865792[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 156  266     52       0        1 0.71860536 0.06822833 0.8
+214223 0.62865792[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 157  268     51       1        0 0.70451505 0.07104408 0.8
+097727 0.61293927[] 
+ []
+
+[138]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 158  269     50       0        1 0.70451505 0.07104408 0.8
+097727 0.61293927[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 159  272     49       0        1 0.70451505 0.07104408 0.8
+097727 0.61293927[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 160  276     48       0        1 0.70451505 0.07104408 0.8
+097727 0.61293927[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 161  285     47       1        0 0.68952537 0.07422800 0.7
+975047 0.59616608[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 162  292     46       0        1 0.68952537 0.07422800 0.7
+975047 0.59616608[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 163  293     45       1        0 0.67420259 0.07755545 0.7
+848845 0.57912872[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 164  296     44       0        1 0.67420259 0.07755545 0.7
+848845 0.57912872[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 165  305     43       1        0 0.65852346 0.08104663 0.7
+718951 0.56180323[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 166  310     42       1        0 0.64284433 0.08455340 0.7
+587135 0.54467047[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 167  315     41       0        1 0.64284433 0.08455340 0.7
+587135 0.54467047[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 168  332     40       0        1 0.64284433 0.08455340 0.7
+587135 0.54467047[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 169  340     39       1        0 0.62636114 0.08845361 0.7
+449320 0.52666318[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 170  345     38       1        0 0.60987795 0.09238657 0.7
+309413 0.50886589[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 171  348     37       1        0 0.59339476 0.09636405 0.7
+167520 0.49126801[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 172  350     36       1        0 0.57691157 0.10039761 0.7
+023731 0.47386066[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 173  351     35       1        0 0.56042839 0.10449888 0.6
+878120 0.45663639[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 174  356     34       0        1 0.56042839 0.10449888 0.6
+878120 0.45663639[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 175  361     33       1        0 0.54344571 0.10893570 0.6
+727944 0.43896504[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 176  363     32       1        0 0.52646303 0.11346828 0.6
+575855 0.42148634[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 177  364     31       0        1 0.52646303 0.11346828 0.6
+575855 0.42148634[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 178  371     30       1        0 0.50891426 0.11842498 0.6
+418716 0.40349773[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 179  376     29       0        1 0.50891426 0.11842498 0.6
+418716 0.40349773[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 180  382     28       0        1 0.50891426 0.11842498 0.6
+418716 0.40349773[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 181  384     27       0        1 0.50891426 0.11842498 0.6
+418716 0.40349773[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 182  426     26       1        0 0.48934064 0.12475150 0.6
+248848 0.38319745[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 183  433     25       1        0 0.46976701 0.13126159 0.6
+075927 0.36320553[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 184  444     24       1        0 0.45019339 0.13798985 0.5
+900058 0.34351202[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 185  450     23       1        0 0.43061976 0.14497408 0.5
+721318 0.32410953[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 186  473     22       1        0 0.41104614 0.15225631 0.5
+539765 0.30499292[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 187  511     21       0        2 0.41104614 0.15225631 0.5
+539765 0.30499292[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 188  520     19       1        0 0.38941213 0.16157339 0.5
+344917 0.28371216[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 189  524     18       1        0 0.36777812 0.17138826 0.5
+146024 0.26284513[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 190  529     17       0        1 0.36777812 0.17138826 0.5
+146024 0.26284513[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 191  543     16       0        1 0.36777812 0.17138826 0.5
+146024 0.26284513[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 192  550     15       1        0 0.34325958 0.18475887 0.4
+930486 0.23897674[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 193  551     14       0        1 0.34325958 0.18475887 0.4
+930486 0.23897674[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 194  559     13       0        1 0.34325958 0.18475887 0.4
+930486 0.23897674[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 195  588     12       0        1 0.34325958 0.18475887 0.4
+930486 0.23897674[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 196  641     11       1        0 0.31205416 0.20791044 0.4
+690333 0.20761384[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 197  654     10       1        0 0.28084875 0.23310483 0.4
+434980 0.17784977[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 198  687      9       1        0 0.24964333 0.26120251 0.4
+165393 0.14961805[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 199  705      8       1        0 0.21843791 0.29340057 0.3
+882139 0.12290937[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 200  728      7       1        0 0.18723250 0.33150176 0.3
+585552 0.09777018[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 201  731      6       1        0 0.15602708 0.37845310 0.3
+275969 0.07431220[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 202  735      5       1        0 0.12482167 0.43957565 0.2
+954319 0.05273786[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 203  740      4       0        1 0.12482167 0.43957565 0.2
+954319 0.05273786[] 
+ []
+
+[139]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 204  765      3       1        0 0.08321444 0.59991117 0.2
+696771 0.02567754[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 205  821      2       0        1 0.08321444 0.59991117 0.2
+696771 0.02567754[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 5712--5712
+[]\TU/lmtt/m/n/10 ## 206  965      1       0        1 0.08321444 0.59991117 0.2
+696771 0.02567754[] 
+ []
+
+[140] [141] [142] [143]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##   [1]  306   455  1010+  210   883  1022+  310   361   218
+   166   170   654[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [13]  728    71   567   144   613   707    61    88   301
+    81   624   371[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [25]  394   520   574   118   390    12   473    26   533
+   107    53   122[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [37]  814   965+   93   731   460   153   433   145   583
+    95   303   519[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [49]  643   765   735   189    53   246   689    65     5
+   132   687   345[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [61]  444   223   175    60   163    65   208   821+  428
+   230   840+  305[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [73]   11   132   226   426   705   363    11   176   791
+    95   196+  167[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [85]  806+  284   641   147   740+  163   655   239    88
+   245   588+   30[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ##  [97]  179   310   477   166   559+  450   364   107   177
+   156   529+   11[] 
+ []
+
+[144]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [109]  429   351    15   181   283   201   524    13   212
+   524   288   363[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [121]  442   199   550    54   558   207    92    60   551
++  543+  293   202[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [133]  353   511+  267   511+  371   387   457   337   201
+   404+  222    62[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [145]  458+  356+  353   163    31   340   229   444+  315
++  182   156   329[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [157]  364+  291   179   376+  384+  268   292+  142   413
++  266+  194   320[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [169]  181   285   301+  348   197   382+  303+  296+  180
+   186   145   269+[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [181]  300+  284+  350   272+  292+  332+  285   259+  110
+   286   270    81[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [193]  131   225+  269   225+  243+  279+  276+  135    79
+    59   240+  202+[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [205]  235+  105   224+  239   237+  173+  252+  221+  185
++   92+   13   222+[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 5745--5745
+[]\TU/lmtt/m/n/10 ## [217]  192+  183   211+  175+  197+  203+  116   188+  191
++  105+  174+  177+[] 
+ []
+
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-222-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-222-1.pdf>
+[145]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-223-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-223-1.pdf>
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 5790--5790
+[]\TU/lmtt/m/n/10 ## Warning: Vectorized input to []element_text()[] is not off
+icially supported.[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 5790--5790
+[]\TU/lmtt/m/n/10 ## Results may be unexpected or may change in future versions
+ of ggplot2.[] 
+ []
+
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-224-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-224-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[146]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 5813--5813
+[]\TU/lmtt/m/n/10 ## survdiff(formula = Surv(time = time, event = status) ~ sex
+, data = lung)[] 
+ []
+
+[147]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## coxph(formula = Surv(time = time, event = status) ~ age + 
+sex +[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ##     ph.ecog + ph.karno + pat.karno + meal.cal + wt.loss, d
+ata = lung)[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ##                           coef  exp(coef)   se(coef)      
+z Pr(>|z|)[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## age                  9.859e-03  1.010e+00  1.175e-02  0.83
+9  0.40155[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## sexFem              -5.453e-01  5.797e-01  2.014e-01 -2.70
+7  0.00679 **[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## ph.ecogDeamb         6.455e-01  1.907e+00  2.822e-01  2.28
+8  0.02215 *[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## ph.ecogCama_menor50  1.439e+00  4.217e+00  4.570e-01  3.14
+9  0.00164 **[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## ph.ecogCama_maior50  2.768e+00  1.592e+01  1.123e+00  2.46
+5  0.01368 *[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## ph.karno             2.208e-02  1.022e+00  1.133e-02  1.94
+9  0.05135 .[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## pat.karno           -1.196e-02  9.881e-01  8.459e-03 -1.41
+4  0.15740[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## meal.cal             3.218e-05  1.000e+00  2.612e-04  0.12
+3  0.90195[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 5889--5889
+[]\TU/lmtt/m/n/10 ## wt.loss             -1.449e-02  9.856e-01  7.842e-03 -1.84
+8  0.06467 .[] 
+ []
+
+[148]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-228-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-228-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[149] [150]
+File: livro_R_Agatha_files/figure-latex/unnamed-chunk-230-1.pdf Graphic file (t
+ype pdf)
+<use livro_R_Agatha_files/figure-latex/unnamed-chunk-230-1.pdf>
+(livro_R_Agatha.bbl [151] [152
+
+]) [153] (livro_R_Agatha.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19444 strings out of 412249
- 341794 string characters out of 2855678
- 833174 words of memory out of 3000000
- 38579 multiletter control sequences out of 15000+200000
+ 19488 strings out of 412249
+ 343864 string characters out of 2855678
+ 851221 words of memory out of 3000000
+ 38617 multiletter control sequences out of 15000+200000
  541579 words of font info for 87 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,6n,118p,880b,476s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on livro_R_Agatha.pdf (133 pages).
+Output written on livro_R_Agatha.pdf (153 pages).
